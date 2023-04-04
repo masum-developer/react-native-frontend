@@ -3,3 +3,15 @@
 //         background-color: red !important;
 //     }
 // }
+
+.cm-editor {
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -o-user-select: none !important;
+    user-select: none !important;
+}
+
+.CodeMirror {
+    pointer-events: none !important;
+}

@@ -41,7 +41,8 @@ const Overview = () => {
 
             <Box mt={3}>
                 <Typography variant='h4'>Output: </Typography>
-                <HtmlOutput h1Text="Learning HTM" pText="Learn MERN stack development from TS4U"></HtmlOutput>
+                <HtmlOutput h1Text="Learning HTML" pText="Learn MERN stack development with
+                 TS4U"></HtmlOutput>
             </Box>
 
         </Box>

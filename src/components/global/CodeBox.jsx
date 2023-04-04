@@ -44,6 +44,8 @@ const CodeBox = ({ codeSnippet }) => {
                 extensions={[javascript({ jsx: true })]}
                 //   onChange={onChange}
                 theme={myTheme}
+                className="code-box"
+                readOnly={true}
             />
 
         </Box>
