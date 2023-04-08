@@ -22,7 +22,7 @@ const Aside = ({ children }) => {
             <Grid container spacing={1}>
                 <Grid item xs={2} md={2} lg={1} xl={1}>
                     <ProSidebarProvider>
-                        <Sidebar style={{ marginTop: '109px' }} backgroundColor="#ECE4EC" width='250px'>
+                        <Sidebar className='sidebar' style={{ marginTop: '109px', height: '90vh', position: 'fixed' }} backgroundColor="#ECE4EC" width='250px'>
                             <Menu
                                 menuItemStyles={{
                                     button: ({ level, active, disabled }) => {
@@ -46,23 +46,86 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'html_overview')}>Overview</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'basic_tags')}>Basic Tags</MenuItem>
-                                    <MenuItem>Elements</MenuItem>
-                                    <MenuItem>Attributes</MenuItem>
-                                    <MenuItem>Basic Tags</MenuItem>
-                                    <MenuItem>Formatting</MenuItem>
-                                    <MenuItem>Images</MenuItem>
-                                    <MenuItem>Tables</MenuItem>
-                                    <MenuItem>Lists</MenuItem>
-                                    <MenuItem>Text Links</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','elements')}>Elements</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','attributes')}>Attributes</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','formatting')}>Formatting</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','images')}>Images</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','tables')}>Tables</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','lists')}>Lists</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','textlinks')}>Text Links</MenuItem>
                                 </SubMenu>
                                 <MenuItem>CSS</MenuItem>
-                                <MenuItem>JavaScript</MenuItem>
-                                
+                                <SubMenu label="JavaScript">
+                                    <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'js_syntax')}>Syntax</MenuItem>
+                                    <SubMenu label="Variables">
+                                        <MenuItem onClick={() => handlePush('tab', 'js_var')}>Var</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'js_let')}>Let</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'js_const')}>Const</MenuItem>
+                                    </SubMenu>
+                                    <SubMenu label="Operators">
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Overview</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'arithmetic')}>Arithmetic</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'assignment')}>Assigment</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>Comparison</MenuItem>
+                                    </SubMenu>
+                                    <MenuItem onClick={() => handlePush('tab', 'dataTypes')}>Data Types</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'string')}>Strings</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'numbers')}>Numbers</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'array')}>Array</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'objects')}>Objects</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'function')}>Functions</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'date')}>Date</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'random')}>Random</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'if-else')}>If Else Statement</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'switch')}>Switch Statement</MenuItem>
+                                    <SubMenu label="Loop">
+                                        <MenuItem onClick={() => handlePush('tab', 'loop-intro')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'for-loop')}>For</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'assignment')}>For In</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>For Of</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>While</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>Do While</MenuItem>
+                                    </SubMenu>
+                                    <MenuItem>Set</MenuItem>
+                                    <MenuItem>Maps</MenuItem>
+                                    <MenuItem>Typeof</MenuItem>
+                                    <MenuItem>Scope</MenuItem>
+                                    <MenuItem>Type Conversion</MenuItem>
+                                    <MenuItem>JSON</MenuItem>
+                                    <MenuItem>Class</MenuItem>
+                                    <MenuItem>this Keyword</MenuItem>
+                                    <SubMenu label="JavaScript ES6">
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                    </SubMenu>
+                                    <SubMenu label="In-depth Functions">
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                    </SubMenu>
+
+                                    <SubMenu label="In-depth Objects">
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                    </SubMenu>
+
+                                    <SubMenu label="Asynchronus JavaScript">
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                    </SubMenu>
+
+                                    <SubMenu label="DOM Manipulation">
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                    </SubMenu>
+                                </SubMenu>
+
                             </Menu>
                         </Sidebar>
                     </ProSidebarProvider>
                 </Grid>
-                <Grid item xs={8} md={8} lg={9} xl={10} sx={{ marginTop: '150px', marginLeft: {lg : '120px'}}}>
+                <Grid item xs={8} md={8} lg={9} xl={10} sx={{ marginTop: '150px', marginLeft: { lg: '120px' }, height: '100vh' }}>
                     {children}
                 </Grid>
             </Grid>

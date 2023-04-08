@@ -18,13 +18,13 @@ const myTheme = createTheme({
         gutterForeground: '#8a919966',
     },
     styles: [
-        { tag: t.comment, color: '#787b8099' },
-        { tag: t.variableName, color: '#0080ff' },
-        { tag: [t.string, t.special(t.brace)], color: '#5c6166' },
-        { tag: t.number, color: '#5c6166' },
+        { tag: t.comment, color: '#6272A4' },
+        { tag: t.variableName, color: '#FF79AA' },
+        { tag: [t.string, t.special(t.brace)], color: '#EDECEE' },
+        { tag: t.number, color: '#C86347' },
         { tag: t.bool, color: '#5c6166' },
         { tag: t.null, color: '#5c6166' },
-        { tag: t.keyword, color: '#5c6166' },
+        { tag: t.keyword, color: '#EDECEE' },
         { tag: t.operator, color: '#5c6166' },
         { tag: t.className, color: '#5c6166' },
         { tag: t.definition(t.typeName), color: '#5c6166' },
@@ -39,6 +39,7 @@ const CodeBox = ({ codeSnippet }) => {
     return (
         <Box mt={1}>
             <CodeMirror
+                style={{ padding: '5px 0' }}
                 value={codeSnippet}
                 // height="200px"
                 extensions={[javascript({ jsx: true })]}

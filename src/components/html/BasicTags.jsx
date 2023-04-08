@@ -7,6 +7,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import useFind from '../../hooks/useFind';
+import htmlData from '../../localDb/HTML';
+import CodeBox from '../global/CodeBox';
+import HtmlOutput from '../global/HtmlOutput';
 
 function createData(serial, tags, description) {
     return { serial, tags, description };
@@ -22,10 +26,19 @@ const rows = [
 ];
 
 const BasicTags = () => {
+      //fetching data from custom hooks
+    const data = useFind(htmlData, 'basictags');
+
+    //destructuring
+    const { section1,section2 } = data || {};
+    const { title1, desc } = section1 || {};
+    const { title2, codeTemplate2 } = section2 || {};
+  
+
     return (
-        <Box>
-            <Typography variant='h3'>Basic Tags</Typography>
-            <Typography variant='subtitle1'>As told earlier, HTML is a markup language and makes use of various tags to format the content. These tags are enclosed within angle braces. Except few tags, most of the tags have their corresponding closing tags. For example, <strong>{`<html>`}</strong> has its closing tag <strong>{`</html>`}</strong> and <strong>{`<body>`}</strong> tag has its closing tag <strong>{`< /body>`}</strong> tag etc.</Typography>
+        <Box mx={8}>
+            <Typography variant='h1'>{title1}</Typography>
+            <Typography mt={3} variant='subtitle1'>{desc}</Typography>
 
             <Box mt={3}>
                 <TableContainer component={Paper}>
@@ -53,6 +66,15 @@ const BasicTags = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
+            </Box>
+             <Typography variant='h3' mt={3}>{title2}</Typography>
+              <CodeBox codeSnippet={codeTemplate2}></CodeBox>
+
+            <Box mt={3}>
+                <Typography variant='h4'>Output1: </Typography>
+                <HtmlOutput variant='subtitle2'
+                    h1Text="Welcome to TS4U"
+                   i></HtmlOutput>
             </Box>
 
         </Box>

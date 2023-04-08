@@ -11,6 +11,7 @@ const HtmlOutput = ({ h1Text, pText }) => {
             {
                 pText && <Typography variant='subtitle2'>{pText}</Typography>
             }
+            
         </Box>
     );
 };

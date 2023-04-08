@@ -3,45 +3,36 @@ import React from 'react';
 import List from '../global/List';
 import CodeBox from '../global/CodeBox';
 import HtmlOutput from '../global/HtmlOutput';
+import useFind from '../../hooks/useFind';
+import htmlData from '../../localDb/HTML';
 
-const HTMLDetails = [
-    {
-        title: 'Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link available on a webpage is called Hypertext.'
-    },
-    {
-        title: 'As its name suggests, HTML is a Markup Language which means you use HTML to simply "mark-up" a text document with tags that tell a Web browser how to structure it to display.'
-    }
-];
 
-const codeSnippet =
-    `<!DOCTYPE html>
-<html>
-    <head>
-        <title>This is document title</title>
-    </head>	
-    <body>
-        <h1>Learning HTML</h1>
-        <p>Learn MERN stack development from TS4U</p>
-    </body>	
-</html>`;
 
 const Overview = () => {
+        //fetching data from custom hooks
+    const data = useFind(htmlData, 'overview');
+
+    //destructuring
+    const { section1,section2,section3 } = data || {};
+    const { desc } =  section1 || {};
+    const { lists2 } = section2 || {};
+    const { title3,codeTemplate3} = section3 || {};
     return (
-        <Box>
-            <Typography variant='subtitle1'>HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.</Typography>
+        <Box mx={8}>
+            <Typography variant='subtitle1'>{desc}</Typography>
 
             <Box mt={1}>
                 {
-                    HTMLDetails?.map((item, i) => <List key={i} item={item}></List>)
+                    lists2?.map((item, i) => <List key={i} item={item}></List>)
                 }
             </Box>
 
-            <Typography variant='h3' mt={3}>Basic HTML</Typography>
-            <CodeBox codeSnippet={codeSnippet}></CodeBox>
+            <Typography variant='h3' mt={3}>{title3}</Typography>
+            <CodeBox codeSnippet={ codeTemplate3}></CodeBox>
 
             <Box mt={3}>
                 <Typography variant='h4'>Output: </Typography>
-                <HtmlOutput h1Text="Learning HTML" pText="Learn MERN stack development with
+                <HtmlOutput h1Text="Welcome to TS4U" pText="Learn MERN stack development with
                  TS4U"></HtmlOutput>
             </Box>
 

@@ -2,27 +2,24 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import List from '../global/List';
 import CodeBox from '../global/CodeBox';
-import { useEffect } from 'react';
-import htmlData from '../../localDb/HTML';
-import { useState } from 'react';
 import useFind from '../../hooks/useFind';
+import JsData from '../../localDb/JsData';
 
-const Introduction = () => {
+const IntroductionJs = () => {
     //fetching data from custom hooks
-    const data = useFind(htmlData, 'introduction');
+    const data = useFind(JsData, 'introductionJs');
 
     //destructuring
-    const { desc, title, section1, section2 } = data || {};
+    const { desc, section1, section2 } = data || {};
     const { title1, desc1, lists1 } =  section1 || {};
-    const { title2, codeTemplate2 } = section2 || {};
+    const { title2, codeTemplate2, codeTemplate2desc } = section2 || {};
 
     return (
-        <Box mx={8}>
-            <Typography variant='h3'>{title}</Typography>
+        <Box>
             <Typography variant='subtitle1'>{desc}</Typography>
 
             <Typography variant='h3' mt={3}>{title1}</Typography>
-            <Typography mt={3} variant='subtitle1'>{desc1}</Typography>
+            <Typography variant='subtitle1'>{desc1}</Typography>
 
             <Box mt={1}>
                 {
@@ -33,10 +30,11 @@ const Introduction = () => {
             <Box mt={3}>
                 <Typography variant='h3'>{title2}</Typography>
                 <CodeBox codeSnippet={codeTemplate2}></CodeBox>
+                <Typography mt={2} variant='subtitle1'>{codeTemplate2desc}</Typography>
             </Box>
         </Box>
         
     );
 };
 
-export default Introduction;
+export default IntroductionJs;
