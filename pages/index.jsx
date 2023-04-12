@@ -38,6 +38,14 @@ import IfElse from '../src/components/js/IfElse';
 import Switch from '../src/components/js/Switch';
 import LoopIntro from '../src/components/js/LoopIntro';
 import ForLoop from '../src/components/js/ForLoop';
+import Sets from '../src/components/js/Sets';
+import Maps from '../src/components/js/Maps';
+import TypeofComp from '../src/components/js/Typeof';
+import ScopeComp from '../src/components/js/ScopeComp';
+import TypeConversion from '../src/components/js/TypeConversion';
+import JSONComp from '../src/components/js/JSONComp';
+import ClassComp from '../src/components/js/ClassComp';
+import TryCatchComp from '../src/components/js/TryCatchComp';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -121,7 +129,23 @@ const Home = () => {
                                                                           <LoopIntro></LoopIntro> :
                                                                           active === 'for-loop' ?
                                                                             <ForLoop></ForLoop> :
-                                                                            ''
+                                                                            active === 'set' ?
+                                                                              <Sets></Sets> :
+                                                                              active === 'map' ?
+                                                                                <Maps></Maps> :
+                                                                                active === 'typeof' ?
+                                                                                  <TypeofComp></TypeofComp> :
+                                                                                  active === 'scope' ?
+                                                                                    <ScopeComp></ScopeComp> :
+                                                                                    active === 'type-conversion' ?
+                                                                                      <TypeConversion></TypeConversion> :
+                                                                                      active === 'json' ?
+                                                                                        <JSONComp></JSONComp> :
+                                                                                        active === 'class' ?
+                                                                                          <ClassComp></ClassComp> :
+                                                                                          active === 'error-handling' ?
+                                                                                            <TryCatchComp></TryCatchComp> :
+                                                                                            ''
         }
       </Aside>
 

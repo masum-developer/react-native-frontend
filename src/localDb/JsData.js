@@ -1,3 +1,6 @@
+let i = 0;
+let j = 0;
+
 const JsData = [
     {
         name: 'introductionJs', //component name wise property
@@ -1188,10 +1191,570 @@ for (let i = 0; i < numbers.length; i++) {
     sum += numbers[i];
 }
             
+console.log(sum); // Output: 15`,
+        desc2_2: 'In this example, we initialize the variable i to 0, set the condition to iterate while i is less than the length of the numbers array, and update i by incrementing it by 1 at the end of each iteration. During each iteration, we add the current element of the numbers array to the sum variable. After the loop is complete, we output the final value of sum.The for loop is a powerful construct that is used in many different applications. It provides a way to automate repetitive tasks and process collections of data in an efficient and flexible manner.'
+        },
+        section3: {
+            title3: 'Problems and Solutions',
+            desc3: 'Here are a few examples of using for loops to solve problems in JavaScript:',
+            desc3_2: '1) Finding the sum of the numbers in an array:',
+            codeTemplate3: `let numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+            
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+            
 console.log(sum); // Output: 15`
         },
-        desc2_2: 'In this example, we initialize the variable i to 0, set the condition to iterate while i is less than the length of the numbers array, and update i by incrementing it by 1 at the end of each iteration. During each iteration, we add the current element of the numbers array to the sum variable. After the loop is complete, we output the final value of sum.The for loop is a powerful construct that is used in many different applications. It provides a way to automate repetitive tasks and process collections of data in an efficient and flexible manner.'
+        section4: {
+            desc4: '2) Reversing a string:',
+            codeTemplate4: `let str = 'hello';
+let newStr = '';
+            
+for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+}
+            
+console.log(newStr); // Output: olleh`
+        },
+        section5: {
+            desc5: '3) Generating a multiplication table:',
+            codeTemplate5: `for (let i = 1; i <= 10; i++) {
+for (let j = 1; j <= 10; j++) {
+        console.log(${'i'} x ${'j'} = ${'i * j'}); //Note: single quotation must be removed from i, j
     }
+}`
+        },
+        section6: {
+            desc6: '4) Finding the factorial of a number:',
+            codeTemplate6: `let num = 5;
+let factorial = 1;
+            
+for (let i = 1; i <= num; i++) {
+    factorial *= i;
+}
+            
+console.log(factorial); // Output: 120`
+        }
+    },
+    {
+        name: 'set', //component name wise property
+        title: 'Object Sets',
+        desc: "A Set is an object that allows you to store unique values of any type. It can be used to efficiently store and manipulate collections of data without the need for duplicate values.",
+        desc_2: 'A Set object is similar to an array, but with some important differences. Unlike an array, a Set does not have an index, and its values are stored in no particular order. Additionally, a Set can only contain unique values; any duplicate values that are added to the Set will be ignored.',
+        desc_3: 'Here is an example of how to use a Set in JavaScript:',
+        codeTemplate: `let mySet = new Set();
+
+mySet.add(1);
+mySet.add('hello');
+mySet.add(true);
+mySet.add(1); // This value will be ignored because it is a duplicate
+        
+console.log(mySet); // Output: Set { 1, 'hello', true }`,
+        desc_4: "In this example, we create a new Set object called mySet. We then add several values to the Set using the add() method. Because the value 1 is added twice, the second instance of 1 is ignored. Finally, we output the contents of the Set to the console, which contains the values 1, 'hello', and true.",
+        desc_5: "The Set object provides a simple and efficient way to store and manipulate unique collections of data in JavaScript. It is especially useful when working with large amounts of data, as it allows you to quickly check whether a value already exists in the collection before adding it.",
+        section1: {
+            desc1: 'The Set object in JavaScript is used for a variety of purposes, but its primary purpose is to store unique values of any type. Some of the benefits of using a Set include:',
+            list1: [
+                'Efficient storage of unique values: A Set allows you to store only unique values, which can be more efficient than storing the same values multiple times in an array or other data structure.',
+                'Fast membership testing: Checking whether a value exists in a Set is faster than checking whether it exists in an array or other data structure, especially for large collections of data.',
+                'Easy removal of duplicate values: If you have a collection of data that contains duplicates, you can quickly remove the duplicates by adding the data to a Set and then converting it back to an array.',
+                'Intersecting and merging sets: You can use the Set object to perform set operations such as intersection and merging of sets.'
+            ],
+        },
+        section2: {
+            title2: 'How to use set?',
+            desc2: 'In JavaScript, you can create a Set object using the Set() constructor. You can then add values to the set using the add() method and remove values from the set using the delete() method. You can also check if a value exists in the set using the has() method, and you can get the number of values in the set using the size property.Here is an example of how to create and use a Set in JavaScript:',
+            codeTemplate2: `let mySet = new Set();
+
+mySet.add(1);
+mySet.add('hello');
+mySet.add(true);
+mySet.add(1); // This value will be ignored because it is a duplicate
+            
+console.log(mySet.has(1)); // Output: true
+console.log(mySet.has('world')); // Output: false
+console.log(mySet.size); // Output: 3
+            
+mySet.delete(true);
+            
+console.log(mySet.has(true)); // Output: false
+console.log(mySet.size); // Output: 2`,
+        desc2_2: "In this example, we create a new Set object called mySet. We add several values to the Set using the add() method, including a duplicate value which is ignored. We then check whether the value 1 exists in the Set using the has() method, and output the result to the console. We also check whether the value 'world' exists in the Set, which returns false. Finally, we delete the value true from the Set using the delete() method, and check whether it has been successfully removed using the has() method.The Set object in JavaScript is a powerful tool for storing and manipulating collections of unique values. It can be used in a variety of applications, from data processing to algorithmic problem-solving."
+        },
+        section3: {
+            title3: 'Method and uses',
+            desc3: 'In JavaScript, the Set object provides several methods that can be used to manipulate and query sets. Here are some of the most commonly used Set methods:',
+            list3: [
+                'add(value): Adds a new value to the set. If the value already exists in the set, it is not added again.',
+                'clear(): Removes all values from the set.',
+                'delete(value): Removes a specific value from the set.',
+                'has(value): Returns true if the set contains the specified value, and false otherwise.',
+                'forEach(callback): Executes a callback function for each value in the set.',
+                'keys(): Returns an iterator that contains the keys of each value in the set.',
+                'values(): Returns an iterator that contains the values of each value in the set.',
+                'entries(): Returns an iterator that contains the key-value pairs of each value in the set.'
+            ],
+            desc3_2: 'Here is an example of how to use some of these methods:',
+            codeTemplate3: `let mySet = new Set();
+
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);i
+            
+console.log(mySet.has(2)); // Output: true
+            
+mySet.forEach(function(value) {
+    console.log(value);
+});
+            
+// Output:
+// 1
+// 2
+// 3
+            
+let keys = mySet.keys();
+console.log(keys.next().value); // Output: 1
+            
+let values = mySet.values();
+console.log(values.next().value); // Output: 1
+            
+let entries = mySet.entries();
+console.log(entries.next().value); // Output: [1, 1]`
+        },
+        desc3_3: 'In this example, we create a new Set object called mySet, and add several values to it using the add() method. We then check whether the value 2 exists in the set using the has() method, which returns true. We also use the forEach() method to execute a callback function for each value in the set, and use the keys(), values(), and entries() methods to create iterators that contain the keys, values, and key-value pairs of each value in the set.The Set object provides many useful methods for manipulating and querying sets in JavaScript, making it a powerful tool for data processing and algorithmic problem-solving.'
+    },
+    {
+        name: 'map', //component name wise property
+        title: 'Object Maps',
+        desc: "A Map is an object that allows you to store key-value pairs. It is similar to an object in that it uses keys to access values, but a Map can use any value, including objects, as keys, whereas an object can only use strings or symbols as keys.",
+        desc_2: 'A Map is useful when you need to store and access data using non-string keys, or when you need to iterate over the keys or values in a specific order. You can add new key-value pairs to a Map using the set() method, access the value of a specific key using the get() method, and remove a key-value pair using the delete() method. You can also check whether a key exists in the Map using the has() method, and get the number of key-value pairs in the Map using the size property.',
+        desc_3: 'Here is an example of how to use a Map in JavaScript:',
+        codeTemplate: `let myMap = new Map();
+
+myMap.set('key1', 'value1');
+myMap.set('key2', 'value2');
+myMap.set(123, 'value3');
+myMap.set(true, 'value4');
+        
+console.log(myMap.get('key1')); // Output: value1
+console.log(myMap.get(123)); // Output: value3
+console.log(myMap.size); // Output: 4
+        
+myMap.delete('key2');
+        
+console.log(myMap.has('key2')); // Output: false
+console.log(myMap.size); // Output: 3`,
+        desc_4: "In this example, we create a new Map object called myMap. We then add several key-value pairs to the Map using the set() method, including a string key, a numeric key, and a boolean key. We then use the get() method to access the value of the keys 'key1' and 123. We also output the size of the Map to the console, which contains 4 key-value pairs. Finally, we delete the key 'key2' from the Map using the delete() method, and check whether it has been successfully removed using the has() method.",
+        desc_5: "The Map object in JavaScript is a powerful tool for storing and accessing key-value pairs, especially when the keys are non-string values or when you need to iterate over the keys or values in a specific order.",
+        section1: {
+            desc1: 'In JavaScript, a Map object is used for storing and accessing data using key-value pairs. Some of the benefits of using a Map include:',
+            list1: [
+                'Flexible key types: Unlike objects, which can only use strings or symbols as keys, a Map can use any value, including objects, functions, and other primitive types.',
+                'Efficient storage of key-value pairs: A Map allows you to store key-value pairs efficiently, which can be more efficient than using an object or other data structure for large collections of data.',
+                'Fast access to key-value pairs: Accessing a value in a Map is faster than searching for a key in an object or other data structure, especially for large collections of data.',
+                'Easy iteration over keys and values: The Map object provides methods for iterating over the keys and values in the map, which can be useful for data processing and algorithmic problem-solving.'
+            ],
+        },
+        section2: {
+            title2: 'How to use map?',
+            desc2: 'In JavaScript, you can create a Map object using the Map() constructor. You can then add key-value pairs to the map using the set() method and remove key-value pairs using the delete() method. You can also access the value of a specific key using the get() method, check whether a key exists in the map using the has() method, and get the number of key-value pairs in the map using the size property.Here is an example of how to use a Map in JavaScript:',
+            codeTemplate2: `let myMap = new Map();
+
+let key1 = 'key1';
+let key2 = {id: 123};
+let key3 = function() {};
+let key4 = 123;
+            
+myMap.set(key1, 'value1');
+myMap.set(key2, 'value2');
+myMap.set(key3, 'value3');
+myMap.set(key4, 'value4');
+            
+console.log(myMap.get(key1)); // Output: value1
+console.log(myMap.get(key2)); // Output: value2
+console.log(myMap.size); // Output: 4
+            
+myMap.delete(key3);
+            
+console.log(myMap.has(key3)); // Output: false
+console.log(myMap.size); // Output: 3`,
+        desc2_2: "In this example, we create a new Map object called myMap. We then create four keys of different types, including a string, an object, a function, and a number. We add several key-value pairs to the Map using the set() method, using the different keys we created as the keys and different values as the values. We then use the get() method to access the value of the keys key1 and key2. We also output the size of the Map to the console, which contains 4 key-value pairs. Finally, we delete the key key3 from the Map using the delete() method, and check whether it has been successfully removed using the has() method.The Map object in JavaScript is a powerful tool for storing and accessing key-value pairs, especially when the keys are non-string values or when you need to iterate over the keys or values in a specific order.."
+        },
+        section3: {
+            title3: 'Method and uses',
+            desc3: 'In JavaScript, the Map object provides several methods that can be used to manipulate datas. Here are some of the most commonly used Map methods:',
+            list3: [
+                'set(key, value): Adds or updates the key-value pair with the specified key and value in the map.',
+                'get(key): Returns the value associated with the specified key in the map, or undefined if the key is not found.',
+                'has(key): Returns a boolean indicating whether the specified key exists in the map.',
+                'keys(): Returns an iterator over the keys in the map, in insertion order.',
+                'values(): Returns an iterator over the values in the map, in insertion order.',
+                'keys(): Returns an iterator that contains the keys of each value in the set.',
+                'size: Returns the number of key-value pairs in the map.',
+                'clear(): Removes all key-value pairs from the map.',
+                'delete(key): Removes the key-value pair with the specified key from the map.',
+                'entries(): Returns an iterator over the key-value pairs in the map, in insertion order.'
+            ],
+            desc3_2: 'Here is an example of how to use a Map to store key-value pairs in JavaScript:',
+            codeTemplate3: `let myMap = new Map();
+
+let key1 = 'key1';
+let key2 = {id: 123};
+let key3 = function() {};
+let key4 = 123;
+            
+myMap.set(key1, 'value1');
+myMap.set(key2, 'value2');
+myMap.set(key3, 'value3');
+myMap.set(key4, 'value4');
+            
+console.log(myMap.get(key1)); // Output: value1
+console.log(myMap.get(key2)); // Output: value2
+console.log(myMap.size); // Output: 4
+            
+myMap.delete(key3);
+            
+console.log(myMap.has(key3)); // Output: false
+console.log(myMap.size); // Output: 3`
+        },
+        desc3_3: 'In this example, we create a new Map object called myMap. We then create four keys of different types, including a string, an object, a function, and a number. We add several key-value pairs to the Map using the set() method, using the different keys we created as the keys and different values as the values. We then use the get() method to access the value of the keys key1 and key2. We also output the size of the Map to the console, which contains 4 key-value pairs. Finally, we delete the key key3 from the Map using the delete() method, and check whether it has been successfully removed using the has() method.The Map object in JavaScript is a powerful tool for storing and accessing key-value pairs, especially when the keys are non-string values or when you need to iterate over the keys or values in a specific order. It is a powerful tool for data manipulation in JavaScript and can help you to write more efficient and effective code.'
+    },
+    {
+        name: 'typeof', //component name wise property
+        title: 'Typeof',
+        desc: "'typeof' is a built-in operator in JavaScript that is used to determine the data type of a value or variable. The typeof operator returns a string indicating the data type of the operand. The syntax for the typeof operator is as follows:",
+        codeTemplate: `typeof operand`,
+        desc_2: "The operand can be any value or variable, such as a string, number, object, function, etc. Here are some examples of using the typeof operator in JavaScript:",
+        codeTemplate_2: `typeof "hello" // Output: "string"
+
+typeof 42 // Output: "number"
+        
+typeof true // Output: "boolean"
+        
+typeof null // Output: "object"
+        
+typeof undefined // Output: "undefined"
+        
+typeof {} // Output: "object"
+        
+typeof [] // Output: "object"
+        
+typeof function() {} // Output: "function"`,
+        desc_3: 'In this example, we use the typeof operator to determine the data type of several values and variables. The typeof operator returns a string indicating the data type of each operand.The typeof operator is useful for checking the data type of a value or variable before performing certain operations on it. For example, you may want to check if a variable is a number before performing a mathematical operation on it, or you may want to check if a variable is a function before calling it.',
+        section1: {
+            title1: "Why 'typeof' is used?",
+            desc1: 'We use the typeof operator in JavaScript to determine the data type of a value or variable. By using typeof, we can check whether a value or variable is a string, number, boolean, object, function, or undefined, and perform operations or make decisions based on its data type.',
+            desc1_2: "For example, if we have a variable that may contain a string or a number, we can use typeof to check its data type before performing a mathematical operation on it. If the variable is a string, we can convert it to a number before performing the operation, while if the variable is already a number, we can perform the operation directly.",
+            desc1_3: "The typeof operator is also useful when working with objects and arrays. By checking the data type of an object or array, we can determine whether it contains the expected properties or elements, and avoid errors or unexpected behavior in our code.",
+            desc1_4: "In summary, the typeof operator is a powerful tool in JavaScript for checking the data type of values and variables, and can help us write more robust and error-free code."
+        },
+    },
+    {
+        name: 'typeof', //component name wise property
+        title: 'Typeof',
+        desc: "'typeof' is a built-in operator in JavaScript that is used to determine the data type of a value or variable. The typeof operator returns a string indicating the data type of the operand. The syntax for the typeof operator is as follows:",
+        codeTemplate: `typeof operand`,
+        desc_2: "The operand can be any value or variable, such as a string, number, object, function, etc. Here are some examples of using the typeof operator in JavaScript:",
+        codeTemplate_2: `typeof "hello" // Output: "string"
+
+typeof 42 // Output: "number"
+        
+typeof true // Output: "boolean"
+        
+typeof null // Output: "object"
+        
+typeof undefined // Output: "undefined"
+        
+typeof {} // Output: "object"
+        
+typeof [] // Output: "object"
+        
+typeof function() {} // Output: "function"`,
+        desc_3: 'In this example, we use the typeof operator to determine the data type of several values and variables. The typeof operator returns a string indicating the data type of each operand.The typeof operator is useful for checking the data type of a value or variable before performing certain operations on it. For example, you may want to check if a variable is a number before performing a mathematical operation on it, or you may want to check if a variable is a function before calling it.',
+        section1: {
+            title1: "Why 'typeof' is used?",
+            desc1: 'We use the typeof operator in JavaScript to determine the data type of a value or variable. By using typeof, we can check whether a value or variable is a string, number, boolean, object, function, or undefined, and perform operations or make decisions based on its data type.',
+            desc1_2: "For example, if we have a variable that may contain a string or a number, we can use typeof to check its data type before performing a mathematical operation on it. If the variable is a string, we can convert it to a number before performing the operation, while if the variable is already a number, we can perform the operation directly.",
+            desc1_3: "The typeof operator is also useful when working with objects and arrays. By checking the data type of an object or array, we can determine whether it contains the expected properties or elements, and avoid errors or unexpected behavior in our code.",
+            desc1_4: "In summary, the typeof operator is a powerful tool in JavaScript for checking the data type of values and variables, and can help us write more robust and error-free code."
+        },
+    },
+    {
+        name: 'scope', //component name wise property
+        title: 'Scope in JavaScript',
+        desc: "In JavaScript, scope refers to the visibility and accessibility of variables and functions in different parts of your code. There are two main types of scope in JavaScript: global scope and local scope.",
+        codeTemplate: `const outerVariable = "Out"
+
+function move() {
+    const innerVariable = "In"
+    console.log(outerVariable, innerVariable)
+    // Prints: "Out", "In"
+}
+        
+move()
+console.log(outerVariable, innerVariable)
+        // Throws Uncaught Reference Error: inner is not defined`,
+        desc_2: 'In the above example we have some simple code that defines a variable outside a function and inside a function. We then log both variables to the console from inside and outside the function. This works fine inside the function, but outside the function our log throws an error since we do not have access to the inner variable outside the scope fo the function..',
+        section1: {
+            title1: "There are 3 types of scope in JavaScript.",
+            list1: [
+                'Block scope',
+                'Function scope',
+                'Global scope'
+            ]
+        },
+        section2: {
+            title2: "Block Scope",
+            desc2: "Block scope is a way of declaring variables in JavaScript using the let and const keywords, which allows variables to be limited to a specific block of code. A block of code is defined by a pair of curly braces {} and can include any number of statements, such as loops or conditionals. Here's an example of block scope using the let keyword:",
+            codeTemplate2: `function myFunction() {
+let x = 1;
+                
+if (x === 1) {
+    let x = 2;
+    console.log(x); // Output: 2
+}
+                
+console.log(x); // Output: 1
+}
+              
+myFunction();`,
+        desc2_2: "In this example, the variable x is declared with the let keyword inside the myFunction() function. Inside the if statement block, a new variable x is declared with the same name, but with a value of 2. This new variable x only exists within the if statement block, and does not affect the value of the outer variable x, which remains 1.Block scope can help you avoid naming conflicts and improve the overall organization and readability of your code. It's important to note that variables declared with the var keyword do not have block scope, and are instead function or global scoped."
+        },
+        section3: {
+            title3: "Function Scope",
+            desc3: "Function scope is a way of declaring variables in JavaScript using the var, let, or const keywords inside a function. When a variable is declared inside a function, it is only accessible within that function or in nested functions inside that function. This means that the variable has a local scope, and is not accessible outside of the function. Here's an example of function scope using the var keyword:",
+            codeTemplate3: `function myFunction() {
+    var x = 1;
+    console.log(x); // Output: 1
+}
+              
+myFunction();
+console.log(x); // Output: Uncaught ReferenceError: x is not defined`,
+        desc3_2: "In this example, the variable x is declared with the var keyword inside the myFunction() function. This means that x is only accessible within the myFunction() function, and is not accessible outside of it. Function scope can help you avoid naming conflicts and improve the overall organization and readability of your code. It's important to note that variables declared with the let or const keywords also have function scope, but are only accessible within the block they are declared in, rather than the entire function."
+        },
+
+        section4: {
+            title4: "Global Scope",
+            desc4: "Global scope in JavaScript refers to variables or functions that are declared outside of any function, and are accessible from anywhere in your code, including other functions or blocks. Global variables and functions are declared using the var, let, or const keywords outside of any function or block. Here's an example of global scope using the var keyword:",
+            codeTemplate4: `var x = 1;
+
+function myFunction() {
+    console.log(x); // Output: 1
+}
+            
+myFunction();
+console.log(x); // Output: 1`,
+        desc4_2: "In this example, the variable x is declared with the var keyword outside of any function or block, which means it has global scope. This means that the variable x is accessible from within the myFunction() function and outside of it as well. Global scope can be useful when you want to declare variables that are accessible from anywhere in your code. However, it's important to use global variables and functions judiciously, as they can make your code harder to read, maintain, and debug."
+        },
+    },
+    {
+        name: 'typeConversion', //component name wise property
+        title: 'Type Conversion in JavaScript',
+        desc: "Type conversion in programming is the process of converting a value from one data type to another data type. In JavaScript, type conversion can occur implicitly or explicitly.",
+        title_2: 'Implicit Conversion',
+        desc_2: 'Implicit type conversion, also known as coercion, is when JavaScript automatically converts one data type to another when it is necessary for a specific operation. For example, when you use the + operator to concatenate a string and a number, JavaScript automatically converts the number to a string. Explicit type conversion, also known as casting, is when you manually convert a value from one data type to another using built-in JavaScript functions, such as Number(), String(), and Boolean().',
+        codeTemplate: `var num = 10;
+var str = "20";
+        
+var result = num + str;
+        
+console.log(result); // Output: "1020"`,
+        desc_3: 'In this example, the variable num is a number, and the variable str is a string. When we use the + operator to concatenate them, JavaScript converts the number num to a string, and concatenates it with the string str, resulting in the string "1020".',
+        title_3: 'Explicit Conversion',
+        desc_4: "Explicit type conversion, also known as casting, is when you manually convert a value from one data type to another using built-in JavaScript functions, such as Number(), String(), and Boolean(). Here's an example of explicit type conversion:",
+        codeTemplate_2: `var str = "10";
+
+var num = Number(str);
+        
+console.log(num); // Output: 10
+        `,
+        desc_5: 'In this example, the Number() function is used to explicitly convert the string "10" to a number. The resulting value is stored in the variable num, and when we log it to the console, we see the number 10.',
+        section1: {
+            title1: "Why type conversion is used?",
+            desc1: 'Type conversion is used in programming to enable the manipulation and use of data in different ways depending on the situation. For example, type conversion can be used to:',
+            list1: [
+                'Combine data of different types. For instance, you may want to concatenate a string and a number, or perform mathematical operations on a string or a boolean value.',
+                'Change the format of data. For instance, you may want to format a number as a currency value or a date as a string in a specific format.',
+                'Compare data of different types. For instance, you may want to compare a string and a number or a boolean and a number.',
+                'Convert data to a different type for better performance or accuracy. For instance, you may want to convert a string to a number to perform mathematical operations on it, or convert a boolean to a number to use it in a calculation.'
+            ]
+        },
+    },
+    {
+        name: 'json', //component name wise property
+        title: 'What is JSON (JavaScript Object Notation)?',
+        desc: "JSON stands for JavaScript Object Notation. It is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. JSON is often used for transmitting data between a server and a web application, as an alternative to XML.JSON is a text-based format that uses a syntax similar to JavaScript object notation. It consists of key-value pairs, with each key and its associated value separated by a colon, and each pair separated by a comma. JSON supports a range of data types, including strings, numbers, booleans, arrays, and objects.",
+        desc_2: "Here's an example of a simple JSON object:",
+        codeTemplate: `
+{
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}`,
+        desc_3: 'In this example, the JSON object contains three key-value pairs: name with the value "John", age with the value 30, and city with the value "New York".',
+        section1: {
+            title1: "Why JSON is used?",
+            desc1: 'JSON (JavaScript Object Notation) is used for several reasons in web development:',
+            list1: [
+                'Data interchange format: JSON is a lightweight data interchange format that is easy to read and write, and easy for machines to parse and generate. It is widely used for transmitting data between a server and a web application, as an alternative to XML.',
+                'Language independence: JSON is a language-independent format that can be used with any programming language that can parse JSON data. This makes it a popular choice for web APIs that need to support multiple programming languages.',
+                'Easy to understand: JSON syntax is simple and easy to understand, making it an ideal choice for developers who need to work with data structures that are easily readable and writable.',
+                'Efficiency: JSON is a compact format that can transmit data efficiently over the network. This is important for web applications that need to transfer large amounts of data quickly and efficiently.'
+            ]
+        },
+        section2: {
+            desc2: "Here's an example of a JSON object that represents a list of products:",
+            codeTemplate2: `
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "description": "This is first product",
+            "price": 19.99
+        },
+        {
+            "id": 2,
+            "name": "Product 2",
+            "description": "This is second product",
+            "price": 29.99
+        },
+        {
+            "id": 3,
+            "name": "Product 3",
+            "description": "This is third product",
+            "price": 39.99
+        }
+    ]
+}`
+
+        },
+        desc2_2: 'In this example, the JSON object contains an array of three products, each represented as a JSON object with the keys id, name, description, and price.'
+    },
+    {
+        name: 'class', //component name wise property
+        title: 'What is Class?',
+        desc: "A class is a blueprint for creating objects that share the same properties and methods. A class is a type of object constructor that defines a set of properties and methods that are common to all instances of the class. JavaScript classes were introduced in ECMAScript 2015 (ES6) as a new syntax for defining classes in JavaScript. Prior to ES6, JavaScript used a prototype-based model for object-oriented programming.",
+        desc_2: "Here's an example of a simple JavaScript class:",
+        codeTemplate: `class Person {
+constructor(name, age) {
+    this.name = name;
+    this.age = age;
+}
+          
+sayHello() {
+    console.log(Hello, my name is $'{this.name} and I am $'{this.age} years old.);
+}
+}
+          
+let person1 = new Person('John', 30);
+let person2 = new Person('Jane', 25);
+          
+person1.sayHello(); // Output: "Hello, my name is John and I am 30 years old."
+person2.sayHello(); // Output: "Hello, my name is Jane and I am 25 years old."`,
+        desc_3: "In this example, we define a Person class that has two properties, name and age, and one method, sayHello(). We then create two instances of the Person class using the new keyword and pass in the name and age values. Finally, we call the sayHello() method on each instance, which prints a message to the console with the person's name and age.",
+        section1: {
+            title1: "Why Class is used?",
+            desc1: 'Class is used for several reasons in web development:',
+            list1: [
+                'Code organization: Classes provide a way to organize your code into reusable object blueprints that can be used throughout your application. This can help improve code readability, maintainability, and scalability',
+                'Modularity: Classes can help modularize code by separating functionality into self-contained units that can be tested and reused independently. This can help improve code organization and scalability.',
+                'Abstraction: Classes allow you to abstract away complex implementation details, and instead focus on the interface or API of an object. This makes code easier to read, understand, and reuse.'
+            ]
+        },
+        section2: {
+            title2: 'How to use Class?',
+            desc2: "To use a class in JavaScript, you need to define the class using the class keyword, and then create instances of the class using the new keyword. Here is a basic example:",
+            codeTemplate2: `class Person {
+constructor(name, age) {
+    this.name = name;
+    this.age = age;
+}
+              
+sayHello() {
+    console.log(Hello, my name is $'{this.name} and I am $'{this.age} years old.);
+}
+}
+              
+let person1 = new Person('John', 30);
+let person2 = new Person('Jane', 25);
+              
+person1.sayHello(); // Output: "Hello, my name is John and I am 30 years old."
+person2.sayHello(); // Output: "Hello, my name is Jane and I am 25 years old."`,
+
+        desc2_2: "In this example, we define a Person class with two properties, name and age, and one method, sayHello(). We then create two instances of the Person class using the new keyword and pass in the name and age values. Finally, we call the sayHello() method on each instance, which prints a message to the console with the person's name and age. Once you have defined a class, you can create as many instances of the class as you need by using the new keyword followed by the class name and any arguments required by the constructor. You can then call methods on the instances, just like you would with any other object in JavaScript."
+        },
+        section3: {
+            title3: 'What is Constructor Method?',
+            desc3: "In JavaScript, the constructor method is a special method that is called when an object is created using a class. It is used to set up the initial state of the object by assigning values to its properties and performing any other necessary setup tasks. The constructor method is defined using the constructor keyword in the class definition, and it must have the same name as the class. Here is an example of a Person class with a constructor method:",
+            codeTemplate3: `class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}`,
+        desc3_2: "In this example, the Person class has a constructor method that takes two arguments (name and age) and assigns them as properties of the Person object using the this keyword. When a new Person object is created using the new keyword, the constructor method is automatically called with the supplied arguments.",
+        desc3_3: 'Here are some basic rules for writing constructor methods in JavaScript:',
+        list3: [
+            "The constructor method must have the same name as the class.",
+            "The constructor method is defined using the constructor keyword followed by parentheses that contain any arguments that the constructor needs to create the object.",
+            "Inside the constructor method, you can use the this keyword to assign values to the object's properties, set up any necessary state, or perform any other necessary tasks.",
+            "If the constructor method does not explicitly return a value, it will return a new instance of the object automatically."
+        ]
+        },
+    },
+    {
+        name: 'error-handling', //component name wise property
+        title: 'What is Error Handling?',
+        desc: "Error handling is an important part of JavaScript programming, as it allows you to gracefully handle errors and exceptions that may occur during the execution of your code. There are several ways to handle errors in JavaScript:",
+        desc_2: "In JavaScript, throw and try...catch...finally are two language constructs used to handle errors and exceptions that may occur during the execution of a block of code. 'throw' is used to explicitly throw an exception or error when a particular condition is met. The syntax for throw is as follows:",
+        codeTemplate: `throw new Error('This is an error message.');`,
+        desc_3: "In this example, we are throwing a new Error object with a message that describes the error. When this code is executed, an exception is thrown and the JavaScript engine will look for a try...catch block to handle the error.",
+        desc_4: "try...catch...finally is a language construct used to handle errors and exceptions that may occur in a block of code. The try block contains the code that may throw an exception or error, the catch block contains the code that handles the error if it occurs, and the finally block contains code that is executed regardless of whether an error occurred or not. Here's an example of how try...catch...finally can be used to handle an error and execute some cleanup code:",
+        codeTemplate_2: `try {
+    // Code that may throw an exception
+    throw new Error('This is an error message.');
+} catch (error) {
+    // Code that handles the exception
+    console.error('An error occurred:', error);
+} finally {
+    // Code that is always executed
+    console.log('Cleanup code here.');
+}`,
+        desc_5: "In this example, the try block contains code that explicitly throws an Error object. The catch block contains code that logs an error message to the console if an error occurs in the try block. The finally block contains code that is executed regardless of whether an error occurred or not. When the code is executed, the error is caught by the catch block and the error message is logged to the console. The cleanup code in the finally block is then executed. 'throw and try...catch...finally' are powerful features that allow you to handle errors and exceptions gracefully in your JavaScript code.",
+        section1: {
+            title1: "Why Error Handling is used?",
+            desc1: 'Error handling is used in programming to gracefully handle errors and exceptions that may occur during the execution of a block of code. Without error handling, an error or exception can cause a program to crash or produce unexpected results, making it difficult to debug and fix issues in the code.',
+            desc1_2: 'By using error handling techniques such as try...catch blocks and throwing custom errors, developers can catch and handle errors in a controlled manner. This allows the program to continue executing, even if an error occurs, and can prevent the program from crashing or producing unexpected results.',
+            list1: [
+                'Improved reliability: Error handling can improve the reliability of a program by allowing it to continue executing, even if an error occurs. This can prevent the program from crashing or producing unexpected results, which can improve the overall user experience.',
+                'Easier debugging: Error handling can make it easier to debug a program by providing more detailed error messages and stack traces. This can help developers identify the root cause of the error more quickly and easily.',
+                'Better user experience: By handling errors in a graceful manner, developers can provide a better user experience by preventing the program from crashing or displaying confusing error messages.'
+            ]
+        },
+        section2: {
+            title2: "Example of 'try...catch'",
+            desc2: "Here is an example of using the try...catch statement for error handling in JavaScript:",
+            codeTemplate2: `function divideNumbers(a, b) {
+try {
+        if (b === 0) {
+        throw new Error('Division by zero is not allowed');
+        }
+        return a / b;
+    } catch (error) {
+        console.error('An error occurred:', error.message);
+    }
+}
+              
+console.log(divideNumbers(10, 0)); // Output: An error occurred: Division by zero is not allowed`,
+        desc2_2: "In this example, the divideNumbers function takes two parameters a and b and attempts to divide a by b. The try block contains the code that might throw an exception or error, and the catch block contains code that is executed when an exception or error is thrown."
+        },
+        desc2_3: 'If the value of b is 0, the code throws a custom Error object with the message "Division by zero is not allowed". The catch block then catches the error and logs the error message to the console.',
+        desc2_4: "Note that using try...catch statements can help make your code more resilient and prevent it from crashing due to unhandled errors, but it's also important to write code that avoids errors whenever possible. Good programming practices, such as validating user input and checking for null or undefined values, can go a long way in preventing errors from occurring in the first place.",
+    },
+    
 ];
 
 export default JsData;

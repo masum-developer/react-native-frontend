@@ -83,19 +83,19 @@ const Aside = ({ children }) => {
                                     <SubMenu label="Loop">
                                         <MenuItem onClick={() => handlePush('tab', 'loop-intro')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'for-loop')}>For</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'assignment')}>For In</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>For Of</MenuItem>
+                                        {/* <MenuItem onClick={() => handlePush('tab', 'assignment')}>For In</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>For Of</MenuItem> */}
                                         <MenuItem onClick={() => handlePush('tab', 'comparison')}>While</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'comparison')}>Do While</MenuItem>
                                     </SubMenu>
-                                    <MenuItem>Set</MenuItem>
-                                    <MenuItem>Maps</MenuItem>
-                                    <MenuItem>Typeof</MenuItem>
-                                    <MenuItem>Scope</MenuItem>
-                                    <MenuItem>Type Conversion</MenuItem>
-                                    <MenuItem>JSON</MenuItem>
-                                    <MenuItem>Class</MenuItem>
-                                    <MenuItem>this Keyword</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'set')}>Set</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'map')}>Maps</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'typeof')}>Typeof</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'scope')}>Scope</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'type-conversion')}>Type Conversion</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'json')}>JSON</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'class')}>Class</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'error-handling')}>Error Handling</MenuItem>
                                     <SubMenu label="JavaScript ES6">
                                         <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>

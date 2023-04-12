@@ -9,10 +9,10 @@ const Hero = () => {
             <Grid container spacing={2}>
                 <Grid xs={12} md={6} sx={{ margin: 'auto' }}>
                     <Typography variant='h1'>
-                        Learn MERN stack and become a JavaScript developer.
+                        Learn MERN stack and become a Full-Stack Developer
                     </Typography>
-                    <Typography variant='subtitle1'>
-                        Explore MERN stack courses to expand your web development knowledge
+                    <Typography variant='subtitle1' maxWidth={'80%'}>
+                        Explore MERN stack courses to expand your web development knowledge.
                     </Typography>
                     <ButtonComp sx={{ mt: 2 }} myWidth='150px'>
                         <Link href="?tab=html_introduction">
