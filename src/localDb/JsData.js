@@ -1,5 +1,6 @@
 let i = 0;
 let j = 0;
+const name = '';
 
 const JsData = [
     {
@@ -1754,6 +1755,258 @@ console.log(divideNumbers(10, 0)); // Output: An error occurred: Division by zer
         desc2_3: 'If the value of b is 0, the code throws a custom Error object with the message "Division by zero is not allowed". The catch block then catches the error and logs the error message to the console.',
         desc2_4: "Note that using try...catch statements can help make your code more resilient and prevent it from crashing due to unhandled errors, but it's also important to write code that avoids errors whenever possible. Good programming practices, such as validating user input and checking for null or undefined values, can go a long way in preventing errors from occurring in the first place.",
     },
+    {
+        name: 'es6', //component name wise property
+        title: 'What is ES6?',
+        desc: "ES6 stands for ECMAScript 6, which is a major update to the ECMAScript language specification used by JavaScript. It was released in 2015 and introduced several new features and improvements to the language.",
+        desc_2: "Some of the key features introduced in ES6 include:",
+        list: [
+            "Arrow functions: A new syntax for creating functions that makes them more concise and easier to read.",
+            "Let and const keywords: A new way to declare variables that provides better scoping rules and prevents accidental reassignment of values.",
+            "Classes: A new syntax for creating object-oriented classes that is more intuitive and easier to use than the existing prototype-based syntax.",
+            "Template literals: A new way to define strings that allows for easy embedding of variables and expressions.",
+            "Destructuring: A new syntax for extracting values from arrays and objects that makes it easier to work with complex data structures.",
+            "Modules: A new syntax for organizing and sharing code across multiple files, making it easier to manage large codebases."
+        ],
+        desc_3: "ES6 has been widely adopted by modern browsers and is now considered the de facto standard for writing modern JavaScript code. Its features have greatly improved the language's readability, maintainability, and performance, and have made it easier to write complex applications with less code.",
+        section1: {
+            title1: "Why ES6 is used?",
+            desc1: 'ES6 is used because it introduced several new features and improvements to the JavaScript language, making it easier to write and maintain code. Some of the key benefits of using ES6 include:',
+            list1: [
+                'Improved syntax: ES6 introduced several new syntax features, such as arrow functions, template literals, and destructuring, that make it easier to write concise and expressive code.',
+                'Better scoping rules: The let and const keywords introduced in ES6 provide better scoping rules that prevent accidental reassignment of values and make it easier to reason about code.',
+                'Improved object-oriented programming: ES6 introduced a new class syntax that makes it easier to create and work with object-oriented code in JavaScript.',
+                'Modules: ES6 introduced a standard syntax for creating and working with modules, making it easier to organize and share code across different files and projects.',
+                "Improved performance: Several new features introduced in ES6, such as for...of loops and Map and Set collections, can help improve the performance of JavaScript code."
+            ]
+        },
+        section2: {
+            title2: "How to use ES6 features?",
+            desc2: "Here's an example of ES6 code that demonstrates some of the new features introduced in the language:",
+            codeTemplate2: `// Arrow functions
+const add = (a, b) => a + b;
+            
+// Template literals
+const name = 'Alice';
+console.log('Hello, $'{name}!);
+            
+// Destructuring
+const person = { name: 'Bob', age: 30 };
+const { name, age } = person;
+console.log('$'{name} is $'{age} years old.)
+            
+// Let and const
+let count = 0;
+count = 1;
+const MAX_COUNT = 10;
+            
+// Classes
+class Person {
+    constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    }
+              
+    sayHello() {
+    console.log('Hello, my name is $'{this.name} and I$'{'this.age} years old.')
+    }
+}
+            
+const alice = new Person('Alice', 25);
+alice.sayHello();
+            
+// Modules
+import { add } from './math.js';
+console.log(add(2, 3));`,
+        desc2_2: "This code demonstrates several ES6 features, including arrow functions, template literals, destructuring, let and const variables, classes, and modules. These features make the code more concise, expressive, and easier to read, and can help improve the performance of your JavaScript applications."
+        }
+    },
+    {
+        name: 'arrow-function', //component name wise property
+        title: 'What is Arrow function?',
+        desc: "An arrow function is a new syntax introduced in ES6 for defining functions in JavaScript. It provides a more concise way of defining functions compared to traditional function expressions.",
+        desc_2: "Here's an example of a traditional function expression:",
+        codeTemplate: `function add(a, b) {
+    return a + b;
+}`,
+        desc_3: "Here's the same function expressed as an arrow function:",
+        codeTemplate_2: `const add = (a, b) => a + b;`,
+        desc_4: "As you can see, arrow functions use a simplified syntax, with the => operator replacing the function keyword, and the function body being expressed on the right-hand side of the arrow. If the function body contains only a single expression, you can omit the curly braces and return keyword, as shown in the example above. Arrow functions also have a different behavior for the this keyword compared to traditional functions, which makes them especially useful for certain types of programming patterns, such as working with callbacks and event handlers.",
+        section1: {
+            title1: "Why Arrow function is used?",
+            desc1: 'Arrow functions are used for a variety of reasons, but some of the key benefits they provide include:',
+            list1: [
+                'Conciseness: Arrow functions provide a more concise syntax compared to traditional function expressions, making the code easier to read and write.',
+                'Implicit return: If the function body contains a single expression, arrow functions can provide an implicit return value, which can make the code more readable and reduce the amount of boilerplate code.',
+                'Use with higher-order functions: Arrow functions can be especially useful when working with higher-order functions, such as map, filter, and reduce, which often require passing in a callback function as an argument. Arrow functions can make it easier to write these callback functions in a concise and readable way.'
+            ]
+        },
+        section2: {
+            title2: "How to use Arrow function?",
+            desc2: "Here's an example of how to use arrow functions in JavaScript:",
+            codeTemplate2: `// Traditional function expression
+function add(a, b) {
+    return a + b;
+}
+            
+// Arrow function expression
+const add = (a, b) => a + b;
+            
+// Traditional function declaration
+function sayHello(name) {
+    console.log('Hello, $'{name}!);
+}
+            
+// Arrow function declaration
+const sayHello = (name) => console.log(Hello, $'{name}!);
+            
+// Arrow function with implicit return
+const double = (num) => num * 2;
+            
+// Arrow function with multiple parameters and block body
+const sum = (a, b) => {
+    const result = a + b;
+    return result;
+}`,
+        desc2_2: "In general, the syntax for arrow functions is very similar to traditional function expressions and declarations. The key difference is the use of the => operator to separate the parameter list from the function body, and the optional use of curly braces and the return keyword for more complex functions."
+        }
+    },
+    {
+        name: 'destructuring', //component name wise property
+        title: 'What is Destructuring?',
+        desc: "Destructuring is a feature introduced in ECMAScript 6 (ES6) that provides a more concise and convenient way to extract data from arrays and objects in JavaScript. It allows you to assign individual values from an array or properties from an object to variables in a single statement, using a syntax that mirrors the structure of the array or object.",
+        desc_2: "Here's an example of destructuring an array:",
+        codeTemplate: `const colors = ['red', 'green', 'blue'];
+
+const [firstColor, secondColor, thirdColor] = colors;
+        
+console.log(firstColor); // "red"
+console.log(secondColor); // "green"
+console.log(thirdColor); // "blue"`,
+        desc_3: "In this example, the square brackets on the left-hand side of the assignment define a pattern that matches the structure of the colors array. The variables firstColor, secondColor, and thirdColor are then assigned the corresponding values from the array in a single statement.",
+        codeTemplate_2: `const person = {
+    name: 'Alice',
+    age: 30,
+    city: 'New York',
+};
+          
+const { name, age, city } = person;
+          
+console.log(name); // "Alice"
+console.log(age); // 30
+console.log(city); // "New York"`,
+        desc_4: "In this example, the curly braces on the left-hand side of the assignment define a pattern that matches the structure of the person object. The variables name, age, and city are then assigned the corresponding property values from the object in a single statement.",
+        section1: {
+            title1: "Why Destructuring is used?",
+            desc1: 'Destructuring is used in JavaScript to extract specific values or properties from arrays and objects in a more concise and convenient way.',
+            list1: [
+                'Readability: Destructuring can make code more readable and easier to understand by clearly identifying the specific values or properties being used.',
+                'Efficiency: Destructuring can reduce the amount of code needed to extract values or properties from arrays and objects, which can make code more efficient and easier to maintain.',
+                'Flexibility: Destructuring can be used in a variety of contexts, such as function parameters, variable assignments, and for-of loops, which provides developers with greater flexibility and control over how data is used.',
+                'Improved debugging: Destructuring can help to identify errors and bugs in code by making it easier to pinpoint where data is being extracted and how it is being used.'
+            ]
+        },
+        section2: {
+            title2: "How to use Destructuring?",
+            desc2: "In JavaScript, destructuring can be used to extract specific values or properties from arrays and objects in a more concise and convenient way.",
+            codeTemplate2: `const numbers = [1, 2, 3, 4, 5];
+
+// Extracting individual values
+const [first, second, , fourth] = numbers;
+            
+console.log(first); // 1
+console.log(second); // 2
+console.log(fourth); // 4
+            
+// Extracting remaining values using the spread operator
+const [head, ...tail] = numbers;
+            
+console.log(head); // 1
+console.log(tail); // [2, 3, 4, 5]`,
+        desc2_2: "And here's how to use destructuring for objects:",
+        codeTemplate2_2: `const person = {
+            name: 'Alice',
+            age: 30,
+            city: 'New York',
+};
+          
+// Extracting individual properties
+const { name, age } = person;
+          
+console.log(name); // "Alice"
+console.log(age); // 30
+          
+// Renaming properties during extraction
+const { name: fullName, age: years } = person;
+          
+console.log(fullName); // "Alice"
+console.log(years); // 30
+          
+// Using default values for missing properties
+const { name: fullName, age: years, job = 'unemployed' } = person;
+          
+console.log(job); // "unemployed"`,
+desc2_3: 'Destructuring can also be used in function parameters to extract specific values or properties from an array or object directly:',
+        codeTemplate2_3: `function displayPerson({ name, age }) {
+    console.log('Name: $'{name}, Age: $'{age});
+}
+          
+    const person = {
+    name: 'Alice',
+    age: 30,
+    city: 'New York',
+};
+          
+displayPerson(person); // "Name: Alice, Age: 30"`
+        },
+    },
+    {
+        name: 'modules', //component name wise property
+        title: 'What is Modules?',
+        desc: "ES6 modules are a standardized approach for creating and using modules in JavaScript applications. ES6 modules were introduced in ECMAScript 2015 (ES6) as part of the broader effort to modernize and improve the JavaScript language.",
+        desc_2: "ES6 modules provide several benefits for JavaScript developers:",
+        list: [
+            "Explicit dependency management: ES6 modules explicitly define their dependencies, which helps to ensure that only the required dependencies are loaded and used.",
+            "Improved performance: ES6 modules can improve application performance by loading only the required code, reducing the overall size of the application, and avoiding unnecessary code execution.",
+            "Standardization: ES6 modules provide a standardized approach for creating and using modules in JavaScript applications, which helps to ensure consistency and interoperability across different platforms and environments."
+        ],
+        desc_3: "Here's an example of using ES6 modules to create and export a simple function:",
+        codeTemplate: `// math.js
+export function add(a, b) {
+    return a + b;
+}
+        
+// app.js
+import { add } from './math.js';
+        
+console.log(add(2, 3)); // 5`,
+        desc_4: "In this example, the add() function is defined in the math.js module and exported using the export keyword. In the app.js module, the add() function is imported using the import keyword and used to perform a simple addition operation.",
+        section1: {
+            title1: "How to use Modules?",
+            desc1: "Here's an example of how to create and use an ES6 module in JavaScript:",
+            codeTemplate1: `// math.js
+export function add(a, b) {
+    return a + b;
+}
+            
+// main.js
+import { add } from './math.js';
+            
+console.log(add(2, 3)); // 5`,
+desc1_2: "In this example, we define a function add() in the math.js module and export it using the export keyword. In the main.js module, we import the add() function using the import keyword and use it to perform a simple addition operation.",
+        desc1_3: "ES6 modules also support the default keyword to export a single value as the default export, like this:",
+        codeTemplate1_2 : `// utils.js
+export default function sayHello(name) {
+    console.log('Hello, $'{name}!);
+}
+        
+// main.js
+import sayHello from './utils.js';
+        
+sayHello('Alice'); // logs "Hello, Alice!"`,
+        desc1_4: "In this example, we define a default export for the utils.js module using the export default syntax, and import it in the main.js module using the import keyword and the from keyword."
+        },
+    }
     
 ];
 

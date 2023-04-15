@@ -46,6 +46,13 @@ import TypeConversion from '../src/components/js/TypeConversion';
 import JSONComp from '../src/components/js/JSONComp';
 import ClassComp from '../src/components/js/ClassComp';
 import TryCatchComp from '../src/components/js/TryCatchComp';
+import ESFeatures from '../src/components/js/ESFeatures';
+import ArrowFunc from '../src/components/js/ArrowFunc';
+import DesctructuringComp from '../src/components/js/DesctructuringComp';
+import ModulesComp from '../src/components/js/ModulesComp';
+import VsCodeComp from '../src/components/EnvironmentSetup/VsCodeComp';
+import VScodeExtensions from '../src/components/EnvironmentSetup/VScodeExtensions';
+import GitCodeComp from '../src/components/EnvironmentSetup/GitComp';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -63,6 +70,12 @@ const Home = () => {
     <Layout>
       <Aside>
         {
+          active === 'vscode-extentions' ?
+          <VScodeExtensions></VScodeExtensions> :
+          active === 'vscode-installation' ?
+          <VsCodeComp></VsCodeComp> :
+          active === 'git-installation' ?
+          <GitCodeComp></GitCodeComp> :
           active === 'get_started' ?
             <Hero></Hero> :
             active === 'html_introduction' ?
@@ -145,7 +158,19 @@ const Home = () => {
                                                                                           <ClassComp></ClassComp> :
                                                                                           active === 'error-handling' ?
                                                                                             <TryCatchComp></TryCatchComp> :
-                                                                                            ''
+                                                                                            active === 'es6-introduction' ?
+                                                                                              <ESFeatures></ESFeatures> :
+                                                                                              active === 'arrow-function' ?
+                                                                                                <ArrowFunc></ArrowFunc> :
+                                                                                                active === 'es6-let' ?
+                                                                                                  <LetJs></LetJs> :
+                                                                                                  active === 'es6-const' ?
+                                                                                                    <ConstJs></ConstJs> :
+                                                                                                    active === 'destructuring' ?
+                                                                                                      <DesctructuringComp></DesctructuringComp> :
+                                                                                                      active === 'modules' ?
+                                                                                                        <ModulesComp></ModulesComp> :
+                                                                                                        ''
         }
       </Aside>
 

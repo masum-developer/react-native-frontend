@@ -42,17 +42,29 @@ const Aside = ({ children }) => {
                                 }}
                             >
                                 <MenuItem onClick={() => handlePush('tab', 'get_started')}>Get Started</MenuItem>
+                                <SubMenu label="Environment Setup" defaultOpen>
+                                    <MenuItem onClick={() => handlePush('tab', 'vscode-installation')}>VS Code Installation</MenuItem>
+
+                                    <MenuItem onClick={() => handlePush('tab', 'vscode-extentions')}>VS Code Extensions</MenuItem>
+
+                                    <MenuItem onClick={() => handlePush('tab', 'git-installation')}>Git Installation</MenuItem>
+
+                                    <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>Git & GitHub</MenuItem>
+
+                                </SubMenu>
+                                <MenuItem >Agile Scrum</MenuItem>
+
                                 <SubMenu label="HTML" defaultOpen>
                                     <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'html_overview')}>Overview</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'basic_tags')}>Basic Tags</MenuItem>
-                                    <MenuItem onClick={()=>handlePush('tab','elements')}>Elements</MenuItem>
-                                    <MenuItem onClick={()=>handlePush('tab','attributes')}>Attributes</MenuItem>
-                                    <MenuItem onClick={()=>handlePush('tab','formatting')}>Formatting</MenuItem>
-                                    <MenuItem onClick={()=>handlePush('tab','images')}>Images</MenuItem>
-                                    <MenuItem onClick={()=>handlePush('tab','tables')}>Tables</MenuItem>
-                                    <MenuItem onClick={()=>handlePush('tab','lists')}>Lists</MenuItem>
-                                    <MenuItem onClick={()=>handlePush('tab','textlinks')}>Text Links</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'elements')}>Elements</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'attributes')}>Attributes</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'formatting')}>Formatting</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'images')}>Images</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'tables')}>Tables</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'lists')}>Lists</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'textlinks')}>Text Links</MenuItem>
                                 </SubMenu>
                                 <MenuItem>CSS</MenuItem>
                                 <SubMenu label="JavaScript">
@@ -97,11 +109,15 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'class')}>Class</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'error-handling')}>Error Handling</MenuItem>
                                     <SubMenu label="JavaScript ES6">
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'es6-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'arrow-function')}>Arrow Function</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'es6-let')}>Let</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'es6-const')}>Const</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'destructuring')}>Destructuring</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'modules')}>Modules</MenuItem>
                                     </SubMenu>
                                     <SubMenu label="In-depth Functions">
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Declarations</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
                                     </SubMenu>
 
