@@ -3,6 +3,7 @@ import React from 'react';
 import StepComp from './StepComp';
 import ImageComp from './ImageComp';
 import Process from './Process';
+import Block from '../global/Block';
 
 const list1 = [
     "Go to google and search 'git download'.",
@@ -104,13 +105,31 @@ const list20 = [
     "Happy Installation! 🙂🙂"
 ];
 
+const whyList = [
+    "Collaboration: Git allows multiple developers to work on the same codebase simultaneously, collaborate on changes, and merge those changes back into the main codebase.",
+    "Version control: Git tracks changes made to the codebase over time, including who made the changes and when. This allows developers to roll back to previous versions of the code and keep track of changes made by different team members.",
+    "Code management: Git provides tools for managing code, including branching and merging, pull requests, code reviews, and issue tracking.",
+    "Backup: Git stores a complete copy of the codebase on each developer's local machine, as well as on a central repository. This provides a backup in case of hardware failure or other disasters.",
+    "Flexibility: Git can be used with a variety of programming languages and development workflows, making it a flexible tool for software development."
+]
+
 const GitCodeComp = () => {
     return (
         <Box pb={3}>
-            <Typography variant='h3'>Step-By-Step Installation Guide for Git</Typography>
-            <StepComp stepText="Step 1:"></StepComp>
-            <ImageComp image={"/git/Screenshot_20.png"} imageTitle={"Screenshot 1: Search on google"}></ImageComp>
-            <Process list={list1}></Process>
+            <Typography variant='h3'>What is Git</Typography>
+            <Typography variant='subtitle2'>Git is a distributed version control system used for tracking changes in source code during software development. It was created by Linus Torvalds in 2005 and has since become one of the most widely used version control systems in the world. Git provides a way for software developers to collaborate on code, manage different versions of a project, and track changes over time. It allows multiple developers to work on the same codebase simultaneously and provides tools for merging changes, resolving conflicts, and managing branches.</Typography>
+
+            <Box mt={7}>
+            <Typography variant='h3'>Why Git is used?</Typography>
+            <Block list={whyList}></Block>
+            </Box>
+            <Box mt={7}>
+                <Typography variant='h3'>Step-By-Step Installation Guide for Git</Typography>
+                <StepComp stepText="Step 1:"></StepComp>
+                <ImageComp image={"/git/Screenshot_20.png"} imageTitle={"Screenshot 1: Search on google"}></ImageComp>
+                <Process list={list1}></Process>
+            </Box>
+
 
             <Box mt={7}>
                 <StepComp stepText="Step 2:"></StepComp>

@@ -2006,6 +2006,148 @@ import sayHello from './utils.js';
 sayHello('Alice'); // logs "Hello, Alice!"`,
         desc1_4: "In this example, we define a default export for the utils.js module using the export default syntax, and import it in the main.js module using the import keyword and the from keyword."
         },
+    },
+    {
+        name: 'func-declaration', //component name wise property
+        title: 'What is Function declaration',
+        desc: "In JavaScript, a function declaration is a way to define a named function that can be called later in the code. Function declarations are defined using the 'function' keyword, followed by the name of the function, a set of parentheses, and a set of curly braces containing the code to be executed when the function is called.",
+        desc_2: "Here's an example of a function declaration:",
+        codeTemplate: `function sayHello(name) {
+    console.log("Hello, " + name + "!");
+}`,
+        desc_3: "In this example, the 'sayHello' function takes one parameter (the name of the person to greet) and logs a message to the console.",
+        section1: {
+            desc1: "Function declarations can be called anywhere in the code after they are defined, and can be called multiple times with different arguments. For example:",
+            codeTemplate1: `sayHello("Alice"); // logs "Hello, Alice!"
+sayHello("Bob"); // logs "Hello, Bob!"`,
+desc1_2: "Function declarations can also have default parameter values, rest parameters, and can return a value. They are a fundamental building block of JavaScript programming, and are used extensively in writing modular and reusable code.",
+        }
+    },
+    {
+        name: 'func-expressions', //component name wise property
+        title: 'What is Function expressions',
+        desc: "In JavaScript, a function expression is a way to define a function as a value and assign it to a variable, rather than using a function declaration. Function expressions are defined by assigning an anonymous or named function to a variable, and can be used just like any other value in JavaScript.",
+        desc_2: "Here's an example of a function expression:",
+        codeTemplate: `const sayHello = function(name) {
+    console.log("Hello, " + name + "!");
+};`,
+        desc_3: "In this example, the 'sayHello' function is defined as an anonymous function and assigned to a variable called 'sayHello'. The function takes one parameter (the name of the person to greet) and logs a message to the console.",
+        section1: {
+            title1: "How to use function expression?",
+            desc1: "To use a function expression in JavaScript, you can follow these steps:"
+        },
+        section2: {
+            desc2: "Declare a variable and assign an anonymous or named function to it using the function keyword:",
+            codeTemplate2: `const myFunction = function() {
+    // Function body
+};`
+        },
+        section2: {
+            desc2: "Use the variable name to call the function:",
+            codeTemplate2: `myFunction();`
+        },
+        section3: {
+            desc3: "Pass arguments to the function (if necessary) by placing them inside the parentheses:",
+            codeTemplate3: `const myFunction = function(a, b) {
+    console.log(a + b);
+};
+              
+myFunction(2, 3); // Output: 5`
+        },
+        section4: {
+            desc4: "Function expressions can also be used as arguments to other functions, as return values from functions, and as objects in their own right. For example:",
+            codeTemplate4: `const add = function(a, b) {
+    return a + b;
+};
+              
+const multiply = function(a, b) {
+    return a * b;
+};
+              
+const calculator = {
+    add: add,
+    multiply: multiply
+};
+              
+console.log(calculator.add(2, 3)); // Output: 5
+console.log(calculator.multiply(2, 3)); // Output: 6`
+        },
+        desc4_2: "In this example, two functions (add and multiply) are defined as function expressions and assigned to variables. These variables are then used as properties of an object called calculator. The functions can be called using dot notation and passed arguments as needed."
+    },
+    {
+        name: 'func-anonymous', //component name wise property
+        title: 'What is anonymous functions?',
+        desc: "In JavaScript, an anonymous function is a function that does not have a name identifier. Instead, it is defined as an expression and typically assigned to a variable or used as an argument to another function. Anonymous functions are commonly used in JavaScript for a variety of purposes, such as event handlers, callbacks, and self-executing functions. They allow you to define a function on the fly without the need to assign a name to it, which can be useful in cases where you only need to use the function once or where naming the function is not necessary or desirable.",
+        desc_2: "Here's an example of an anonymous function defined as an expression and assigned to a variable:",
+        codeTemplate: `const add = function(x, y) {
+    return x + y;
+};`,
+        desc_3: "In this example, an anonymous function that takes two parameters and returns their sum is defined as an expression and assigned to the variable add. The function can be called using the add variable, like this:",
+        section1: {
+            title1: "How to use anonymous function?",
+            desc1: "Here's an example of an anonymous function being used as a callback function for an asynchronous operation:",
+            codeTemplate1: `const fetchData = function(url, callback){
+fetch(url)
+    .then(response => response.json())
+    .then(data => callback(data))
+    .catch(error => console.log(error));
+};
+              
+fetchData('https://jsonplaceholder.typicode.com/todos/1', function(data) {
+console.log(data);
+});`,
+        desc1_2: "In this example, fetchData is a function that makes a network request to a URL and passes the resulting data to a callback function. The callback function is defined inline as an anonymous function that logs the data to the console. When fetchData is called, it executes the anonymous function with the fetched data as its argument."
+        },
+    },
+    {
+        name: 'callback', //component name wise property
+        title: 'What is Callback function?',
+        desc: "a callback function is a function that is passed as an argument to another function and is then called inside that function. Callback functions are commonly used in asynchronous programming to handle responses or actions that are not immediately available.",
+        desc_2: "Here's a simple example of a callback function:",
+        codeTemplate: `function doSomething(callback) {
+    console.log("Doing something...");
+    callback();
+}
+          
+function doSomethingElse() {
+    console.log("Doing something else...");
+}
+          
+doSomething(doSomethingElse);`,
+        desc_3: "In this example, doSomething() is a function that takes a callback argument. When doSomething() is called, it logs a message to the console and then calls the callback function. In this case, the callback function is doSomethingElse(), which also logs a message to the console. When doSomething() is called with doSomethingElse as its argument, the output will be:",
+        codeTemplate_2: `Doing something...
+Doing something else...`,
+        desc_4: "This is because doSomething() logs its message first, then calls the callback function (doSomethingElse()), which logs its message next.",
+        section1: {
+            title1: "Why Callback functions are used?",
+            desc1: "Callbacks are used in JavaScript for several reasons, including:",
+            list1: [
+                "Asynchronous programming: In JavaScript, many operations such as network requests, file I/O, and user input are asynchronous, meaning that they happen outside of the normal program flow. Callbacks can be used to handle the results of these operations once they are complete, without blocking the main program.",
+                "Event handling: When an event occurs in the browser, such as a user clicking a button or scrolling the page, a callback function can be used to handle the event and update the page accordingly.",
+                "Reusability: Callback functions can be defined separately from the functions that use them, allowing them to be reused in multiple contexts."
+            ],
+        desc1_2: "Overall, callbacks are a powerful tool in JavaScript for handling asynchronous and event-driven programming, and are an essential part of modern web development."
+        },
+        section2: {
+            title2: "How to use Callback function?",
+            desc2: "In JavaScript, you can use callback functions by passing them as arguments to other functions. Here's a basic example:",
+            codeTemplate2: `function multiply(num1, num2, callback) {
+    let result = num1 * num2;
+    callback(result);
+}
+              
+function printResult(result) {
+    console.log("Result:", result);
+}
+              
+multiply(5, 10, printResult); // Output: Result: 50`,
+        desc2_2: "n this example, multiply() is a function that takes two numbers (num1 and num2) and a callback function as arguments. The multiply() function multiplies num1 and num2 to get the result, and then calls the callback function with the result as its argument. The printResult() function is a callback function that takes the result as its argument and logs it to the console. When multiply() is called with 5, 10, and printResult as its arguments, it calculates the result (50) and passes it to the printResult() function as a callback. The printResult() function then logs the result to the console.",
+        desc2_3: "Note that you can also define callback functions inline, without giving them a name:",
+        codeTemplate2_2: `multiply(5, 10, function(result) {
+    console.log("Result:", result);
+});`,
+        desc2_4 : "This has the same effect as the previous example, but the printResult() function is defined inline as an anonymous function.Overall, callback functions provide a flexible and powerful way to handle asynchronous and event-driven programming in JavaScript."
+        },
     }
     
 ];

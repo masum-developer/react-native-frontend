@@ -49,10 +49,10 @@ const Aside = ({ children }) => {
 
                                     <MenuItem onClick={() => handlePush('tab', 'git-installation')}>Git Installation</MenuItem>
 
-                                    <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>Git & GitHub</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'git-gitlab')}>Git & GitLab</MenuItem>
 
                                 </SubMenu>
-                                <MenuItem >Agile Scrum</MenuItem>
+                                {/* <MenuItem >Agile Scrum</MenuItem> */}
 
                                 <SubMenu label="HTML" defaultOpen>
                                     <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
@@ -117,18 +117,17 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'modules')}>Modules</MenuItem>
                                     </SubMenu>
                                     <SubMenu label="In-depth Functions">
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Declarations</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
-                                    </SubMenu>
-
-                                    <SubMenu label="In-depth Objects">
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'func_declaration')}>Declarations</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'func-expressions')}>Expressions</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'arrow-function')}>Arrow Function</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'anonymous-function')}>Anonymous Function</MenuItem>
                                     </SubMenu>
 
                                     <SubMenu label="Asynchronus JavaScript">
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'callbacks')}>Callbacks</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Asynchronous</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Promises</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Async/Await</MenuItem>
                                     </SubMenu>
 
                                     <SubMenu label="DOM Manipulation">
