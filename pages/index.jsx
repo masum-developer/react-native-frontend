@@ -58,6 +58,10 @@ import FuncDeclaration from '../src/components/js/FuncDeclaration';
 import FuncExpressions from '../src/components/js/FuncExpressions';
 import AnonymousFunc from '../src/components/js/AnonymousFunc';
 import CallbackComp from '../src/components/js/CallbackComp';
+import AsynchronousComp from '../src/components/js/AsynchronousComp';
+import PromisComp from '../src/components/js/PromisComp';
+import AsyncAwaitComp from '../src/components/js/AsyncAwaitComp';
+import DomIntroduction from '../src/components/DOM/DomIntroduction';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -184,7 +188,15 @@ const Home = () => {
                                                                                                                     active === 'anonymous-function' ?
                                                                                                                     <AnonymousFunc></AnonymousFunc> :
                                                                                                                     active === 'callbacks' ?
-                                                                                                                    <CallbackComp></CallbackComp>:
+                                                                                                                    <CallbackComp></CallbackComp> :
+                                                                                                                    active === 'asynchronous' ?
+                                                                                                                    <AsynchronousComp></AsynchronousComp> :
+                                                                                                                    active === 'promise' ?
+                                                                                                                    <PromisComp></PromisComp> :
+                                                                                                                    active === 'async-await' ?
+                                                                                                                    <AsyncAwaitComp></AsyncAwaitComp> :
+                                                                                                                    active === 'dom-introduction' ?
+                                                                                                                    <DomIntroduction></DomIntroduction> :
                                                                                                                     ''
         }
       </Aside>

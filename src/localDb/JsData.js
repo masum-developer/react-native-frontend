@@ -2102,7 +2102,7 @@ console.log(data);
     {
         name: 'callback', //component name wise property
         title: 'What is Callback function?',
-        desc: "a callback function is a function that is passed as an argument to another function and is then called inside that function. Callback functions are commonly used in asynchronous programming to handle responses or actions that are not immediately available.",
+        desc: "A callback function is a function that is passed as an argument to another function and is then called inside that function. Callback functions are commonly used in asynchronous programming to handle responses or actions that are not immediately available.",
         desc_2: "Here's a simple example of a callback function:",
         codeTemplate: `function doSomething(callback) {
     console.log("Doing something...");
@@ -2141,12 +2141,183 @@ function printResult(result) {
 }
               
 multiply(5, 10, printResult); // Output: Result: 50`,
-        desc2_2: "n this example, multiply() is a function that takes two numbers (num1 and num2) and a callback function as arguments. The multiply() function multiplies num1 and num2 to get the result, and then calls the callback function with the result as its argument. The printResult() function is a callback function that takes the result as its argument and logs it to the console. When multiply() is called with 5, 10, and printResult as its arguments, it calculates the result (50) and passes it to the printResult() function as a callback. The printResult() function then logs the result to the console.",
+        desc2_2: "In this example, multiply() is a function that takes two numbers (num1 and num2) and a callback function as arguments. The multiply() function multiplies num1 and num2 to get the result, and then calls the callback function with the result as its argument. The printResult() function is a callback function that takes the result as its argument and logs it to the console. When multiply() is called with 5, 10, and printResult as its arguments, it calculates the result (50) and passes it to the printResult() function as a callback. The printResult() function then logs the result to the console.",
         desc2_3: "Note that you can also define callback functions inline, without giving them a name:",
         codeTemplate2_2: `multiply(5, 10, function(result) {
     console.log("Result:", result);
 });`,
         desc2_4 : "This has the same effect as the previous example, but the printResult() function is defined inline as an anonymous function.Overall, callback functions provide a flexible and powerful way to handle asynchronous and event-driven programming in JavaScript."
+        },
+    },
+    {
+        name: 'asynchronous', //component name wise property
+        title: 'What is Asynchronous programming?',
+        desc: "In JavaScript, asynchronous programming refers to the use of non-blocking methods and functions to allow the program to continue running while waiting for a response or action to be completed. Asynchronous programming is essential in web development to handle tasks that take time, such as making network requests or reading files, without blocking the main program.",
+        desc_2: "In JavaScript, asynchronous programming is usually achieved through the use of callbacks, promises, and async/await syntax. Here's an example using callbacks:",
+        codeTemplate: `console.log("Start");
+
+setTimeout(function() {
+    console.log("Middle");
+}, 2000);
+        
+console.log("End");`,
+        desc_3: "In this example, the console.log('Start') statement is executed first. Then, a setTimeout() function is called with a callback function that logs 'Middle' after a delay of 2 seconds. The console.log('End') statement is executed immediately after the setTimeout() function call, without waiting for the callback to be executed. The output of this program will be:",
+        codeTemplate_2: `Start
+End
+Middle`,
+        desc_4: "This shows that the program is not blocked by the delay caused by the setTimeout() function, and can continue executing other code while waiting for the callback to be called.",
+        section1: {
+            title1: "Why asynchronous programming is used?",
+            desc1: "Asynchronous programming is used in JavaScript for several reasons, including:",
+            list1: [
+                "Non-blocking code: Asynchronous programming allows code to continue executing while waiting for a response or action to be completed, rather than blocking the program until the response is received. This can make the program more responsive and efficient.",
+                "Better performance: Asynchronous programming can improve the performance of web applications by allowing multiple tasks to be performed simultaneously, without blocking the program flow.",
+                "Handling large datasets: Asynchronous programming is particularly useful for handling large datasets, where blocking the program flow could cause performance issues.",
+                "Network requests: Asynchronous programming is essential for making network requests, as these requests can take varying amounts of time to complete and could block the program if done synchronously."
+            ],
+        desc1_2: "Asynchronous programming is an important technique in JavaScript for improving performance, handling complex tasks, and providing a responsive user experience in web applications."
+        },
+        section2: {
+            title2: "How to use asynchronous programming?",
+            desc2: "Asynchronous programming can be achieved using several techniques, including callbacks, promises, and async/await. Here's an example using promises:",
+            codeTemplate2: `console.log("Start");
+
+new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        resolve("Middle");
+    }, 2000);
+}).then(function(result) {
+    console.log(result);
+});
+            
+console.log("End");`,
+        desc2_2: "In this example, the console.log('Start') statement is executed first. Then, a new Promise object is created with a callback function that logs 'Middle' after a delay of 2 seconds and resolves the promise with that value. Finally, a .then() method is called on the promise object with a callback function that logs the resolved value (result). The console.log('End') statement is executed immediately after the Promise object is created, without waiting for the callback to be executed.",
+        desc2_3: "The output of this program will be:",
+        codeTemplate2_2: `Start
+End
+Middle`,
+        desc2_4 : "This shows that the program is not blocked by the delay caused by the setTimeout() function, and can continue executing other code while waiting for the promise to be resolved."
+        },
+    },
+    {
+        name: 'promise', //component name wise property
+        title: 'What is Promise?',
+        desc: "A promise in JavaScript is an object that represents a value that may not be available yet, but will be resolved at some point in the future. It is a way to handle asynchronous operations, such as fetching data from an API or reading a file from the file system, without blocking the execution of other code.",
+        desc_2: "A promise has three states:",
+        list: [
+            "1. pending: the initial state, before the promise is resolved or rejected.",
+            "2. fulfilled: the state when the promise is successfully resolved with a value.",
+            "3. rejected: the state when the promise is rejected with an error."
+        ],
+        
+        desc_3: "A promise has a then method, which is used to handle the resolved value when the promise is fulfilled, and a catch method, which is used to handle the rejection when the promise is rejected. Here's an example of a simple promise in JavaScript:",
+        codeTemplate: `const promise = new Promise((resolve, reject)=> {
+setTimeout(() => {
+    const randomNumber = Math.random();
+    if (randomNumber < 0.5) {
+        resolve(randomNumber);
+    } else {
+        reject(new Error('Random number is greater than 0.5'));
+    }
+}, 1000);
+});
+          
+promise
+    .then((result) => console.log('Resolved with result:{result}'))
+    .catch((error) => console.error('Rejected with error: $'{error.message}'));`,
+        desc_4: "In this example, a promise is created with a function that resolves or rejects the promise after a delay of 1 second. If the generated random number is less than 0.5, the promise is resolved with the number. Otherwise, the promise is rejected with an error message. The then method is called with a callback function that is executed when the promise is resolved, and the catch method is called with a callback function that is executed when the promise is rejected.",
+        section1: {
+            title1: "Why Promise is used?",
+            desc1: "Promises are used in JavaScript to handle asynchronous operations in a more elegant and organized way. Before promises, developers used callback functions to handle asynchronous code, which often led to callback hell and unreadable code. Promises provide a cleaner and more concise syntax for dealing with asynchronous operations. Using promises, you can chain multiple asynchronous operations together in a readable and maintainable way. Promises also provide a way to handle errors in asynchronous operations, making it easier to catch and handle errors in a consistent way.",
+            list1: [
+                "Improved readability: Promises provide a cleaner and more concise syntax for handling asynchronous operations, making it easier to read and understand the code.",
+                "Chaining: Promises can be chained together, allowing multiple asynchronous operations to be executed in a sequential order.",
+                "Error handling: Promises provide a standardized way to handle errors in asynchronous operations, making it easier to catch and handle errors in a consistent way.",
+                "Asynchronous control flow: Promises make it easier to control the flow of asynchronous operations, ensuring that they are executed in the correct order and with the correct dependencies."
+            ],
+        },
+        section2: {
+            title2: "How to use Promise in JavaScript?",
+            desc2: "Promises in JavaScript are created using the Promise constructor. Here is an example of how to create and use a promise in JavaScript:",
+            codeTemplate2: `const promise = new Promise((resolve, reject) => {
+// Perform an asynchronous operation
+// If the operation succeeds, call resolve with the result
+// If the operation fails, call reject with an error object
+              
+if (/* asynchronous operation succeeds */) {
+    resolve('Success!');
+} else {
+    reject(new Error('Something went wrong!'));
+}
+});
+              
+promise
+.then(result => {
+    // Handle the success case
+    console.log(result);
+})
+.catch(error => {
+    // Handle the error case
+    console.error(error);
+});`,
+        desc2_2: "In this example, the Promise constructor takes a callback function with two arguments: resolve and reject. The asynchronous operation is performed inside this callback function. If the operation succeeds, the resolve function is called with the result. If the operation fails, the reject function is called with an error object.",
+        desc2_3: "Once the promise is created, you can use the .then() method to handle the success case, and the .catch() method to handle the error case. The then() method takes a callback function that will be called with the result of the promise if it succeeds. The catch() method takes a callback function that will be called with the error object if the promise fails.",
+        desc2_4 : "By using promises, you can write asynchronous code that is easy to read, write, and maintain."
+        },
+    },
+    {
+        name: 'async-await', //component name wise property
+        title: 'What is Async/wait?',
+        desc: "Async/await is a syntax in JavaScript that makes it easier to work with promises. It allows you to write asynchronous code that looks and behaves like synchronous code, making it easier to read and maintain.",
+        desc_2: "Here is an example of how to use async/await in JavaScript:",
+        codeTemplate: `async function getData() {
+try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+          
+getData();
+          `,
+        desc_3: "In this example, the getData() function is marked as async, which means it returns a promise. Inside the function, we use the await keyword to wait for the fetch() function to resolve the promise returned by it. Once the promise is resolved, the response is converted to JSON using the json() method, which also returns a promise. We use the await keyword again to wait for this promise to resolve before logging the data to the console.",
+        desc_4: "If any error occurs during this process, the catch block is executed and the error is logged to the console.Using async/await makes the code easier to read and maintain, as it avoids the nested callback structure that can arise when working with promises directly.",
+        section1: {
+            title1: "Why Async/await is used?",
+            desc1: "Async/await is used in JavaScript to simplify working with promises. Promises allow you to write asynchronous code in a more manageable way, but can still lead to complex and nested code structures. Async/await allows you to write asynchronous code that looks and behaves like synchronous code, making it easier to read and maintain. By using async/await, you can avoid the need for callbacks or chained .then() methods, and instead use simple and intuitive syntax to handle asynchronous operations. This can improve the readability and maintainability of your code, and make it easier to handle errors and exceptions. Async/await has several advantages over traditional approaches to handling asynchronous operations in JavaScript:",
+            list1: [
+                "Simplified syntax: Async/await allows you to write asynchronous code that looks and behaves like synchronous code, making it easier to read and understand.",
+                "Improved error handling: Async/await makes it easier to handle errors and exceptions that may occur during asynchronous operations. You can use try/catch blocks to catch and handle errors in a more intuitive and straightforward way.",
+                "Sequential execution: Async/await allows you to write asynchronous code that executes in a sequential order, making it easier to reason about the flow of your program.",
+                "Better control flow: Async/await allows you to easily handle complex control flows in your code, such as loops and conditional statements, without creating deeply nested callback functions."
+            ],
+        },
+        section2: {
+            title2: "How to use Async/await?",
+            desc2: "As we've seen an example above here's another example that demonstrates how to use async/await with multiple API requests using Promise.all():",
+            codeTemplate2: `async function fetchData() {
+    try {
+        const [userData, postList] = await Promise.all([
+            fetch('https://jsonplaceholder.typicode.com/users/1'),
+            fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+        ]);
+              
+        const userDataJSON = await userData.json();
+        const postListJSON = await postList.json();
+              
+        console.log(userDataJSON);
+        console.log(postListJSON);
+    } catch (error) {
+        console.error(error);
+    }
+}
+              
+fetchData();`,
+        desc2_2: "In this example, we define an async function called fetchData(). Inside the function, we use Promise.all() to make two asynchronous API requests to retrieve data for a user and a list of posts by that user. The Promise.all() method takes an array of Promises and waits for all of them to resolve before returning an array of results in the same order as the input array. In this case, we pass an array with two Promises that make the two API requests.",
+        desc2_3: "We use destructuring assignment to assign the results of the Promise.all() call to two variables: userData and postList. We then use await to wait for each of the responses to be parsed using the .json() method, and log the resulting JSON data to the console. As before, we use a try/catch block to handle any errors that might occur during the asynchronous operations.",
+        desc2_4 : "When the fetchData() function is called, it will execute the two API requests, wait for both to complete, and then log the resulting data to the console."
         },
     }
     

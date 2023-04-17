@@ -125,14 +125,15 @@ const Aside = ({ children }) => {
 
                                     <SubMenu label="Asynchronus JavaScript">
                                         <MenuItem onClick={() => handlePush('tab', 'callbacks')}>Callbacks</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Asynchronous</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Promises</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Async/Await</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'asynchronous')}>Asynchronous</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'promise')}>Promises</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'async-await')}>Async/Await</MenuItem>
                                     </SubMenu>
 
                                     <SubMenu label="DOM Manipulation">
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Features List</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'dom-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Documents</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Method</MenuItem>
                                     </SubMenu>
                                 </SubMenu>
 
