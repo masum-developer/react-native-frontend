@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import htmlData from '../../localDb/HTML';
 import { useState } from 'react';
 import useFind from '../../hooks/useFind';
-import ImageContainer from '../global/ImageContainer';
 
 const Introduction = () => {
     //fetching data from custom hooks
@@ -18,7 +17,7 @@ const Introduction = () => {
     const { title2, codeTemplate2 } = section2 || {};
 
     return (
-        <Box mx={8}>
+        <Box >
             <Typography variant='h3'>{title}</Typography>
             <Typography variant='subtitle1'>{desc}</Typography>
 
@@ -35,7 +34,6 @@ const Introduction = () => {
                 <Typography variant='h3'>{title2}</Typography>
                 <CodeBox codeSnippet={codeTemplate2}></CodeBox>
             </Box>
-            <ImageContainer></ImageContainer>
         </Box>
         
     );

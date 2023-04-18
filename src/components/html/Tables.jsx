@@ -26,7 +26,7 @@ const Tables = () => {
 
 
     return (
-        <Box mx={8}>
+        <Box >
 
 
             <Typography variant='h1' mt={3}>{title1}</Typography>

@@ -18,7 +18,7 @@ const Overview = () => {
     const { lists2 } = section2 || {};
     const { title3,codeTemplate3} = section3 || {};
     return (
-        <Box mx={8}>
+        <Box >
             <Typography variant='subtitle1'>{desc}</Typography>
 
             <Box mt={1}>

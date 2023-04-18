@@ -99,7 +99,7 @@ const codeTemplate5 = `<!DOCTYPE html>
   </body>
 </html>`
 
-const Selectors = () => {
+const DomSelectors = () => {
     return (
         <Box pb={3}>
 
@@ -198,4 +198,4 @@ Example Div 2`}></CodeBox>
     );
 };
 
-export default Selectors;
+export default DomSelectors;

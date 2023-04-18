@@ -47,8 +47,8 @@ const Attributes = () => {
     const { codeTemplate4 } = section4 || {};
     
     return (
-        <Box mx={8}>
-            <Typography variant='h1'>{title1}</Typography>
+        <Box >
+            <Typography variant='h3'>{title1}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc} </Typography>
 
             <Box mt={3} >

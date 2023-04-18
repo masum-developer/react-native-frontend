@@ -36,7 +36,7 @@ const BasicTags = () => {
   
 
     return (
-        <Box mx={8}>
+        <Box >
             <Typography variant='h1'>{title1}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc}</Typography>
 

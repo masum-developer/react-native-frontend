@@ -16,6 +16,19 @@ import Images from '../src/components/html/Images';
 import Tables from '../src/components/html/Tables';
 import Lists from '../src/components/html/Lists';
 import TextLinks from '../src/components/html/TextLinks';
+import CssIntroduction from '../src/components/css/CssIntroduction';
+import Selectors from '../src/components/css/Selectors';
+import Colors from '../src/components/css/Colors';
+import Background from '../src/components/css/Background';
+import Margin from '../src/components/css/Margin';
+import Padding from '../src/components/css/Padding';
+import BoxModel from '../src/components/css/BoxModel';
+import HeightandWidth from '../src/components/css/HeightandWidth';
+import Font from '../src/components/css/Font';
+import Icons from '../src/components/css/Icons';
+import List from '../src/components/css/List';
+import CssTables from '../src/components/css/CssTables';
+import Display from '../src/components/css/Display';
 import IntroductionJs from '../src/components/js/IntroductionJs';
 import OverviewJs from '../src/components/js/OverviewJs';
 import SyntaxJs from '../src/components/js/SyntaxJs';
@@ -62,7 +75,7 @@ import AsynchronousComp from '../src/components/js/AsynchronousComp';
 import PromisComp from '../src/components/js/PromisComp';
 import AsyncAwaitComp from '../src/components/js/AsyncAwaitComp';
 import DomIntroduction from '../src/components/DOM/DomIntroduction';
-import Selectors from '../src/components/DOM/Selectors';
+import DomSelectors from '../src/components/DOM/DomSelectors';
 import DomStyles from '../src/components/DOM/DomStyles';
 import DomEvents from '../src/components/DOM/DomEvents';
 import EventListener from '../src/components/DOM/EventListener';
@@ -113,105 +126,131 @@ const Home = () => {
                                       <Lists></Lists> :
                                       active === 'textlinks' ?
                                         <TextLinks></TextLinks> :
-                                        active === 'js_introduction' ?
-                                          <IntroductionJs></IntroductionJs> :
-                                          active === 'js_overview' ?
-                                            <OverviewJs></OverviewJs> :
-                                            active === 'js_syntax' ?
-                                              <SyntaxJs></SyntaxJs> :
-                                              active === 'js_var' ?
-                                                <VarJs></VarJs> :
-                                                active === 'js_let' ?
-                                                  <LetJs></LetJs> :
-                                                  active === 'js_const' ?
-                                                    <ConstJs></ConstJs> :
-                                                    active === 'operator_overview' ?
-                                                      <Operator></Operator> :
-                                                      active === 'arithmetic' ?
-                                                        <Arithmetic></Arithmetic> :
-                                                        active === 'assignment' ?
-                                                          <Assignment></Assignment> :
-                                                          active === 'comparison' ?
-                                                            <Comparison></Comparison> :
-                                                            active === 'dataTypes' ?
-                                                              <DataTypes></DataTypes> :
-                                                              active === 'string' ?
-                                                                <Strings></Strings> :
-                                                                active === 'numbers' ?
-                                                                  <Numbers></Numbers> :
-                                                                  active === 'array' ?
-                                                                    <Arrays></Arrays> :
-                                                                    active === 'objects' ?
-                                                                      <Objects></Objects> :
-                                                                      active === 'function' ?
-                                                                        <Functions></Functions> :
-                                                                        active === 'date' ?
-                                                                          <Dates></Dates> :
-                                                                          active === 'random' ?
-                                                                            <Random></Random> :
-                                                                            active === 'if-else' ?
-                                                                              <IfElse></IfElse> :
-                                                                              active === 'switch' ?
-                                                                                <Switch></Switch> :
-                                                                                active === 'loop-intro' ?
-                                                                                  <LoopIntro></LoopIntro> :
-                                                                                  active === 'for-loop' ?
-                                                                                    <ForLoop></ForLoop> :
-                                                                                    active === 'set' ?
-                                                                                      <Sets></Sets> :
-                                                                                      active === 'map' ?
-                                                                                        <Maps></Maps> :
-                                                                                        active === 'typeof' ?
-                                                                                          <TypeofComp></TypeofComp> :
-                                                                                          active === 'scope' ?
-                                                                                            <ScopeComp></ScopeComp> :
-                                                                                            active === 'type-conversion' ?
-                                                                                              <TypeConversion></TypeConversion> :
-                                                                                              active === 'json' ?
-                                                                                                <JSONComp></JSONComp> :
-                                                                                                active === 'class' ?
-                                                                                                  <ClassComp></ClassComp> :
-                                                                                                  active === 'error-handling' ?
-                                                                                                    <TryCatchComp></TryCatchComp> :
-                                                                                                    active === 'es6-introduction' ?
-                                                                                                      <ESFeatures></ESFeatures> :
-                                                                                                      active === 'arrow-function' ?
-                                                                                                        <ArrowFunc></ArrowFunc> :
-                                                                                                        active === 'es6-let' ?
-                                                                                                          <LetJs></LetJs> :
-                                                                                                          active === 'es6-const' ?
-                                                                                                            <ConstJs></ConstJs> :
-                                                                                                            active === 'destructuring' ?
-                                                                                                              <DesctructuringComp></DesctructuringComp> :
-                                                                                                              active === 'modules' ?
-                                                                                                                <ModulesComp></ModulesComp> :
-                                                                                                                active === 'func_declaration' ?
-                                                                                                                  <FuncDeclaration></FuncDeclaration> :
-                                                                                                                  active === 'func-expressions' ?
-                                                                                                                    <FuncExpressions></FuncExpressions> :
-                                                                                                                    active === 'anonymous-function' ?
-                                                                                                                    <AnonymousFunc></AnonymousFunc> :
-                                                                                                                    active === 'callbacks' ?
-                                                                                                                    <CallbackComp></CallbackComp> :
-                                                                                                                    active === 'asynchronous' ?
-                                                                                                                    <AsynchronousComp></AsynchronousComp> :
-                                                                                                                    active === 'promise' ?
-                                                                                                                    <PromisComp></PromisComp> :
-                                                                                                                    active === 'async-await' ?
-                                                                                                                    <AsyncAwaitComp></AsyncAwaitComp> :
-                                                                                                                    active === 'dom-introduction' ?
-                                                                                                                    <DomIntroduction></DomIntroduction> :
-                                                                                                                    active === 'selectors' ?
-                                                                                                                    <Selectors></Selectors> :
-                                                                                                                    active === 'selectors' ?
-                                                                                                                    <Selectors></Selectors> :
-                                                                                                                    active === 'dom-styling' ?
-                                                                                                                    <DomStyles></DomStyles> :
-                                                                                                                    active === 'dom-events' ?
-                                                                                                                    <DomEvents></DomEvents> :
-                                                                                                                    active === 'dom-event-listener' ?
-                                                                                                                    <EventListener></EventListener> :
-                                                                                                                    ''
+                                        active === 'css_introduction' ?
+                                          <CssIntroduction></CssIntroduction> :
+                                          active === 'selectors' ?
+                                            <Selectors></Selectors> :
+                                            active === 'colors' ?
+                                              <Colors></Colors> :
+                                              active === 'background' ?
+                                                <Background></Background> :
+                                                active === 'margin' ?
+                                                  <Margin></Margin> :
+                                                  active === 'padding' ?
+                                                    <Padding></Padding> :
+                                                    active === 'boxmodel' ?
+                                                      <BoxModel></BoxModel> :
+                                                      active === 'heightandwidth' ?
+                                                        <HeightandWidth></HeightandWidth> :
+                                                        active === 'font' ?
+                                                          <Font></Font> :
+                                                          active === 'icons' ?
+                                                            <Icons></Icons> :
+                                                            active === 'list' ?
+                                                              <List></List> :
+                                                              active === 'css_table' ?
+                                                                <CssTables></CssTables> :
+                                                                active === 'display' ?
+                                                                  <Display></Display> :
+                                                                  active === 'js_introduction' ?
+                                                                    <IntroductionJs></IntroductionJs> :
+                                                                    active === 'js_overview' ?
+                                                                      <OverviewJs></OverviewJs> :
+                                                                      active === 'js_syntax' ?
+                                                                        <SyntaxJs></SyntaxJs> :
+                                                                        active === 'js_var' ?
+                                                                          <VarJs></VarJs> :
+                                                                          active === 'js_let' ?
+                                                                            <LetJs></LetJs> :
+                                                                            active === 'js_const' ?
+                                                                              <ConstJs></ConstJs> :
+                                                                              active === 'operator_overview' ?
+                                                                                <Operator></Operator> :
+                                                                                active === 'arithmetic' ?
+                                                                                  <Arithmetic></Arithmetic> :
+                                                                                  active === 'assignment' ?
+                                                                                    <Assignment></Assignment> :
+                                                                                    active === 'comparison' ?
+                                                                                      <Comparison></Comparison> :
+                                                                                      active === 'dataTypes' ?
+                                                                                        <DataTypes></DataTypes> :
+                                                                                        active === 'string' ?
+                                                                                          <Strings></Strings> :
+                                                                                          active === 'numbers' ?
+                                                                                            <Numbers></Numbers> :
+                                                                                            active === 'array' ?
+                                                                                              <Arrays></Arrays> :
+                                                                                              active === 'objects' ?
+                                                                                                <Objects></Objects> :
+                                                                                                active === 'function' ?
+                                                                                                  <Functions></Functions> :
+                                                                                                  active === 'date' ?
+                                                                                                    <Dates></Dates> :
+                                                                                                    active === 'random' ?
+                                                                                                      <Random></Random> :
+                                                                                                      active === 'if-else' ?
+                                                                                                        <IfElse></IfElse> :
+                                                                                                        active === 'switch' ?
+                                                                                                          <Switch></Switch> :
+                                                                                                          active === 'loop-intro' ?
+                                                                                                            <LoopIntro></LoopIntro> :
+                                                                                                            active === 'for-loop' ?
+                                                                                                              <ForLoop></ForLoop> :
+                                                                                                              active === 'set' ?
+                                                                                                                <Sets></Sets> :
+                                                                                                                active === 'map' ?
+                                                                                                                  <Maps></Maps> :
+                                                                                                                  active === 'typeof' ?
+                                                                                                                    <TypeofComp></TypeofComp> :
+                                                                                                                    active === 'scope' ?
+                                                                                                                      <ScopeComp></ScopeComp> :
+                                                                                                                      active === 'type-conversion' ?
+                                                                                                                        <TypeConversion></TypeConversion> :
+                                                                                                                        active === 'json' ?
+                                                                                                                          <JSONComp></JSONComp> :
+                                                                                                                          active === 'class' ?
+                                                                                                                            <ClassComp></ClassComp> :
+                                                                                                                            active === 'error-handling' ?
+                                                                                                                              <TryCatchComp></TryCatchComp> :
+                                                                                                                              active === 'es6-introduction' ?
+                                                                                                                                <ESFeatures></ESFeatures> :
+                                                                                                                                active === 'arrow-function' ?
+                                                                                                                                  <ArrowFunc></ArrowFunc> :
+                                                                                                                                  active === 'es6-let' ?
+                                                                                                                                    <LetJs></LetJs> :
+                                                                                                                                    active === 'es6-const' ?
+                                                                                                                                      <ConstJs></ConstJs> :
+                                                                                                                                      active === 'destructuring' ?
+                                                                                                                                        <DesctructuringComp></DesctructuringComp> :
+                                                                                                                                        active === 'modules' ?
+                                                                                                                                          <ModulesComp></ModulesComp> :
+                                                                                                                                          active === 'func_declaration' ?
+                                                                                                                                            <FuncDeclaration></FuncDeclaration> :
+                                                                                                                                            active === 'func-expressions' ?
+                                                                                                                                              <FuncExpressions></FuncExpressions> :
+                                                                                                                                              active === 'anonymous-function' ?
+                                                                                                                                                <AnonymousFunc></AnonymousFunc> :
+                                                                                                                                                active === 'callbacks' ?
+                                                                                                                                                  <CallbackComp></CallbackComp> :
+                                                                                                                                                  active === 'asynchronous' ?
+                                                                                                                                                    <AsynchronousComp></AsynchronousComp> :
+                                                                                                                                                    active === 'promise' ?
+                                                                                                                                                      <PromisComp></PromisComp> :
+                                                                                                                                                      active === 'async-await' ?
+                                                                                                                                                        <AsyncAwaitComp></AsyncAwaitComp> :
+                                                                                                                                                        active === 'dom-introduction' ?
+                                                                                                                                                          <DomIntroduction></DomIntroduction> :
+                                                                                                                                                          active === 'selectors' ?
+                                                                                                                                                            <Selectors></Selectors> :
+                                                                                                                                                            active === 'selectors' ?
+                                                                                                                                                              <Selectors></Selectors> :
+                                                                                                                                                              active === 'dom-styling' ?
+                                                                                                                                                                <DomStyles></DomStyles> :
+                                                                                                                                                                active === 'dom-events' ?
+                                                                                                                                                                  <DomEvents></DomEvents> :
+                                                                                                                                                                  active === 'dom-event-listener' ?
+                                                                                                                                                                    <EventListener></EventListener> :
+                                                                                                                                                                    ''
         }
       </Aside>
 

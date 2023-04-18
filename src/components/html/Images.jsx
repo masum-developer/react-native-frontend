@@ -23,7 +23,7 @@ const Images = () => {
     
 
     return (
-        <Box mx={8}>
+        <Box >
            
 
             <Typography variant='h1' mt={3}>{title1}</Typography>
@@ -41,7 +41,7 @@ const Images = () => {
 
             <Box mt={3}>
                 <Typography variant='h4'>Output2: </Typography>
-                <HtmlOutput images2="hero.png" ></HtmlOutput>
+                <HtmlOutput images2="/hero.png" ></HtmlOutput>
             </Box>
             
             <Typography mt={3} variant='subtitle1'>{desc5}</Typography>

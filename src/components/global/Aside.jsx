@@ -19,7 +19,7 @@ const Aside = ({ children }) => {
     return (
         <Box sx={{ flexGrow: 1 }}>
 
-            <Grid container spacing={1}>
+            <Grid container>
                 <Grid item xs={2} md={2} lg={1} xl={1}>
                     <ProSidebarProvider>
                         <Sidebar className='sidebar' style={{ marginTop: '109px', height: '90vh', position: 'fixed', paddingBottom: '10px' }} backgroundColor="#ECE4EC" width='250px'>
@@ -66,7 +66,35 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'lists')}>Lists</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'textlinks')}>Text Links</MenuItem>
                                 </SubMenu>
-                                <MenuItem>CSS</MenuItem>
+                                <SubMenu label="CSS" >
+                                    <MenuItem onClick={()=>handlePush('tab','css_introduction')}>CSS Introduction</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','selectors')}>Selectors</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','colors')}>Colors</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','background')}>Background</MenuItem>
+                                    <MenuItem onClick={()=>handlePush('tab','margin')}>Margin</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'padding')}>Padding</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'boxmodel')}>Box Model</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'heightandwidth')}>Height and Width</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'font')}>Font</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'icons')}>Icons</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'list')}>Lists</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'css_table')}>Tables</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'display')} >Display</MenuItem>
+                                    <MenuItem>Position</MenuItem>
+                                    <MenuItem>Z-Index</MenuItem>
+                                    <MenuItem>Float</MenuItem>
+                                    <MenuItem>Block</MenuItem>
+                                    <MenuItem>Align</MenuItem>
+                                    <MenuItem>DropDown</MenuItem>
+                                    <MenuItem>Form</MenuItem>
+                                    <MenuItem>Image</MenuItem>
+                                    <MenuItem>Unit</MenuItem>
+                                    <MenuItem>Specificity</MenuItem>
+                                    <MenuItem>!Important</MenuItem>
+                                    
+
+                                    
+                                </SubMenu>
                                 <SubMenu label="JavaScript">
                                     <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>
@@ -143,7 +171,7 @@ const Aside = ({ children }) => {
                         </Sidebar>
                     </ProSidebarProvider>
                 </Grid>
-                <Grid item xs={8} md={8} lg={9} xl={10} sx={{ marginTop: '150px', marginLeft: { lg: '120px' }, height: '100vh' }}>
+                <Grid item xs={8} md={8} lg={9} xl={11} sx={{ marginTop: '150px', marginLeft: { sm: '300px' }, height: '100vh' }}>
                     {children}
                 </Grid>
             </Grid>
