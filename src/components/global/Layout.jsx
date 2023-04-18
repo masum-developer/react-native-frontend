@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import Navbar from '../navbar/navbar';
+import Navbar from '../navbar/Navbar';
 
 const Layout = ({ title, keywords, description, children }) => {
     return (

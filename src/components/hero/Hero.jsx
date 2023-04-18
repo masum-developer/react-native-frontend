@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { ButtonComp } from '../ui/Button';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const Hero = () => {
     return (

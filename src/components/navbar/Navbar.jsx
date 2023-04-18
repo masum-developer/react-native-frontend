@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container, Stack } from '@mui/material';
 import { ButtonComp } from '../ui/Button';
-import Link from 'next/Link';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import InputBase from '@mui/material/InputBase';
