@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ts4u-portal-ingress
+  name: mern-frontend-ingress
   namespace: {{ .Values.namespace }}
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
@@ -22,7 +22,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ts4u-portal
+            name: mern-frontend
             port:
               name: http
               

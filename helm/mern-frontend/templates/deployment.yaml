@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ts4u-portal
+  name: mern-frontend
   namespace: {{ .Values.namespace }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: ts4u-portal
+      app: mern-frontend
   template:
     metadata:
       labels:
-        app: ts4u-portal
+        app: mern-frontend
     spec:
       containers:
         - name: {{ .Values.image.name }}
