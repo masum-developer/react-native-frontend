@@ -1,0 +1,33 @@
+# Default values for ts4u-backend.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+namespace: mern-production
+
+# limits:
+#   cpu: 1
+#   memory: "2Gi"
+
+# requests:
+#   cpu: 1
+#   memory: "2Gi"
+
+limits:
+  cpu: 1
+  memory: "2Gi"
+
+requests:
+  cpu: "500m"
+  memory: "1Gi"
+
+host: mern.ts4u.us
+
+image:
+  name: ts4u-portal
+  repository: ts4udocker/mern-frontend
+  tag: main-latest
+  pullPolicy: IfNotPresent
+imagePullSecrets:
+  name: regcred

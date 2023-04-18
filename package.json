@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:staging": "env-cmd -f .env.staging next build",
+    "build:prod": "env-cmd -f .env.prod next build",
+    "dev:test": "env-cmd -f .env.testing next dev -p 4001",
+    "dev:staging": "env-cmd -f .env.staging next dev -p 4001",
+    "dev:prod": "env-cmd -f .env.prod next dev -p 4001"
   },
   "dependencies": {
     "@codemirror/lang-html": "^6.4.3",
