@@ -22,7 +22,7 @@ const Aside = ({ children }) => {
             <Grid container spacing={1}>
                 <Grid item xs={2} md={2} lg={1} xl={1}>
                     <ProSidebarProvider>
-                        <Sidebar className='sidebar' style={{ marginTop: '109px', height: '90vh', position: 'fixed' }} backgroundColor="#ECE4EC" width='250px'>
+                        <Sidebar className='sidebar' style={{ marginTop: '109px', height: '90vh', position: 'fixed', paddingBottom: '10px' }} backgroundColor="#ECE4EC" width='250px'>
                             <Menu
                                 menuItemStyles={{
                                     button: ({ level, active, disabled }) => {
@@ -132,8 +132,10 @@ const Aside = ({ children }) => {
 
                                     <SubMenu label="DOM Manipulation">
                                         <MenuItem onClick={() => handlePush('tab', 'dom-introduction')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Documents</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Method</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'selectors')}>Selectors</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'dom-styling')}>Styling</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'dom-events')}>Events</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'dom-event-listener')}>Event Listener</MenuItem>
                                     </SubMenu>
                                 </SubMenu>
 

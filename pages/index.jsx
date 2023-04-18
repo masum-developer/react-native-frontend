@@ -62,6 +62,10 @@ import AsynchronousComp from '../src/components/js/AsynchronousComp';
 import PromisComp from '../src/components/js/PromisComp';
 import AsyncAwaitComp from '../src/components/js/AsyncAwaitComp';
 import DomIntroduction from '../src/components/DOM/DomIntroduction';
+import Selectors from '../src/components/DOM/Selectors';
+import DomStyles from '../src/components/DOM/DomStyles';
+import DomEvents from '../src/components/DOM/DomEvents';
+import EventListener from '../src/components/DOM/EventListener';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -197,6 +201,16 @@ const Home = () => {
                                                                                                                     <AsyncAwaitComp></AsyncAwaitComp> :
                                                                                                                     active === 'dom-introduction' ?
                                                                                                                     <DomIntroduction></DomIntroduction> :
+                                                                                                                    active === 'selectors' ?
+                                                                                                                    <Selectors></Selectors> :
+                                                                                                                    active === 'selectors' ?
+                                                                                                                    <Selectors></Selectors> :
+                                                                                                                    active === 'dom-styling' ?
+                                                                                                                    <DomStyles></DomStyles> :
+                                                                                                                    active === 'dom-events' ?
+                                                                                                                    <DomEvents></DomEvents> :
+                                                                                                                    active === 'dom-event-listener' ?
+                                                                                                                    <EventListener></EventListener> :
                                                                                                                     ''
         }
       </Aside>
