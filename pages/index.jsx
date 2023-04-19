@@ -79,6 +79,19 @@ import DomSelectors from '../src/components/DOM/DomSelectors';
 import DomStyles from '../src/components/DOM/DomStyles';
 import DomEvents from '../src/components/DOM/DomEvents';
 import EventListener from '../src/components/DOM/EventListener';
+import ReactIntroduction from '../src/components/react/ReactIntroduction';
+import ReactInstallation from '../src/components/react/ReactInstallation';
+import ReactJSX from '../src/components/react/ReactJSX';
+import ReactComponent from '../src/components/react/ReactComponent';
+import ReactProps from '../src/components/react/ReactProps';
+import ReactEvent from '../src/components/react/ReactEvent';
+import CondionalRendering from '../src/components/react/CondionalRendering';
+import ReactList from '../src/components/react/ReactList';
+import ReactForm from '../src/components/react/ReactForm';
+import HooksIntro from '../src/components/react/HooksIntro';
+import HooksUseState from '../src/components/react/HooksUseState';
+import HooksUseEffect from '../src/components/react/HooksUseEffect';
+import HooksUseContext from '../src/components/react/HooksUseContext';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -250,7 +263,33 @@ const Home = () => {
                                                                                                                                                                   <DomEvents></DomEvents> :
                                                                                                                                                                   active === 'dom-event-listener' ?
                                                                                                                                                                     <EventListener></EventListener> :
-                                                                                                                                                                    ''
+                                                                                                                                                                    active === 'react-introduction' ?
+                                                                                                                                                                      <ReactIntroduction></ReactIntroduction> :
+                                                                                                                                                                      active === 'react-installation' ?
+                                                                                                                                                                        <ReactInstallation></ReactInstallation> :
+                                                                                                                                                                        active === 'react-jsx' ?
+                                                                                                                                                                          <ReactJSX></ReactJSX> :
+                                                                                                                                                                          active === 'react-component' ?
+                                                                                                                                                                            <ReactComponent></ReactComponent> :
+                                                                                                                                                                            active === 'react-props' ?
+                                                                                                                                                                              <ReactProps></ReactProps> :
+                                                                                                                                                                              active === 'react-events' ?
+                                                                                                                                                                                <ReactEvent></ReactEvent> :
+                                                                                                                                                                                active === 'react-conditional-rendering' ?
+                                                                                                                                                                                  <CondionalRendering></CondionalRendering> :
+                                                                                                                                                                                  active === 'react-list' ?
+                                                                                                                                                                                    <ReactList></ReactList> :
+                                                                                                                                                                                    active === 'react-form' ?
+                                                                                                                                                                                      <ReactForm></ReactForm> :
+                                                                                                                                                                                      active === 'hooks-introduction' ?
+                                                                                                                                                                                        <HooksIntro></HooksIntro> :
+                                                                                                                                                                                        active === 'hooks-useState' ?
+                                                                                                                                                                                          <HooksUseState></HooksUseState> :
+                                                                                                                                                                                          active === 'hooks-useEffect' ?
+                                                                                                                                                                                            <HooksUseEffect></HooksUseEffect> :
+                                                                                                                                                                                            active === 'hooks-useContext' ?
+                                                                                                                                                                                            <HooksUseContext></HooksUseContext> :
+                                                                                                                                                                                            ''
         }
       </Aside>
 
