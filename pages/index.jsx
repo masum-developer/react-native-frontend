@@ -92,6 +92,12 @@ import HooksIntro from '../src/components/react/HooksIntro';
 import HooksUseState from '../src/components/react/HooksUseState';
 import HooksUseEffect from '../src/components/react/HooksUseEffect';
 import HooksUseContext from '../src/components/react/HooksUseContext';
+import NodeIntroduction from '../src/components/nodejs/NodeIntroduction';
+import NodeServer from '../src/components/nodejs/NodeServer';
+import ExpressIntro from '../src/components/express/ExpressIntro';
+import InstallSetup from '../src/components/express/InstallSetup';
+import ReqObj from '../src/components/express/ReqObj';
+import ResObj from '../src/components/express/ResObj';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -288,8 +294,20 @@ const Home = () => {
                                                                                                                                                                                           active === 'hooks-useEffect' ?
                                                                                                                                                                                             <HooksUseEffect></HooksUseEffect> :
                                                                                                                                                                                             active === 'hooks-useContext' ?
-                                                                                                                                                                                            <HooksUseContext></HooksUseContext> :
-                                                                                                                                                                                            ''
+                                                                                                                                                                                              <HooksUseContext></HooksUseContext> :
+                                                                                                                                                                                              active === 'nodejs-introduction' ?
+                                                                                                                                                                                                <NodeIntroduction></NodeIntroduction> :
+                                                                                                                                                                                                active === 'nodejs-server' ?
+                                                                                                                                                                                                  <NodeServer></NodeServer> :
+                                                                                                                                                                                                  active === 'expreejs-introduction' ?
+                                                                                                                                                                                                    <ExpressIntro></ExpressIntro> :
+                                                                                                                                                                                                    active === 'expreejs-installation' ?
+                                                                                                                                                                                                    <InstallSetup></InstallSetup> :
+                                                                                                                                                                                                    active === 'req-object' ?
+                                                                                                                                                                                                    <ReqObj></ReqObj> :
+                                                                                                                                                                                                    active === 'res-object' ?
+                                                                                                                                                                                                    <ResObj></ResObj> :
+                                                                                                                                                                                                    ''
         }
       </Aside>
 

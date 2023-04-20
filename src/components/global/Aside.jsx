@@ -3,8 +3,11 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { ProSidebarProvider } from 'react-pro-sidebar';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Aside = ({ children }) => {
+    const matches = useMediaQuery('(min-width:600px)');
+    console.log('matcgh', matches);
     const router = useRouter();
 
     const handlePush = (key, value) => {
@@ -22,7 +25,7 @@ const Aside = ({ children }) => {
             <Grid container>
                 <Grid item xs={2} md={2} lg={1} xl={1}>
                     <ProSidebarProvider>
-                        <Sidebar className='sidebar' style={{ marginTop: '109px', height: '90vh', position: 'fixed', paddingBottom: '10px' }} backgroundColor="#ECE4EC" width='250px'>
+                        <Sidebar defaultCollapsed={!matches} className='sidebar' style={{ marginTop: '109px', height: '90vh', position: 'fixed', paddingBottom: '10px' }} backgroundColor="#ECE4EC" width='250px'>
                             <Menu
                                 menuItemStyles={{
                                     button: ({ level, active, disabled }) => {
@@ -54,7 +57,7 @@ const Aside = ({ children }) => {
                                 </SubMenu>
                                 {/* <MenuItem >Agile Scrum</MenuItem> */}
 
-                                <SubMenu label="HTML" defaultOpen>
+                                <SubMenu label="HTML">
                                     <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'html_overview')}>Overview</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'basic_tags')}>Basic Tags</MenuItem>
@@ -186,6 +189,26 @@ const Aside = ({ children }) => {
                                         <MenuItem>Custom Hooks</MenuItem>
                                     </SubMenu>
 
+                                </SubMenu>
+
+                                <SubMenu label="NodeJs">
+                                    <MenuItem onClick={() => handlePush('tab', 'nodejs-introduction')}>Introduction</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'nodejs-server')}>Basic Server</MenuItem>
+                                </SubMenu>
+
+                                <SubMenu label="ExpressJs">
+                                    <MenuItem onClick={() => handlePush('tab', 'expreejs-introduction')}>Introduction</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'expreejs-installation')}>Installation & Setup</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'req-object')}>req Object</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'res-object')}>res Object</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'basic-server')}>Status Code</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'basic-server')}>Routing</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'basic-server')}>HTTP Methods</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'basic-server')}>Middleware</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'basic-server')}>Error Handling</MenuItem>
+                                </SubMenu>
+
+                                <SubMenu label="Database">
                                 </SubMenu>
 
                             </Menu>

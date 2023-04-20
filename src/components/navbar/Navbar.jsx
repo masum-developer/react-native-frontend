@@ -68,6 +68,14 @@ const Navbar = (props) => {
                     </ListItem>
                 ))}
             </List>
+
+            <Stack direction="column" alignItems="center" justifyContent="center">
+                <ButtonComp myWidth='110px'>Sign In</ButtonComp>
+
+                <Box mt={2}>
+                    <ButtonComp background="#313641" myWidth='110px' color='white'>Sign Up</ButtonComp>
+                </Box>
+            </Stack>
         </Box>
     );
 
@@ -75,56 +83,56 @@ const Navbar = (props) => {
 
 
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  border: '1px solid #D7DAE0',
-  borderRadius: theme.shape.borderRadius,
-//   backgroundColor: '#CDC0F8',
-//   '&:hover': {
-//     backgroundColor: '#CDC0F8',
-//   },
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: 'auto',
-  },
-}));
+    const Search = styled('div')(({ theme }) => ({
+        position: 'relative',
+        border: '1px solid #D7DAE0',
+        borderRadius: theme.shape.borderRadius,
+        //   backgroundColor: '#CDC0F8',
+        //   '&:hover': {
+        //     backgroundColor: '#CDC0F8',
+        //   },
+        marginLeft: 0,
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: theme.spacing(1),
+            width: 'auto',
+        },
+    }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
+    const SearchIconWrapper = styled('div')(({ theme }) => ({
+        padding: theme.spacing(0, 2),
+        height: '100%',
+        position: 'absolute',
+        pointerEvents: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }));
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '18ch',
-      '&:focus': {
-        width: '24ch',
-      },
-    },
-    '&::placeholder': {
-        textOverflow: 'ellipsis !important',
-        color: 'black'
-      }
-  },
-}));
+    const StyledInputBase = styled(InputBase)(({ theme }) => ({
+        color: 'inherit',
+        '& .MuiInputBase-input': {
+            padding: theme.spacing(1, 1, 1, 0),
+            // vertical padding + font size from searchIcon
+            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+            transition: theme.transitions.create('width'),
+            width: '100%',
+            [theme.breakpoints.up('sm')]: {
+                width: '18ch',
+                '&:focus': {
+                    width: '24ch',
+                },
+            },
+            '&::placeholder': {
+                textOverflow: 'ellipsis !important',
+                color: 'black'
+            }
+        },
+    }));
 
     return (
         <Box>
-            <AppBar sx={{ p: 1, background: '#FFFFFF', boxShadow: '1px 635px 254px rgba(0, 0, 0, 0.01), 1px 357px 214px rgba(0, 0, 0, 0.05), 0px 159px 159px rgba(0, 0, 0, 0.09), 0px 40px 87px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)', height: '108px', padding: '0' }}>
+            <AppBar sx={{ p: 1, background: '#FFFFFF', boxShadow: '1px 635px 254px rgba(0, 0, 0, 0.01), 1px 357px 214px rgba(0, 0, 0, 0.05), 0px 159px 159px rgba(0, 0, 0, 0.09), 0px 40px 87px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)', height: { xs: '70px', sm: '108px' }, padding: '0' }}>
                 <Container>
                     <Toolbar>
                         <IconButton
@@ -153,7 +161,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
                             />
                         </Search>
 
-                        <Box direction="row" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <Box direction="row" sx={{ display: { xs: 'none', md: 'block' } }}>
                             {navItems?.map((item) => (
                                 <Link href={`${item?.slug}`}>
                                     <Typography variant='body1' key={item?.id} sx={{ mx: 1, color: '#413434', display: 'inline-block', cursor: 'pointer' }}>
