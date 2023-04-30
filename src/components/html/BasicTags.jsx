@@ -10,6 +10,8 @@ import Paper from '@mui/material/Paper';
 import useFind from '../../hooks/useFind';
 import htmlData from '../../localDb/HTML';
 import CodeBox from '../global/CodeBox';
+import Block from '../global/Block';
+import MuiAlert from '@mui/material/Alert';
 import HtmlOutput from '../global/HtmlOutput';
 
 function createData(serial, tags, description) {
@@ -30,15 +32,18 @@ const BasicTags = () => {
     const data = useFind(htmlData, 'basictags');
 
     //destructuring
-    const { section1,section2 } = data || {};
-    const { title1, desc } = section1 || {};
+    const { section1,section2,section3 } = data || {};
+    const { title1, desc,title } = section1 || {};
     const { title2, codeTemplate2 } = section2 || {};
+    const { title3, desc3, list3 } = section3 || {};
   
 
     return (
         <Box >
-            <Typography variant='h1'>{title1}</Typography>
+            <Typography variant='h3'>{title1}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc}</Typography>
+             <Typography mt={3} variant='h3'>{title}</Typography>
+
 
             <Box mt={3}>
                 <TableContainer component={Paper}>
@@ -67,11 +72,15 @@ const BasicTags = () => {
                     </Table>
                 </TableContainer>
             </Box>
+            <Typography variant='h3' mt={3}>{title3}</Typography>
+            <Typography mt={3} variant='subtitle1'>{desc}</Typography>
+            <Block list={list3}></Block>
+
              <Typography variant='h3' mt={3}>{title2}</Typography>
               <CodeBox codeSnippet={codeTemplate2}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output1: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput variant='subtitle2'
                     h1Text="Welcome to TS4U"
                    i></HtmlOutput>

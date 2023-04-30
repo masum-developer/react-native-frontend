@@ -79,6 +79,19 @@ import DomSelectors from '../src/components/DOM/DomSelectors';
 import DomStyles from '../src/components/DOM/DomStyles';
 import DomEvents from '../src/components/DOM/DomEvents';
 import EventListener from '../src/components/DOM/EventListener';
+import Position from '../src/components/css/Position';
+import ZIndex from '../src/components/css/ZIndex';
+import Float from '../src/components/css/Float';
+import Blocks from '../src/components/css/Blocks';
+import Align from '../src/components/css/Align';
+import Dropdown from '../src/components/css/DropDown';
+import Form from '../src/components/css/Form';
+import CssImages from '../src/components/css/CssImages';
+import Units from '../src/components/css/Units';
+import Specificity from '../src/components/css/Specificity';
+import Important from '../src/components/css/Important';
+import Flexbox from '../src/components/css/Flexbox';
+import CssGrid from '../src/components/css/CssGrid';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -152,6 +165,32 @@ const Home = () => {
                                                                 <CssTables></CssTables> :
                                                                 active === 'display' ?
                                                                   <Display></Display> :
+                                                                  active === 'position' ?
+                                                                    <Position></Position> :
+                                                                    active === 'z-index' ?
+                                                                      <ZIndex></ZIndex> :
+                                                                      active === 'float' ?
+                                                                        <Float></Float> :
+                                                                        active === 'block' ?
+                                                                          <Blocks></Blocks> :
+                                                                          active === 'align' ?
+                                                                            <Align></Align> :
+                                                                            active === 'dropdown' ?
+                                                                              <Dropdown></Dropdown> :
+                                                                              active === 'form' ?
+                                                                                <Form></Form> :
+                                                                                active === "cssimages" ?
+                                                                                  <CssImages></CssImages> :
+                                                                                  active === "units" ?
+                                                                                    <Units></Units> :
+                                                                                    active === "specificity" ?
+                                                                                      <Specificity></Specificity> :
+                                                                                      active === "important" ?
+                                                                                        <Important></Important> :
+                                                                                        active === 'flexbox' ?
+                                                                                          <Flexbox></Flexbox> :
+                                                                                          active === 'grid' ?
+                                                                                            <CssGrid></CssGrid>:
                                                                   active === 'js_introduction' ?
                                                                     <IntroductionJs></IntroductionJs> :
                                                                     active === 'js_overview' ?

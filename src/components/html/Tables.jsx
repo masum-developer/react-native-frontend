@@ -9,6 +9,8 @@ import useFind from '../../hooks/useFind';
 import HtmlOutput from '../global/HtmlOutput';
 import TableOutput1 from '../global/TableOutput1';
 import TableOutput2 from '../global/TableOutput2';
+import Block from '../global/Block';
+import MuiAlert from '@mui/material/Alert';
 
 const Tables = () => {
     //fetching data from custom hooks
@@ -16,8 +18,8 @@ const Tables = () => {
 
     //destructuring
     const { section1, section2, section3, section4 } = data || {};
-    const { title1, desc } = section1 || {};
-    const { codeTemplate2 } = section2 || {};
+    const { title1, desc,title,desc1,list1 } = section1 || {};
+    const { codeTemplate2,title2 } = section2 || {};
     const { desc3, desc4 } = section3 || {};
     const { codeTemplate4, desc5, desc6 } = section4 || {};
 
@@ -29,13 +31,17 @@ const Tables = () => {
         <Box >
 
 
-            <Typography variant='h1' mt={3}>{title1}</Typography>
+            <Typography variant='h3' mt={3}>{title1}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc}</Typography>
+            <Typography variant='h3' mt={3}>{title}</Typography>
+            <Typography mt={3} variant='subtitle1'>{desc1}</Typography>
+            <Block list={list1}></Block>
+            <Typography variant='h3' mt={3}>{title2}</Typography>
 
             <CodeBox codeSnippet={codeTemplate2}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output1: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <TableOutput1></TableOutput1>
             </Box>
             
@@ -45,7 +51,7 @@ const Tables = () => {
             
             <CodeBox mt={3} codeSnippet={codeTemplate4}></CodeBox>
             <Box mt={3}>
-                <Typography variant='h4'>Output2: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <TableOutput2></TableOutput2>
 
             </Box>

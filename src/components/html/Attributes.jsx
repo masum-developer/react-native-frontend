@@ -41,7 +41,7 @@ const Attributes = () => {
 
     //destructuring
     const { section1, section2,section3,section4 } = data || {};
-    const { title1, desc } = section1 || {};
+    const { title1, desc,title } = section1 || {};
     const { title2, codeTemplate2 } = section2 || {};
     const { codeTemplate3 } = section3 || {};
     const { codeTemplate4 } = section4 || {};
@@ -50,6 +50,7 @@ const Attributes = () => {
         <Box >
             <Typography variant='h3'>{title1}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc} </Typography>
+             <Typography mt={3} variant='h3'>{title}</Typography>
 
             <Box mt={3} >
                 <TableContainer component={Paper}>
@@ -85,21 +86,21 @@ const Attributes = () => {
             <CodeBox codeSnippet={codeTemplate2}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output1: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput underline='Welcome to TS4U'></HtmlOutput>
             </Box>
             {/* Example 2 */}
              <CodeBox codeSnippet={codeTemplate3}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output2: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput title='Ts4u-Mern Stack Development Track' pText="Title Output is shown in the browser's title bar"></HtmlOutput>
             </Box>
             {/* Example 3 */}
             <CodeBox codeSnippet={codeTemplate4}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output4: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput images1="logo.svg"></HtmlOutput>
                
             </Box>

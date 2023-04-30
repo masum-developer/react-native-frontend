@@ -12,6 +12,8 @@ import ListsOutput2 from '../global/Listsoutput2';
 import ListsOutput3 from '../global/Listsoutput3';
 import ListsOutput4 from '../global/Listsoutput4';
 import ListsOutput5 from './Listsoutput5';
+import Block from '../global/Block';
+import MuiAlert from '@mui/material/Alert';
 
 
 
@@ -20,8 +22,8 @@ const Lists = () => {
     const data = useFind(htmlData, 'lists');
 
     // //destructuring
-    const { section1,section2 ,section3,section4,section5,section6,section7,section8,section9,section10} = data || {};
-    const { title1, desc1 } = section1 || {};
+    const { section1,section2 ,section3,section4,section5,section6,section7,section8,section9,section10,section12} = data || {};
+    const { title1, desc1 ,title,desc,list1} = section1 || {};
     const { title2,desc2} = section2 || {};
     const { codeTemplate3,desc3 } = section3 || {};
     const { desc4,codeTemplate4 } = section4 || {};
@@ -31,7 +33,8 @@ const Lists = () => {
     const { desc7 } = section7 || {}
     const { desc8, codeTemplate8 } = section8 || {}
     const { desc9, title9 } = section9 || {}
-    const { desc10,codeTemplate10,desc11 } = section10 || {}
+    const { desc10, codeTemplate10, desc11 } = section10 || {}
+    const { title12, desc12 } = section12 || {};
 
 
 
@@ -39,9 +42,19 @@ const Lists = () => {
         <Box >
 
 
-            <Typography variant='h1' mt={3}>{title1}</Typography>
+            <Typography variant='h3' mt={3}>{title1}</Typography>
            
             <Typography mt={2} variant='subtitle1'>{desc1}</Typography>
+            <Typography  variant='h3' mt={3}>{title}</Typography>
+           
+            <Typography mt={2} variant='subtitle1'>{desc}</Typography>
+            <Block list={list1}></Block>
+            <Typography  variant='h3' mt={3}>{title12}</Typography>
+           
+            <Typography mt={2} variant='subtitle1'>{desc12}</Typography>
+            
+
+
             
             <Typography variant='h3' mt={3}>{title2}</Typography>
             <Typography mt={2} variant='subtitle1'>{desc2}</Typography>
