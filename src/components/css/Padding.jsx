@@ -12,7 +12,7 @@ import CssPaddingOutput from '../global/CssPaddingOutput';
 import ListsOutput7 from '../global/Listsoutput7';
 
 
-const Margin = () => {
+const Padding = () => {
      //fetching data from custom hooks
     const data = useFind(CssData, 'padding');
 
@@ -27,14 +27,14 @@ const Margin = () => {
     const { desc7 } = section7 || {};
     const { title8,codeTemplate8 } = section8 || {};
     return (
-         <Box >
+         <Box>
 
             <Typography variant='h3'>{title1}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc1}</Typography>
             <Typography mt={3} variant='h3'>{title}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc}</Typography>
             <ListsOutput7></ListsOutput7>
-           
+      
 
 
             <Typography mt={3} variant='h3'>{title2}</Typography>
@@ -82,4 +82,4 @@ const Margin = () => {
             </Box>
     )
 }
-export default Margin;
+export default Padding;

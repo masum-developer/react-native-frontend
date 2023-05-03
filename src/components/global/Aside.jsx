@@ -34,12 +34,12 @@ const Aside = ({ children }) => {
                                             color: disabled ? "#eee" : "#455A64",
                                             backgroundColor: active ? "#3D34E3" : undefined,
                                             "&:hover": {
-                                                backgroundColor: "#D5C9F0 !important",
+                                                backgroundColor: "#D5C9F0  !important",
                                                 color: "#3D34E3 !important",
                                                 fontWeight: "bold !important",
                                                 fontFamily: "Heebo, sans-serif"
                                             },
-                                            // };
+                                            //  };
                                         }
                                     },
                                 }}
@@ -83,6 +83,22 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'list')}>Lists</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'css_table')}>Tables</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'display')} >Display</MenuItem>
+<<<<<<< HEAD
+                                    <MenuItem onClick={() => handlePush('tab', 'position')}>Position</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'z-index')}>Z-Index</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'float')}>Float</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'block')}>Block</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'align')}>Align</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'dropdown')}>DropDown</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'form')}>Form</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'cssimages')}>Image</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab','units')}> Unit</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab','specificity')}>Specificity</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'important')}>!Important</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'flexbox')}>Flexbox</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Grid</MenuItem>
+                                    
+=======
                                     <MenuItem>Position</MenuItem>
                                     <MenuItem>Z-Index</MenuItem>
                                     <MenuItem>Float</MenuItem>
@@ -94,6 +110,7 @@ const Aside = ({ children }) => {
                                     <MenuItem>Unit</MenuItem>
                                     <MenuItem>Specificity</MenuItem>
                                     <MenuItem>!Important</MenuItem>
+>>>>>>> 2ccb75f61b9a4fd0b434e988651fd882c83108d9
 
 
 
@@ -110,7 +127,7 @@ const Aside = ({ children }) => {
                                     <SubMenu label="Operators">
                                         <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Overview</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'arithmetic')}>Arithmetic</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'assignment')}>Assigment</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'assignment')}>Assignment</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'comparison')}>Comparison</MenuItem>
                                     </SubMenu>
                                     <MenuItem onClick={() => handlePush('tab', 'dataTypes')}>Data Types</MenuItem>

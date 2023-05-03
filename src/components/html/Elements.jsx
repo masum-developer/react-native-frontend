@@ -37,7 +37,7 @@ const Elements = () => {
 
     //destructuring
     const { section1, section2,section3,section4,section5,section6,section7,section8 } = data || {};
-    const { title1, desc } = section1 || {};
+    const { title1, desc,title } = section1 || {};
     const { title2, codeTemplate2 } = section2 || {}
     const { codeTemplate3 } = section3 || {}
     const { codeTemplate4 } = section4 || {}
@@ -47,8 +47,9 @@ const Elements = () => {
     const { codeTemplate8 } = section8 || {}
     return (
         <Box >
-            <Typography variant='h1'>{title1}</Typography>
+            <Typography mt={3} variant='h3'>{title1}</Typography>
             <Typography mt={3} variant='subtitle1'>{desc} </Typography>
+            <Typography mt={3} variant='h3'>{title}</Typography>
 
             <Box mt={3} >
                 <TableContainer component={Paper}>
@@ -82,28 +83,28 @@ const Elements = () => {
             <CodeBox codeSnippet={ codeTemplate2}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output1: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput h1Text="Welcome to TS4U" ></HtmlOutput>
             </Box>
             {/*  Example2 */}
             <CodeBox codeSnippet={ codeTemplate3}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output2: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput pText="Welcome to TS4U" ></HtmlOutput>
             </Box>
             {/* Example 3 */}
             <CodeBox codeSnippet={ codeTemplate4}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output3: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput linkText="Visit TS4U Website" ></HtmlOutput>
             </Box>
             {/* Example 4 */}
              <CodeBox codeSnippet={codeTemplate5}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output4: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <HtmlOutput images1="logo.svg"></HtmlOutput>
                
             </Box>
@@ -111,7 +112,7 @@ const Elements = () => {
               <CodeBox mt={3} codeSnippet={codeTemplate6}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output5: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                <ListsOutput2></ListsOutput2>
                 
             </Box>
@@ -119,14 +120,14 @@ const Elements = () => {
               <CodeBox mt={3} codeSnippet={codeTemplate7}></CodeBox>
 
             <Box mt={3}>
-                <Typography variant='h4'>Output6: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <ListsOutput3></ListsOutput3>
                 
             </Box>
             {/* Example 7 */}
              <CodeBox mt={3} codeSnippet={codeTemplate8}></CodeBox>
             <Box mt={3}>
-                <Typography variant='h4'>Output7: </Typography>
+                <Typography variant='h4'>Output: </Typography>
                 <TableOutput2></TableOutput2>
 
             </Box>

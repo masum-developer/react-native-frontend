@@ -73,7 +73,8 @@ const htmlData = [
     {
         name: "basictags",
         section1: {
-            title1: "Basic Tags",
+            title1: "What is Basic Tags in HTML?",
+            title: "What are the Tags in HTML?",
             desc: "As told earlier, HTML is a markup language and makes use of various tags to format the content. These tags are enclosed within angle braces. Except few tags, most of the tags have their corresponding closing tags.For example, (<html>) has its closing tag (</html>) and (<body>) tag has its closing tag (</body>) tag etc."
         },
         section2: {
@@ -87,13 +88,19 @@ const htmlData = [
                         <h1>Welcome to TS4U</h1>
                     </body>	
                 </html>`
+        },
+        section3: {
+            title3: "Why should we use Tags in HTML?",
+            desc3: "Tags are an essential part of HTML (Hypertext Markup Language) and are used to define the structure and content of a web page. Tags are essentially keywords that tell the browser how to display the content of the page. Here are some reasons why we should use tags in HTML:",
+            list3: ['Structure: HTML tags provide a structured way to define the layout and structure of a web page. By using tags such as <header>, <nav>, <main>, <footer>, etc., we can clearly define the different parts of a web page, making it easier for search engines to crawl and index the content.', 'Accessibility: HTML tags provide important accessibility features for users who may use assistive technology to access web content. For example, using the <img> tag to add alt text to images allows users with visual impairments to understand the content of the image.', 'SEO: HTML tags are important for search engine optimization (SEO) as they help search engines understand the content of a web page. Using tags such as <title>, <meta>, <h1>, and <p> helps search engines to understand the hierarchy and relevance of the content on the page, which can improve the pages ranking in search results.', 'Consistency: By using consistent HTML tags, web designers and developers can create a consistent look and feel across multiple pages of a website. This makes it easier for users to navigate the site and find the content they are looking for.']
         }
 
     },
     {
         name: "elements",
         section1: {
-            title1: "Elements",
+            title1: "What is Elements in HTML?",
+            title: "What are the Elements Tags in HTML?",
             desc: "Well , As we said that HTML (Hypertext Markup Language) is the standard markup language which is used to create web pages. HTML elements are the building blocks of HTML pages. Basically HTML elements are defined by tags, which are enclosed in angle brackets.There are two types of tags: opening tags and closing tags.Opening tags start with the less than symbol (<) followed by the tag name, and closing tags start with the less than symbol (<) followed by a forward slash (/), the tag name, and then the greater than symbol (>).The HTML element is everything from the start tag to the end tag: (<tagname> Contents goes here ..... </tagname>)",
 
         },
@@ -208,7 +215,8 @@ const htmlData = [
     }, {
         name: "attributes",
         section1: {
-            title1: " Attributes",
+            title1: " What is Attributes in HTML?",
+            title: "What are the Attributes Tags in HTML?",
             desc: "Well Now talking about the Html Attributes which are additional information provided within the tags of an HTML element to define its characteristics and behavior. Attributes provide extra functionality and customization to the elements they are applied to.Attributes are always specified in the start tag. And It usually come in name/value pairs like: name='value'."
         },
         section2: {
@@ -254,7 +262,8 @@ const htmlData = [
     {
         name: "formatting",
         section1: {
-            title1: 'Formatting',
+            title1: 'What is Formatting in HTML?',
+            title: "What are the Formatting Tags in HTML?",
             desc: 'Basically HTML tags are used to format and structure the content in a web page. HTML Formatting is a process of formatting text for better look and feel. HTML provides us ability to format text without using CSS. There are many formatting tags in HTML. These tags are used to make text bold, italicized, or underlined. There are almost 14 options available that how text appears in HTML and XHTML. The formatting tags are divided into two categories: Physical tag and Logical tag.',
 
         },
@@ -341,10 +350,11 @@ const htmlData = [
     {
         name: "images",
         section1: {
-            title1: "Images",
+            title1: "What is Images in HTML?",
             desc: "The HTML <img> tag is used to embed an image in a web page.Images are not technically inserted into a web page; images are linked to web pages.The < img > tag creates a holding space for the referenced image.The < img > tag is empty, it contains attributes only, and does not have a closing tag. Here is the some exclusive examples:"
         },
         section2: {
+            title2: "Example",
             codeTemplate2: `<img src="logo.svg" alt="Ts4u">
             
             `
@@ -359,15 +369,25 @@ const htmlData = [
         },
         section5: {
             desc5: "Note that it's important Always specify the width and height of an image. If width and height are not specified, the web page might flicker while the image loads."
+        },
+        section6: {
+            title6: "Why should we use Images in HTML?",
+            desc6: "Images are a powerful tool for enhancing the visual appeal of a web page and conveying information in a more engaging and memorable way. Here are some reasons why we should use images in HTML:",
+            list6: ['Visual Appeal: Images can make a web page more visually appealing and interesting to users. By using images, web designers can break up large blocks of text and make a page look more visually balanced and attractive.', 'Engagement: Images can engage users and encourage them to spend more time on a web page. Relevant and interesting images can help to draw users in and keep them engaged with the content.', 'Explanation: Images can help to explain complex concepts or data in a more visual and accessible way. For example, charts and graphs can be used to illustrate data trends, and diagrams can be used to show the relationships between different parts of a system.', 'Branding: Images can be used to reinforce a brands identity and personality.By using consistent imagery across a website, businesses can create a recognizable and memorable brand image that users will associate with their products or services.', 'Accessibility: Images can also be used to improve accessibility for users with visual impairments. By providing alternative text (alt text) for images, screen readers can read out a description of the image, allowing users with visual impairments to understand the content of the page.']
+
         }
     },
     {
         name: "tables",
         section1: {
-            title1: "Tables",
-            desc: "Well , Basically, HTML tables allow web developers to arrange data into rows and columns.HTML provides a way to create tables using the <table> tag and a combination of other tags to define the table structure, headings, rows, and cells. Here's a basic example:"
+            title1: "What is Tables in Html?",
+            title: "Why should we use Tables in HTML?",
+            desc1: 'Tables are a powerful tool in HTML (Hypertext Markup Language) for displaying data in a structured and organized way. Here are some reasons why we should use tables in HTML:',
+            desc: "Well , Basically, HTML tables allow web developers to arrange data into rows and columns.HTML provides a way to create tables using the <table> tag and a combination of other tags to define the table structure, headings, rows, and cells. Here's a basic example:",
+            list1: ['Data organization: Tables are an effective way to organize data in a clear and structured manner, making it easier for users to read and understand. Tables allow data to be arranged in rows and columns, and can include headers and footers to provide context and additional information.', 'Comparison: Tables can be used to compare data from different sources or periods of time. By presenting data in a table, users can quickly and easily see differences and similarities between different data sets.', 'Accessibility: Tables can improve accessibility for users with visual impairments by providing a clear structure and context for data. Screen readers can read out table headers and footers, making it easier for users to understand the content of the table.', 'Customization: Tables in HTML can be customized using CSS (Cascading Style Sheets) to change the appearance and layout of the table. This allows web designers to create tables that match the look and feel of the rest of the web page, improving the overall user experience.', 'Printability: Tables can be easily printed, making them a useful tool for printing data or reports for offline use.']
         },
         section2: {
+            title2: "Example",
             codeTemplate2: `<table>
   <thead>
     <tr>
@@ -427,11 +447,14 @@ const htmlData = [
     {
         name: "lists",
         section1: {
-            title1: "Lists",
-            desc1: "At First we have think how this 'List' word carries its valueable meaning. So we can define like 'A list is a record of short pieces of related information or used to display the data or any information on web pages in the ordered or unordered form.' Now  I know that you think how we can make lists using Html. Well,Basically, HTML provides three types of lists: ordered lists (<ol>), unordered lists (<ul>), and description lists (<dl>).  "
+            title1: "What is Lists in HTML?",
+            desc1: "At First we have think how this 'List' word carries its valueable meaning. So we can define like 'A list is a record of short pieces of related information or used to display the data or any information on web pages in the ordered or unordered form.' Now  I know that you think how we can make lists using Html.  ",
+            title: "Why should we use Lists in HTML?",
+            desc: "Lists are an essential part of HTML (Hypertext Markup Language) and are used to organize content into an ordered or unordered list. Here are some reasons why we should use lists in HTML:",
+            list1: ['Organization: Lists provide a clear and organized way to present information. By grouping related items together, lists can help to make content more readable and easier to understand.', 'Accessibility: Lists can improve accessibility for users with visual impairments by providing a clear structure and context for content. Screen readers can read out list items and their relationships to each other, making it easier for users to understand the content.', 'SEO: Lists can be used to improve search engine optimization (SEO) by providing a clear and structured way to present information. By using lists with descriptive headings, search engines can better understand the content of the page, which can improve its ranking in search results.', 'Customization: Lists in HTML can be customized using CSS (Cascading Style Sheets) to change the appearance and layout of the list. This allows web designers to create lists that match the look and feel of the rest of the web page, improving the overall user experience.', 'Readability: Lists can improve the readability of content by breaking up large blocks of text into more manageable chunks. By using lists, web designers can make content more scannable and easier to read.']
         },
         section2: {
-            title2: "Ordered Lists",
+            title2: "What is Ordered Lists?",
             desc2: "An ordered list is a list of items that are numbered in a specific order. To create an ordered list, use the <ol> tag with <li> tags for each item:"
         },
         section3: {
@@ -457,7 +480,7 @@ const htmlData = [
         },
         section5: {
             desc5: 'This will start the list with the number "5".',
-            title5: "Unordered Lists"
+            title5: "What is Unordered Lists?"
         },
         section6: {
             desc6: "An unordered list is a list of items that are not numbered. To create an unordered list, use the <ul> tag with <li> tags for each item:",
@@ -499,14 +522,22 @@ const htmlData = [
 </dl>
 `,
             desc11: "This will create a description list with each term followed by its corresponding definition."
+        },
+        section12: {
+            title12: "What are the Types of Lists?",
+            desc12: "Well,Basically, HTML provides three types of lists: ordered lists (<ol>), unordered lists (<ul>), and description lists (<dl>)."
         }
     }, {
         name: "textlinks",
         section1: {
-            title1: "Text Links",
-            desc1: "In HTML, you can create links to other web pages or resources using the <a> tag. Here's an example:"
+            title1: "What is Text Links in HTML?",
+            desc1: "In HTML, you can create links to other web pages or resources using the <a> tag. Here's an example:",
+            title: "Why should we use Text Links in HTML?",
+            desc: "Text links, also known as hyperlinks, are an important part of HTML (Hypertext Markup Language) and are used to create clickable links that connect different web pages or sections within a page. Here are some reasons why we should use text links in HTML:",
+            list1: ['Navigation: Text links provide an intuitive and easy-to-use way for users to navigate a website. By using text links, users can quickly and easily move between different pages or sections within a page, improving the overall user experience.', 'SEO: Text links can improve search engine optimization (SEO) by providing clear and descriptive anchor text for search engines to crawl and index. By using relevant and descriptive anchor text, web designers can help search engines to better understand the content of the linked page, which can improve its ranking in search results.', 'Accessibility: Text links can improve accessibility for users with visual impairments by providing clear and descriptive anchor text that can be read out by screen readers. This makes it easier for users with visual impairments to navigate the website and understand the content.', 'Usability: Text links are a widely recognized and understood convention on the web, making them a familiar and easy-to-use element for users. By using text links, web designers can create a consistent and intuitive user interface that improves usability and enhances the overall user experience.', 'Customization: Text links in HTML can be customized using CSS (Cascading Style Sheets) to change the appearance and layout of the link. This allows web designers to create links that match the look and feel of the rest of the web page, improving the overall user experience.']
         },
         section2: {
+            title2: "Example",
             codeTemplate2: `<a href="https://ts4u.us/">Follow Our TS4U WebPage</a>`,
             desc2: 'In this example, the `href` attribute specifies the URL of the page or resource you want to link to, and the text "Link to Example" is the clickable text for the link.'
 
