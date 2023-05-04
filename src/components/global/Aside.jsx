@@ -83,7 +83,6 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'list')}>Lists</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'css_table')}>Tables</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'display')} >Display</MenuItem>
-<<<<<<< HEAD
                                     <MenuItem onClick={() => handlePush('tab', 'position')}>Position</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'z-index')}>Z-Index</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'float')}>Float</MenuItem>
@@ -98,7 +97,6 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'flexbox')}>Flexbox</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'grid')}>Grid</MenuItem>
                                     
-=======
                                     <MenuItem>Position</MenuItem>
                                     <MenuItem>Z-Index</MenuItem>
                                     <MenuItem>Float</MenuItem>
@@ -110,7 +108,6 @@ const Aside = ({ children }) => {
                                     <MenuItem>Unit</MenuItem>
                                     <MenuItem>Specificity</MenuItem>
                                     <MenuItem>!Important</MenuItem>
->>>>>>> 2ccb75f61b9a4fd0b434e988651fd882c83108d9
 
 
 

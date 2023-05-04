@@ -79,7 +79,6 @@ import DomSelectors from '../src/components/DOM/DomSelectors';
 import DomStyles from '../src/components/DOM/DomStyles';
 import DomEvents from '../src/components/DOM/DomEvents';
 import EventListener from '../src/components/DOM/EventListener';
-<<<<<<< HEAD
 import Position from '../src/components/css/Position';
 import ZIndex from '../src/components/css/ZIndex';
 import Float from '../src/components/css/Float';
@@ -93,7 +92,6 @@ import Specificity from '../src/components/css/Specificity';
 import Important from '../src/components/css/Important';
 import Flexbox from '../src/components/css/Flexbox';
 import CssGrid from '../src/components/css/CssGrid';
-=======
 import ReactIntroduction from '../src/components/react/ReactIntroduction';
 import ReactInstallation from '../src/components/react/ReactInstallation';
 import ReactJSX from '../src/components/react/ReactJSX';
@@ -113,7 +111,6 @@ import ExpressIntro from '../src/components/express/ExpressIntro';
 import InstallSetup from '../src/components/express/InstallSetup';
 import ReqObj from '../src/components/express/ReqObj';
 import ResObj from '../src/components/express/ResObj';
->>>>>>> 2ccb75f61b9a4fd0b434e988651fd882c83108d9
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
