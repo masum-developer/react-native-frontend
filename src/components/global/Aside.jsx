@@ -96,18 +96,14 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'important')}>!Important</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'flexbox')}>Flexbox</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'grid')}>Grid</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'websitelayout')}>Website Layout</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'cssanimation')}>Animation</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'navigationbar')}>Navigation Bar</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Opacity</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Shadows</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Transition</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Media Queries</MenuItem>
                                     
-                                    <MenuItem>Position</MenuItem>
-                                    <MenuItem>Z-Index</MenuItem>
-                                    <MenuItem>Float</MenuItem>
-                                    <MenuItem>Block</MenuItem>
-                                    <MenuItem>Align</MenuItem>
-                                    <MenuItem>DropDown</MenuItem>
-                                    <MenuItem>Form</MenuItem>
-                                    <MenuItem>Image</MenuItem>
-                                    <MenuItem>Unit</MenuItem>
-                                    <MenuItem>Specificity</MenuItem>
-                                    <MenuItem>!Important</MenuItem>
 
 
 
@@ -142,8 +138,8 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'for-loop')}>For</MenuItem>
                                         {/* <MenuItem onClick={() => handlePush('tab', 'assignment')}>For In</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'comparison')}>For Of</MenuItem> */}
-                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>While</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>Do While</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'whileloop')}>While</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'dowhileloop')}>Do While</MenuItem>
                                     </SubMenu>
                                     <MenuItem onClick={() => handlePush('tab', 'set')}>Set</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'map')}>Maps</MenuItem>
@@ -215,7 +211,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'expreejs-installation')}>Installation & Setup</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'req-object')}>req Object</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'res-object')}>res Object</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'basic-server')}>Status Code</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'status-code')}>Status Code</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'basic-server')}>Routing</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'basic-server')}>HTTP Methods</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'basic-server')}>Middleware</MenuItem>
