@@ -18,7 +18,7 @@ const Login = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        console.log('data', data);
+        // console.log('data', data);
 
         setIsLoading(true)
         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/login`, data)
@@ -28,7 +28,7 @@ const Login = () => {
                     return notification.error({ message: "You did not verify your email! Please go to ts4u.us and verify your email" })
                 };
 
-                console.log('res.data.success', res.data.success);
+                // console.log('res.data.success', res.data.success);
 
                 if (res.data.success) {
                     Cookies.set(process.env.NEXT_PUBLIC_TOKEN_NAME, `Bearer ${res.data.token}`);
