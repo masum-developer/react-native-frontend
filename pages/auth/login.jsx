@@ -21,7 +21,7 @@ const Login = () => {
         console.log('data', data);
 
         setIsLoading(true)
-        axios.post("/user/login", data)
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/login`, data)
             .then(res => {
                 let { isOtpSend, success, token } = res.data;
                 if (isOtpSend) {
