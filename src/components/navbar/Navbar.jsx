@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -18,11 +17,17 @@ import { Container, Stack } from '@mui/material';
 import { ButtonComp } from '../ui/Button';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Avatar from '@mui/material/Avatar';
 import InputBase from '@mui/material/InputBase';
-// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from "@mui/system";
+import { useSelector } from 'react-redux';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
+import Cookies from "js-cookie";
+import { Alert, message, notification, Space, Spin } from 'antd';
 
 
 const drawerWidth = 240;
@@ -40,15 +45,42 @@ const navItems = [
     },
 ];
 
+const settings = ['Logout'];
+
 const Navbar = (props) => {
-    const { window } = props;
+    const { user, isAuthenticated } = useSelector(state => state.auth)
+    const { windowProp } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+
+    // console.log('user, isAuthenticated', user, isAuthenticated);
 
     const router = useRouter();
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
+
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
+
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
+    };
+
+    const handleUserMenu = (val) => {
+        //do logout
+        if (val.toLowerCase() === 'logout') {
+            Cookies.remove(process.env.NEXT_PUBLIC_TOKEN_NAME);
+            message.success("Logged out successfully");
+
+            setTimeout(() => {
+                window.location.href = "/";
+            }, 2000)
+        }
+    }
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -70,16 +102,20 @@ const Navbar = (props) => {
             </List>
 
             <Stack direction="column" alignItems="center" justifyContent="center">
-                <ButtonComp myWidth='110px'>Sign In</ButtonComp>
+                <Link href="/auth/login">
+                    <ButtonComp myWidth='110px'>Sign In</ButtonComp>
+                </Link>
 
                 <Box mt={2}>
-                    <ButtonComp background="#313641" myWidth='110px' color='white'>Sign Up</ButtonComp>
+                    <a target="_blank" href="https://ts4u.us/auth/register" rel="noopener noreferrer">
+                        <ButtonComp background="#313641" myWidth='110px' color='white'>Sign Up</ButtonComp>
+                    </a>
                 </Box>
             </Stack>
         </Box>
     );
 
-    const container = window !== undefined ? () => window().document.body : undefined;
+    const container = windowProp !== undefined ? () => window().document.body : undefined;
 
 
 
@@ -169,9 +205,50 @@ const Navbar = (props) => {
                                     </Typography>
                                 </Link>
                             ))}
-                            <ButtonComp style={{ marginLeft: '5px' }} myWidth='110px'>Sign In</ButtonComp>
+                            {isAuthenticated ?
+                                <>
+                                    <Tooltip title="Open settings">
+                                        <IconButton
+                                            onClick={handleOpenUserMenu}
+                                            sx={{ p: 0 }}>
+                                            <Avatar alt={user?.firstName} src={user?.profilePicture} />
+                                        </IconButton>
+                                    </Tooltip>
 
-                            <ButtonComp style={{ marginLeft: '15px' }} background="#313641" myWidth='110px' color='white'>Sign Up</ButtonComp>
+                                    <Menu
+                                        sx={{ mt: '45px' }}
+                                        id="menu-appbar"
+                                        anchorEl={anchorElUser}
+                                        anchorOrigin={{
+                                            vertical: 'top',
+                                            horizontal: 'right',
+                                        }}
+                                        keepMounted
+                                        transformOrigin={{
+                                            vertical: 'top',
+                                            horizontal: 'right',
+                                        }}
+                                        open={Boolean(anchorElUser)}
+                                        onClose={handleCloseUserMenu}
+                                    >
+                                        {settings.map((setting) => (
+                                            <MenuItem key={setting} onClick={() => handleUserMenu(setting)}>
+                                                <Typography textAlign="center">{setting}</Typography>
+                                            </MenuItem>
+                                        ))}
+                                    </Menu>
+                                </> :
+                                <>
+                                    <Link href="/auth/login">
+                                        <ButtonComp style={{ marginLeft: '5px' }} myWidth='110px'>Sign In</ButtonComp>
+                                    </Link>
+
+                                    <a target="_blank" href="https://ts4u.us/auth/register" rel="noopener noreferrer">
+                                        <ButtonComp style={{ marginLeft: '15px' }} background="#313641" myWidth='110px' color='white'>Sign Up</ButtonComp>
+                                    </a>
+                                </>
+                            }
+
                         </Box>
                     </Toolbar>
                 </Container>
@@ -198,7 +275,7 @@ const Navbar = (props) => {
 };
 
 Navbar.propTypes = {
-    window: PropTypes.func,
+    windowProp: PropTypes.func,
 };
 
 export default Navbar;

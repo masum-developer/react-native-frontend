@@ -27,7 +27,7 @@ const WhileLoop = () => {
 
 
     return (
-        <>{Object.keys(data).length > 0 ?
+        <>
             <Box>
                 <Typography variant='h3'>{title1}</Typography>
                 <Typography variant='subtitle1'>{desc}</Typography>
@@ -62,9 +62,7 @@ const WhileLoop = () => {
 
                 <br></br>
 
-            </Box> :
-            <CircularIndeterminate></CircularIndeterminate>
-        }
+            </Box>
         </>
 
     );

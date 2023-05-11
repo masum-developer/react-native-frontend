@@ -117,6 +117,11 @@ import NavigationBar from '../src/components/css/NavigationBar';
 import WhileLoop from '../src/components/js/WhileLoop';
 import DoWhileLoop from '../src/components/js/DoWhileLoop';
 import StatusCode from '../src/components/express/StatusCode';
+import ExpressRouting from '../src/components/express/ExpressRouting';
+import HTTPMethods from '../src/components/express/HTTPMethods';
+import MiddlewareExpress from '../src/components/express/MiddlewareExpress';
+import ErrorHandlingExpress from '../src/components/express/ErrorHandlingExpress';
+import DBIntroduction from '../src/components/databases/DBIntroduction';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -364,7 +369,17 @@ const Home = () => {
                                                                                                                                                                                                                                               <ResObj></ResObj> :
                                                                                                                                                                                                                                               active === 'status-code' ?
                                                                                                                                                                                                                                                 <StatusCode></StatusCode> :
-                                                                                                                                                                                                                                                ''
+                                                                                                                                                                                                                                                active === 'express-js-routing' ?
+                                                                                                                                                                                                                                                  <ExpressRouting></ExpressRouting> :
+                                                                                                                                                                                                                                                  active === 'http-methods' ?
+                                                                                                                                                                                                                                                    <HTTPMethods></HTTPMethods> :
+                                                                                                                                                                                                                                                    active === 'middleware' ?
+                                                                                                                                                                                                                                                      <MiddlewareExpress></MiddlewareExpress> :
+                                                                                                                                                                                                                                                      active === 'express-error-handling' ?
+                                                                                                                                                                                                                                                        <ErrorHandlingExpress></ErrorHandlingExpress> :
+                                                                                                                                                                                                                                                        active === 'db-introduction' ?
+                                                                                                                                                                                                                                                          <DBIntroduction></DBIntroduction> :
+                                                                                                                                                                                                                                                          ''
         }
       </Aside>
 

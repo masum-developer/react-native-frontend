@@ -6,13 +6,37 @@ import { CacheProvider } from '@emotion/react'
 import createEmotionCache from '../src/utils/createEmotionCache'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import '../styles/global.scss';
+import store from '../store';
+import { Provider } from 'react-redux';
+import { createWrapper } from 'next-redux-wrapper';
+import withAuth from '../helper/withAuth'
+import 'nprogress/nprogress.css';
+import Router from 'next/router';
+import NProgress from 'nprogress';
+
 // import "./node_modules/codemirror/lib/codemirror.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
 
-export default function MyApp(props) {
+function MyApp(props) {
 	const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+	React.useEffect(() => {
+		const handleRouteStart = () => NProgress.start();
+		const handleRouteDone = () => NProgress.done();
+	
+		Router.events.on('routeChangeStart', handleRouteStart);
+		Router.events.on('routeChangeComplete', handleRouteDone);
+		Router.events.on('routeChangeError', handleRouteDone);
+	
+		return () => {
+		  // Make sure to remove the event handler on unmount!
+		  Router.events.off('routeChangeStart', handleRouteStart);
+		  Router.events.off('routeChangeComplete', handleRouteDone);
+		  Router.events.off('routeChangeError', handleRouteDone);
+		};
+	  }, []);
 
 	const theme = createTheme({
 		typography: {
@@ -90,16 +114,20 @@ export default function MyApp(props) {
 	})
 
 	return (
-		<CacheProvider value={emotionCache}>
-			<Head>
-				<meta name='viewport' content='initial-scale=1, width=device-width' />
-			</Head>
-			{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-			<ThemeProvider theme={theme}>
-				<CssBaseline />
-				<Component {...pageProps} />
-			</ThemeProvider>
-		</CacheProvider>
+		<Provider store={store}>
+
+			<CacheProvider value={emotionCache}>
+				<Head>
+					<meta name='viewport' content='initial-scale=1, width=device-width' />
+				</Head>
+				{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+				<ThemeProvider theme={theme}>
+					<CssBaseline />
+					<Component {...pageProps} />
+				</ThemeProvider>
+			</CacheProvider>
+		</Provider>
+
 	)
 }
 
@@ -108,3 +136,7 @@ MyApp.propTypes = {
 	emotionCache: PropTypes.object,
 	pageProps: PropTypes.object.isRequired,
 }
+
+const makestore = () => store
+const wrapper = createWrapper(makestore)
+export default wrapper.withRedux(withAuth(MyApp))
