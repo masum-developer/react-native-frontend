@@ -4,6 +4,7 @@ import React from 'react';
 import CodeBox from '../global/CodeBox';
 import Block from '../global/Block';
 import Process from '../EnvironmentSetup/Process';
+import MuiAlert from '@mui/material/Alert';
 
 const list = [
     "1) Relational databases: Relational databases are the most common type of database and are used to store structured data in tables. Relational databases use SQL to manipulate data, and they are used in a wide range of applications, including web applications, business systems, and scientific research.",
@@ -64,6 +65,10 @@ const DBIntroduction = () => {
                 <Typography mt={1} variant='subtitle2'>
                     These are just a few examples of the many databases available. The choice of database depends on the specific needs of the application, including the size and complexity of the data, performance requirements, and scalability needs.
                 </Typography>
+
+                <Box mt={3}>
+                    <MuiAlert severity="info" variant="filled">Note: We'll learn the MongoDB as our primary database thought the bootcamp.</MuiAlert>
+                </Box>
             </Box>
         </Box>
     );

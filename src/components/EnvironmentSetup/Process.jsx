@@ -3,7 +3,7 @@ import React from 'react';
 
 const Process = ({ list }) => {
     return (
-        <Box mt={3} sx={{ borderLeft: '4px solid gray'}}>
+        <Box mt={1} sx={{ borderLeft: '4px solid gray'}}>
             <Box mt={1} sx={{ backgroundColor: '#ECE4EC', padding: '10px 20px' }}>
 
             {

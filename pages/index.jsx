@@ -122,6 +122,8 @@ import HTTPMethods from '../src/components/express/HTTPMethods';
 import MiddlewareExpress from '../src/components/express/MiddlewareExpress';
 import ErrorHandlingExpress from '../src/components/express/ErrorHandlingExpress';
 import DBIntroduction from '../src/components/databases/DBIntroduction';
+import GettingStartedMongoDB from '../src/components/databases/GettingStartedMongoDB';
+import MongoDBQuery from '../src/components/databases/MongoDBQuery';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -379,7 +381,11 @@ const Home = () => {
                                                                                                                                                                                                                                                         <ErrorHandlingExpress></ErrorHandlingExpress> :
                                                                                                                                                                                                                                                         active === 'db-introduction' ?
                                                                                                                                                                                                                                                           <DBIntroduction></DBIntroduction> :
-                                                                                                                                                                                                                                                          ''
+                                                                                                                                                                                                                                                          active === 'mongodb-getting-started' ?
+                                                                                                                                                                                                                                                            <GettingStartedMongoDB></GettingStartedMongoDB> :
+                                                                                                                                                                                                                                                            active === 'mongodb-query' ?
+                                                                                                                                                                                                                                                              <MongoDBQuery></MongoDBQuery> :
+                                                                                                                                                                                                                                                              ''
         }
       </Aside>
 
