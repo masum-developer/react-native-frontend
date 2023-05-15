@@ -124,6 +124,9 @@ import ErrorHandlingExpress from '../src/components/express/ErrorHandlingExpress
 import DBIntroduction from '../src/components/databases/DBIntroduction';
 import GettingStartedMongoDB from '../src/components/databases/GettingStartedMongoDB';
 import MongoDBQuery from '../src/components/databases/MongoDBQuery';
+import MongoDBAtlas from '../src/components/databases/MongoDBAtlas';
+import MongoDBDatabase from '../src/components/databases/MongoDBDatabase';
+import MongoDBInsert from '../src/components/databases/MongoDBInsert';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -385,7 +388,13 @@ const Home = () => {
                                                                                                                                                                                                                                                             <GettingStartedMongoDB></GettingStartedMongoDB> :
                                                                                                                                                                                                                                                             active === 'mongodb-query' ?
                                                                                                                                                                                                                                                               <MongoDBQuery></MongoDBQuery> :
-                                                                                                                                                                                                                                                              ''
+                                                                                                                                                                                                                                                              active === 'mongodb-atlas' ?
+                                                                                                                                                                                                                                                                <MongoDBAtlas></MongoDBAtlas> :
+                                                                                                                                                                                                                                                                active === 'mongodb-database-collection' ?
+                                                                                                                                                                                                                                                                  <MongoDBDatabase></MongoDBDatabase> :
+                                                                                                                                                                                                                                                                  active === 'mongodb-insert' ?
+                                                                                                                                                                                                                                                                    <MongoDBInsert></MongoDBInsert> :
+                                                                                                                                                                                                                                                                    ''
         }
       </Aside>
 

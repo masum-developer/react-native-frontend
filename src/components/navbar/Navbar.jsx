@@ -28,6 +28,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Cookies from "js-cookie";
 import { Alert, message, notification, Space, Spin } from 'antd';
+import data from '../../staticData/searchData.json'
 
 
 const drawerWidth = 240;
@@ -38,11 +39,11 @@ const navItems = [
         title: 'Get Started',
         slug: '?tab=html_introduction'
     },
-    {
-        id: 2,
-        title: 'Contact',
-        slug: 'Contact'
-    },
+    // {
+    //     id: 2,
+    //     title: 'Contact',
+    //     slug: 'Contact'
+    // },
 ];
 
 const settings = ['Logout'];
@@ -52,11 +53,29 @@ const Navbar = (props) => {
     const { windowProp } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-
-    // console.log('user, isAuthenticated', user, isAuthenticated);
+    const [filteredData, setFilteredData] = React.useState([]);
+    const [wordEntered, setWordEntered] = React.useState("");
 
     const router = useRouter();
+
+    const handleFilter = (event) => {
+        const searchWord = event.target.value;
+        setWordEntered(searchWord);
+        const newFilter = data.filter((value) => {
+            return value.title.toLowerCase().includes(searchWord.toLowerCase());
+        });
+
+        if (searchWord === "") {
+            setFilteredData([]);
+        } else {
+            setFilteredData(newFilter);
+        }
+    };
+
+    const clearInput = () => {
+        setFilteredData([]);
+        setWordEntered("");
+    };
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
@@ -136,7 +155,7 @@ const Navbar = (props) => {
     }));
 
     const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
+        // padding: theme.spacing(0, 1),
         height: '100%',
         position: 'absolute',
         pointerEvents: 'none',
@@ -148,6 +167,7 @@ const Navbar = (props) => {
     const StyledInputBase = styled(InputBase)(({ theme }) => ({
         color: 'inherit',
         '& .MuiInputBase-input': {
+            color: 'red',
             padding: theme.spacing(1, 1, 1, 0),
             // vertical padding + font size from searchIcon
             paddingLeft: `calc(1em + ${theme.spacing(4)})`,
@@ -165,6 +185,12 @@ const Navbar = (props) => {
             }
         },
     }));
+
+    const handleSearchRouter = (link) => {
+        router.push(`?tab=${link}`);
+        setWordEntered('')
+        setFilteredData([])
+    }
 
     return (
         <Box>
@@ -187,15 +213,51 @@ const Navbar = (props) => {
                             </Link>
                         </Box>
 
-                        <Search>
-                            <SearchIconWrapper>
-                                <SearchIcon style={{ color: 'black' }} />
-                            </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Search…"
-                                inputProps={{ 'aria-label': 'search' }}
-                            />
-                        </Search>
+                        <Box direction="row">
+                            <Box sx={{
+                                position: 'relative',
+                                // border: '1px solid #D7DAE0',
+                                borderRadius: '5px',
+                                marginLeft: 0,
+                                width: 'auto',
+                            }}>
+                                <SearchIconWrapper>
+                                    <SearchIcon style={{ color: 'black' }} />
+                                </SearchIconWrapper>
+                                <input
+                                    className='search_input'
+                                    style={{ padding: '8px 8px 8px 25px', borderRadius: '5px', border: '1px solid gray' }}
+                                    placeholder="Search…"
+                                    // inputProps={{ 'aria-label': 'search' }}
+                                    // value={search}
+                                    // onChange={(e) => setSearch(e.target.value)}
+                                    value={wordEntered}
+                                    onChange={handleFilter}
+
+
+                                />
+
+
+                            </Box>
+                            <Box sx={{
+                                // position: 'relative',
+                                // top: '50px'
+                            }}>
+
+                                {filteredData.length != 0 && (
+                                    <div className="dataResult">
+                                        {filteredData.slice(0, 15).map((value, key) => {
+                                            return (
+                                                <a className="dataItem" onClick={() => handleSearchRouter(value?.link)}>
+                                                    <p>{value?.title} </p>
+                                                </a>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+
+                            </Box>
+                        </Box>
 
                         <Box direction="row" sx={{ display: { xs: 'none', md: 'block' } }}>
                             {navItems?.map((item) => (

@@ -221,10 +221,9 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>Database Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-getting-started')}>MongoDB Get Started</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-query')}>MongoDB Query</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Atlas</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Database</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Collection</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Insert</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-atlas')}>MongoDB Atlas</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-database-collection')}>Database & Collection</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-insert')}>MongoDB Insert</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Find</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Update</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Delete</MenuItem>

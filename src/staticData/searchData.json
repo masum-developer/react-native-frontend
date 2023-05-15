@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Get Started",
+    "link": "get_started"
+  },
+  {
+    "title": "VS Code Installation",
+    "link": "vscode-installation"
+  },
+  {
+    "title": "VS Code Extensions",
+    "link": "vscode-extentions"
+  },
+  {
+    "title": "Git Installation",
+    "link": "git-installation"
+  },
+  {
+    "title": "Git & GitLab",
+    "link": "git-gitlab"
+  },
+  {
+    "title": "HTML Introduction",
+    "link": "html_introduction"
+  }
+]
