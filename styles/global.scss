@@ -5,6 +5,8 @@
 // }
 
 .search_input {
+    height: 40px;
+    border: 1px solid #D9C7BF !important;
     &:focus {
         border: 2px solid red;
     }
