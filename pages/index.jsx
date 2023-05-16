@@ -127,6 +127,11 @@ import MongoDBQuery from '../src/components/databases/MongoDBQuery';
 import MongoDBAtlas from '../src/components/databases/MongoDBAtlas';
 import MongoDBDatabase from '../src/components/databases/MongoDBDatabase';
 import MongoDBInsert from '../src/components/databases/MongoDBInsert';
+import MongoDBFind from '../src/components/databases/MongoDBFind';
+import MongoDBUpdate from '../src/components/databases/MongoDBUpdate';
+import MongoDBDelete from '../src/components/databases/MongoDBDelete';
+import CoreJs from '../src/components/CoreJavaScript/CoreJs';
+import StringJs from '../src/components/CoreJavaScript/StringJs';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -394,7 +399,18 @@ const Home = () => {
                                                                                                                                                                                                                                                                   <MongoDBDatabase></MongoDBDatabase> :
                                                                                                                                                                                                                                                                   active === 'mongodb-insert' ?
                                                                                                                                                                                                                                                                     <MongoDBInsert></MongoDBInsert> :
-                                                                                                                                                                                                                                                                    ''
+                                                                                                                                                                                                                                                                    active === 'mongodb-find' ?
+                                                                                                                                                                                                                                                                      <MongoDBFind></MongoDBFind> :
+                                                                                                                                                                                                                                                                      active === 'mongodb-update' ?
+                                                                                                                                                                                                                                                                        <MongoDBUpdate></MongoDBUpdate> :
+                                                                                                                                                                                                                                                                        active === 'mongodb-delete' ?
+                                                                                                                                                                                                                                                                          <MongoDBDelete></MongoDBDelete> :
+                                                                                                                                                                                                                                                                          active === 'core-javascript' ?
+                                                                                                                                                                                                                                                                            <CoreJs></CoreJs> :
+                                                                                                                                                                                                                                                                            active === 'js-string' ?
+                                                                                                                                                                                                                                                                              <StringJs></StringJs> :
+
+                                                                                                                                                                                                                                                                              ''
         }
       </Aside>
 

@@ -4,6 +4,7 @@ import React from 'react';
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { SideMenus } from '../../staticData/menus';
 
 const Aside = ({ children }) => {
     const matches = useMediaQuery('(min-width:600px)');
@@ -16,6 +17,25 @@ const Aside = ({ children }) => {
             pathname: window.location.pathname,
             query: { ...query, [key]: value }
         })
+    }
+
+    function GetSubMenu({ menu }) {
+        return menu.hasSubMenu ? (
+            <SubMenu label={menu?.title}>
+                {
+                    menu?.subMenus?.map((item, i) =>
+                        <GetSubMenu menu={item} key={i}></GetSubMenu>
+                    )
+                }
+            </SubMenu>
+        ) : (
+            <MenuItem
+                icon={menu?.icon}
+                onClick={() => handlePush('tab', menu?.slug)}
+            >
+                {menu?.title}
+            </MenuItem>
+        )
     }
 
     return (
@@ -224,10 +244,21 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-atlas')}>MongoDB Atlas</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-database-collection')}>Database & Collection</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-insert')}>MongoDB Insert</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Find</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Update</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>MongoDB Delete</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Find</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Update</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-delete')}>MongoDB Delete</MenuItem>
                                 </SubMenu>
+
+                                <SubMenu label="Technical Assessment">
+                                    <MenuItem onClick={() => handlePush('tab', 'core-javascript')}>Core JavaScript</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'js-string')}>String</MenuItem>
+                                </SubMenu>
+
+                                {/* {
+                                    SideMenus?.map((menu, i) =>
+                                        <GetSubMenu menu={menu} key={i}></GetSubMenu>
+                                    )
+                                } */}
 
                             </Menu>
                         </Sidebar>

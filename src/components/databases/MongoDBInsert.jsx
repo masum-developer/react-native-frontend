@@ -97,7 +97,7 @@ insertManyDocuments();`
 const MongoDBInsert = () => {
     return (
         <Box pb={2}>
-            <Typography variant='h3'>MongoDB insert operation?</Typography>
+            <Typography variant='h3'>MongoDB Insert Operation</Typography>
             <Typography variant='subtitle2'>
                 There are several methods available for inserting data in MongoDB:
             </Typography>
