@@ -149,6 +149,7 @@ import SassList from '../src/components/sass/SassList';
 import Map from '../src/components/sass/Map';
 import SassSelectors from '../src/components/sass/SassSelectors';
 import SassColors from '../src/components/sass/SassColors';
+import LoopJs from '../src/components/CoreJavaScript/LoopJs';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -460,8 +461,10 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                               <CoreJs></CoreJs> :
                                                                                                                                                                                                                                                                                                               active === 'js-string' ?
                                                                                                                                                                                                                                                                                                                 <StringJs></StringJs> :
+                                                                                                                                                                                                                                                                                                                active === 'js-loop' ?
+                                                                                                                                                                                                                                                                                                                  <LoopJs></LoopJs> :
 
-                                                                                                                                                                                                                                                                                                                ''
+                                                                                                                                                                                                                                                                                                                  ''
         }
       </Aside>
 

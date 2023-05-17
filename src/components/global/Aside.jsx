@@ -265,6 +265,7 @@ const Aside = ({ children }) => {
                                 <SubMenu label="Technical Assessment">
                                     <MenuItem onClick={() => handlePush('tab', 'core-javascript')}>Core JavaScript</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js-string')}>String</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'js-loop')}>Loop</MenuItem>
                                 </SubMenu>
 
                                 {/* {
