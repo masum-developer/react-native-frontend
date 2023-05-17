@@ -1,0 +1,134 @@
+/* import */
+@import './ImportFile.scss';
+
+/* mixin */
+@mixin commonproperty{
+  color: blueviolet;
+  background-color: gold;
+  padding:10px;
+  text-align: center
+}
+.Herosection{
+  @include commonproperty();
+}
+/* extend */
+.button-1 {
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  color: #333;
+  font-weight: bold;
+}
+/* Extend the base selector */
+.primary-button {
+  @extend .button-1;
+  background-color: #337783;
+  color: black;
+  display: flex;
+  gap: 10px;
+}
+
+/* String Functions */
+
+.test{
+  font-family: to-lower-case("Times New Roman");
+}
+
+.pass{
+  font-family: str-index("Helvetica Neue","e");
+}
+
+/* Numeric */
+
+.number{
+  margin:ceil($number: 4.4);
+  padding:10px;
+  background-color: #337783;
+  color:#333;
+}
+
+/* List*/
+$list: 20px 20px 30px;
+
+.lists{
+  padding: length($list);
+  margin:8;
+  border: #4f421a 2px solid;
+  color: #333;
+  border-radius: 3px;
+
+}
+/*map*/
+
+$colors: (
+  primary: #FF00,
+  secondary: #00FF00,
+  tertiary: #0000FF
+);
+
+/* selectors*/
+#my-id{
+  color:#00FF00,
+}
+
+// Accessing values from the map
+
+$headerColor: map-get($colors, tertiary);
+
+// Output the values
+.mapheader {
+  color: $headerColor;
+}
+
+
+/*Colors*/
+$colors: purple;
+
+.colorheader{
+  color: $colors,
+}
+
+
+/* variables  */
+$myColor: blue;
+
+.header {
+  color: $myColor;
+}
+/* Nesting */
+.navbar {
+  background-color: #4f421a;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 10px;
+
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+
+        &:hover {
+          background-color: #04152abc;
+        }
+      }
+    }
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    ul li a {
+      padding: 5px;
+    }
+  }
+}

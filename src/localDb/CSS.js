@@ -2724,6 +2724,428 @@ a:hover {
 </html>`
     }
 
+  }, {
+    name: "opacity",
+    section1: {
+      title1: "What is Opacity in CSS?",
+      desc1: "In CSS, opacity refers to the transparency level of an element. The opacity property specifies the degree to which an element should be transparent or opaque, and it can be applied to any HTML element.The opacity value is a number between 0 and 1, where 0 is completely transparent (invisible) and 1 is completely opaque (visible). You can set the opacity value for an element using the opacity property in CSS."
+    },
+    section2: {
+      title2: "Why should we use Opacity? ",
+      desc2: "Opacity can be useful in web design for a variety of reasons.Here are a few examples: ",
+      list2: ['Creating overlay effects: By setting an elements opacity to less than 1, you can create overlay effects that allow content underneath to show through.This can be useful for creating modal dialogs, lightboxes, or other types of overlays.', 'Improving legibility: Sometimes, text can be hard to read when it is overlaid on top of a busy or colorful background.By reducing the opacity of the background, you can make the text more legible.', 'Creating subtle visual effects: By adjusting the opacity of various elements on a page, you can create subtle visual effects that add depth and texture to the design. For example, you could use a partially transparent background color to create a gradient effect, or adjust the opacity of an image to make it blend in with the background.', 'Enhancing accessibility: For users with visual impairments or certain types of color blindness, high-contrast designs can be easier to read. By using opacity to reduce the contrast between elements on a page, you can create a design that is more accessible to a wider range of users.']
+    },
+    section3: {
+      title3: "How can we use Opacity on Web Page ?",
+      desc3: "There are several ways to use opacity in CSS, depending on what you want to achieve. Here are a few examples:",
+      desc3_1: "1. Set the opacity of an element: To set the opacity of an element, you can use the opacity property in CSS. The value of the opacity property is a number between 0 and 1, where 0 is completely transparent and 1 is completely opaque. For example:",
+      codeTemplate3_1: `/* Set the opacity of an element to 50% */
+.element {
+  opacity: 0.5;
+}
+`,
+      desc3_2: "2. Set the opacity of an image: To set the opacity of an image, you can use the opacity property as above, or you can use the rgba() color notation to specify the opacity as part of the color value. For example:",
+      codeTemplate3_2: `/* Set the opacity of an image to 50% using rgba() */
+img {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+`,
+      desc3_3: "3. Create a partially transparent background color: To create a partially transparent background color, you can use the rgba() notation as above, or you can use the background-color property with the opacity value. For example:",
+      codeTemplate3_3: `/* Create a partially transparent background color */
+.element {
+  background-color: #000000;
+  opacity: 0.5;
+}
+`,
+      desc3_4: "4. Create an overlay effect: To create an overlay effect, you can use a combination of absolute positioning and opacity. For example:",
+      codeTemplate3_4: `/* Create an overlay effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5;
+}
+`,
+      desc3_5: "In this example, the .overlay element is positioned absolutely over the top of other content on the page, and given a partially transparent black background color using the opacity property."
+    },
+    section4: {
+      title4_1: "Example",
+      codeTemplate4_1: `<!DOCTYPE html>
+<html>
+<head>
+<title>Ts4u Bootcamp</title>
+<style>
+body{
+  align-items:center;
+  justify-content:center;
+}
+div{
+  animation: pulsate 2s infinite;
+  position:relative;
+}
+h1{
+  color:#20D;
+  text-align:center; 
+}
+
+@keyframes pulsate{
+  from{
+    opacity:2,
+    transform: scale(1);
+  }
+  to{
+    opacity:0;
+    transform:scale(2);
+  }
+}
+</style>
+</head>
+  <body>
+	   <div>
+         <h1>Welcome to TS4U Bootcamp</h1>
+       </div>
+  </body>
+</html>`,
+      codeTemplate4_2: `<!DOCTYPE html>
+<html>
+<head>
+<title>Ts4u Bootcamp</title>
+<style>
+body{
+  align-items:center;
+  justify-content:center;
+}
+div{
+  animation: pulsate 2s infinite;
+  position:relative;
+}
+h1{
+  color:#AF2D11 ;
+  text-align:center; 
+}
+
+@keyframes pulsate{
+  from{
+    opacity:2,
+    transform: scale(1);
+  }
+  to{
+    opacity:2;
+    transform:scale(0);
+  }
+}
+</style>
+</head>
+  <body>
+	   <div>
+         <h1>Welcome to TS4U Bootcamp</h1>
+       </div>
+  </body>
+</html>`
+
+    }
+  },
+  {
+    name: "shadows",
+    section1: {
+      title1: "What is Shadows in CSS?",
+      desc1: "In CSS, shadows are visual effects that can be applied to elements to create the illusion of depth and dimensionality.Shadows can help make elements stand out on a page, and can be used to create a variety of effects, from subtle drop shadows to dramatic 3D effects.",
+      desc1_1: "There are two main types of shadows that can be applied to elements in CSS: box shadows and text shadows.",
+      desc1_2: "Box shadows are shadows that are applied to the box or container of an element, including its border and padding. Box shadows can be created using the box-shadow property in CSS, which allows you to specify the color, size, and blur radius of the shadow. "
+    },
+    section2: {
+      title2: "Why Should we use Shadows?",
+      desc2: "Shadows can be used in web design for several reasons:",
+      list2: ['Adding depth and dimension: Shadows can help create the illusion of depth and dimensionality on a page, making elements appear more lifelike and tangible. By adding shadows to buttons, cards, or other interface elements, you can create a more engaging and interactive user experience.', 'Highlighting important elements: By using shadows to highlight important elements on a page, such as buttons, calls to action, or navigation menus, you can draw attention to them and make them stand out more. This can help improve the usability and accessibility of your site or application.', 'Creating contrast: Shadows can be used to create contrast between different elements on a page, making them easier to distinguish and improving the overall readability of the content. For example, you could use shadows to create a visual separation between a header and the main content area.', 'Enhancing aesthetics: Shadows can be used to create a variety of aesthetic effects, from subtle drop shadows to dramatic 3D effects. By experimenting with different shadow styles, you can add visual interest and personality to your designs.']
+    },
+    section3: {
+      title3: "How can we use Shadows?",
+      desc3: "There are many ways to use shadows in CSS, depending on the effect you want to achieve. Here are a few examples:",
+      desc3_1: "1. Creating a box shadow: To create a box shadow, you can use the box-shadow property in CSS. The box-shadow property allows you to specify the size, color, and blur radius of the shadow. For example:",
+      codeTemplate3_1: `/* Create a box shadow for an element */
+.element {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+`,
+      desc3_2: "This will create a shadow that's 10 pixels in size and has a black color with 50% opacity.",
+      desc3_3: "2. Creating a text shadow: To create a text shadow, you can use the text-shadow property in CSS. The text-shadow property works similarly to box-shadow, but is applied to the text instead of the element. For example:",
+      codeTemplate3_2: `/* Create a text shadow for an element */
+.element {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+`,
+      desc3_4: "This will create a shadow that's offset by 1 pixel in both the horizontal and vertical directions, and has a black color with 50% opacity.",
+      desc3_5: "3. Creating a hover effect: Shadows can also be used to create hover effects, where the shadow changes when the user hovers over an element. For example:",
+      codeTemplate3_3: `/* Create a hover effect for an element */
+.element {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.element:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+`,
+      desc3_6: "In this example, the transition property specifies the duration and easing of the transition, while the :hover pseudo-class changes the size of the shadow when the user hovers over the element."
+
+    },
+    section4: {
+      title4: "Example:",
+      codeTemplate4_1: `<!DOCTYPE html>
+<html>
+<head>
+<title>Ts4u Bootcamp</title>
+<style>
+.element{
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+</style>
+</head>
+  <body>
+         <h1 class="element">Welcome to TS4U Bootcamp</h1>
+         <h2 class="element">Follow our page</h2>
+      
+  </body>
+</html>`
+    }
+
+
+  }, {
+    name: "transition",
+    section1: {
+      title1: "What is Transition in CSS?",
+      desc1: "In CSS, a transition is a way to create smooth and gradual changes in CSS properties over a specified duration.",
+      desc1_1: "Transitions are often used to create animations or effects that occur when a user interacts with a web page, such as hovering over a button or clicking on a link. For example, you can use a transition to gradually change the color or opacity of an element when the user hovers over it.",
+      desc1_2: 'To create a transition, you first specify the CSS property you want to animate, such as "background-color" or "opacity".You then set the duration of the transition, using the "transition-duration" property, and optionally specify the timing function, using the "transition-timing-function" property, to control the rate at which the transition occurs.'
+    },
+    section2: {
+      title2: "Why should we use Transition in CSS?",
+      desc2: "There are several reasons why you might want to use CSS transitions:",
+      list2: ['Enhance user experience: Transitions can make your website feel more interactive and engaging, as they add visual feedback to user actions. For example, when a user hovers over a link or button, a subtle transition effect can make it clearer that the element is clickable.', 'Smooth visual changes: CSS transitions allow you to create smooth visual changes between two states of an element, which can make your website feel more polished and professional. This can be especially useful when you want to make minor adjustments to an elements appearance, such as changing the background color or opacity.', 'Improve accessibility: Transitions can also help improve accessibility by providing visual cues for users with certain disabilities, such as low vision. By animating changes in element state, users can better understand what is happening on the page without having to rely solely on visual cues.', 'Easy to implement: CSS transitions are relatively simple to implement and require minimal coding, making them a quick and easy way to add visual interest to your website. With just a few lines of CSS code, you can create smooth and engaging transitions that enhance the user experience.']
+    },
+    section3: {
+      title3: "How can we use Transition?",
+      desc3_1: "You can use CSS transitions by specifying the properties you want to animate, along with the duration and timing function of the transition.Here is an example of how to use a transition to animate a change in the background color of an element when it is hovered over: ",
+      codeTemplate3_1: `.my-element {
+  background-color: blue;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.my-element:hover {
+  background-color: red;
+}
+`,
+      desc3_2: "In this example, we are animating the background-color property of the .my-element class when it is hovered over. We set the transition property to background-color, along with a duration of 0.5s and an ease-in-out timing function, which means that the transition will gradually speed up and then slow down as it progresses.",
+      desc3_3: "You can also use the shorthand transition property to specify multiple properties at once, like this:",
+      codeTemplate3_2: `.my-element {
+  background-color: blue;
+  color: white;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.my-element:hover {
+  background-color: red;
+  color: black;
+}
+`,
+      desc3_4: "In this example, we are animating both the background-color and color properties of the .my-element class when it is hovered over, using the shorthand transition property to specify both properties and their durations and timing functions."
+    },
+    section4: {
+      title4: "Example",
+      codeTemplate4: `<!DOCTYPE html>
+<html>
+<head>
+<title>Ts4u Bootcamp</title>
+<style>
+.element{
+     color:black;
+     text-align:center;
+     transition: 0.5s ease-in-out;
+}
+
+@keyframes element{
+  from{
+    opacity:1,
+    transform: scale(1);
+  }
+  to{
+    opacity:0;
+    transform:scale(2);
+  }
+}
+div{
+  animation: element 3s infinite;
+  position:relative;
+}
+
+</style>
+</head>
+  <body>
+         <h1 class="element">Welcome to the Abroad</h1>
+         
+      
+  </body>
+</html>`
+    }
+  },
+  {
+    name: "mediaqueries",
+    section1: {
+      title1: "What is Media Queries ?",
+      desc1: "Media queries are a feature in CSS that allow you to apply different styles to a web page based on the characteristics of the device or browser being used to view it. With media queries, you can create responsive designs that adapt to different screen sizes and orientations, as well as other device features like screen resolution, color depth, and more.",
+      desc1_1: "Media queries consist of a media type and one or more expressions that define the conditions under which the styles should be applied. Here is an example of a media query that applies different styles to a web page when it is viewed on a device with a screen width of 600 pixels or less:",
+      codeTemplate1: `@media (max-width: 600px) {
+  /* styles for screens 600px wide or less */
+}
+`,
+      desc1_2: "In this example, the @media rule specifies a media type of all, which means that the styles will be applied to all devices. The max-width expression specifies a condition that the screen width must be 600 pixels or less for the styles to be applied."
+    },
+    section2: {
+      title2: "Why should we use Media Queries?",
+      desc2: "Media queries are a crucial tool for creating responsive web design, which is the practice of creating websites that look and function well on devices of different sizes and form factors. There are several reasons why you should use media queries:",
+      list2: ['Adaptability: Media queries allow you to create web pages that adapt to different screen sizes and orientations, which is essential in todays multi-device world. By using media queries, you can ensure that your website looks great on desktops, laptops, tablets, and smartphones, without requiring users to zoom or scroll excessively.', 'Improved User Experience: By creating responsive designs with media queries, you can provide users with a better experience on your website. Users are more likely to engage with your content if they can easily navigate and consume it, regardless of the device they are using.', 'Future-Proofing: With the increasing variety of devices and screen sizes, using media queries is a future-proofing technique that ensures your website will remain usable and visually appealing on new and emerging devices. This means that you will not need to redesign your website every time a new device or screen size is introduced.', 'SEO: Responsive design and media queries can also benefit your websites search engine optimization (SEO). Search engines like Google prefer responsive websites, and are more likely to rank them higher in search results. Additionally, having a single URL for your website, instead of separate mobile and desktop URLs, can help to consolidate your websites SEO value and improve your websites overall search engine ranking.']
+    },
+    section3: {
+      title3: "How can we use Media Queries?",
+      desc3: "Media queries can be used in CSS by specifying the media type and conditions under which certain styles should be applied. Here is an example of a basic media query that applies different styles to a web page when viewed on a device with a maximum width of 600 pixels:",
+      codeTemplate3: `@media screen and (max-width: 600px) {
+  /* styles for screens 600px wide or less */
+}
+`,
+      desc3_1: "In this example, we are using the @media rule to specify a media type of screen, which means that the styles will apply only to devices with screens. The max-width condition specifies that the styles should be applied when the screen width is 600 pixels or less.",
+      desc3_2: "Once the media query has been defined, you can include any CSS rules within the curly braces that will apply only when the media query conditions are met.",
+      desc3_3: "You can also use logical operators like and, or, and not to create more complex media queries. For example:",
+      codeTemplate3_3: `@media screen and (max-width: 600px) and (orientation: portrait) {
+  /* styles for screens 600px wide or less and in portrait orientation */
+}
+
+@media not screen and (color) {
+  /* styles for devices without screens and with color display */
+}
+`,
+      desc3_4: "In this example, the first media query applies styles to devices with a screen width of 600 pixels or less in portrait orientation, while the second media query applies styles to devices without screens and with color display."
+
+
+    },
+    section4: {
+      title4: "Example",
+      codeTemplate4: `<!DOCTYPE html>
+<html>
+<head>
+<title>Ts4u Bootcamp</title>
+<style>
+  nav{
+    background-color:black;
+    padding-block:20px;
+    justify-content:space-between;
+    align-items:center;
+  }
+  nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+  }
+  nav ul li{
+    margin: 0px 10px;
+  }
+  nav ul li a{
+    font-size:20px;
+    color:violet;
+    text-decoration:none;
+  }
+  .header{
+    background-image: url('logo2.png');
+    background-color:rgba(0,0,0,0.5);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:300px;
+
+  }
+  footer{
+    padding-block:20px;
+  }
+  footer .footer-content{
+    color:white;
+    background-color:black;
+    text-align:center;
+    padding:10px;
+
+  }
+
+  @media screen and (max-width: 600px) {
+  nav{
+     justify-content:space-between;
+     align-items:center;
+  }
+  nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+  }
+    nav ul li a{
+    font-size:20px;
+  }
+  footer .footer-content{
+     text-align:center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    nav{
+     justify-content:space-between;
+     align-items:center;
+  }
+  nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+  }
+    nav ul li a{
+    font-size:15px;
+  }
+  footer .footer-content{
+     text-align:center;
+  }
+}
+</style>
+</head>
+<body>
+  <section>
+       <nav>
+         <ul>
+            <li <a href="#">Home</a>></li>
+            <li <a href="#">About</a></li>
+            <li <a href="#">Contact</a></li>  
+         </ul>
+      
+       </nav>
+  
+  </section>
+	<div class="header">
+		
+	</div>
+	<footer>
+		<p class='footer-content'>Created by TS4U @2023</p>
+	 </footer>
+</body>
+</html>`
+    }
   }
 ];
 

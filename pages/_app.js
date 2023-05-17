@@ -13,6 +13,8 @@ import withAuth from '../helper/withAuth'
 import 'nprogress/nprogress.css';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import '../styles/SassVariableStyles.scss';
+import '../styles/ImportFile.scss';
 
 // import "./node_modules/codemirror/lib/codemirror.css";
 

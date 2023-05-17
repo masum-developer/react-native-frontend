@@ -118,15 +118,28 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'websitelayout')}>Website Layout</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'cssanimation')}>Animation</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'navigationbar')}>Navigation Bar</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Opacity</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Shadows</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Transition</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Media Queries</MenuItem>
-
-
-
-
+                                    <MenuItem onClick={() => handlePush('tab', 'opacity')}>Opacity</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'shadows')}>Shadows</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'transition')}>Transition</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mediaqueries')}>Media Queries</MenuItem>
                                 </SubMenu>
+
+                                <SubMenu label="SASS" >
+                                    <MenuItem onClick={() => handlePush('tab', 'sassintroduction')}>SASS Introduction</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'sassinstallation')}>SASS Installation</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'sassvariable')}>Variables</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'nesting')}>Nesting</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'import')}>@import</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'mixin')}>@mixin</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'extend')}>@extend</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'sassstring')}>String</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'numberic')}>Numeric</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'sasslist')}>List</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'map')}>Map</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'sassselector')} >Selector</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'sasscolors')}>Color</MenuItem>
+                                </SubMenu>
+
                                 <SubMenu label="JavaScript">
                                     <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>

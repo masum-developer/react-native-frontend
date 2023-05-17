@@ -1240,6 +1240,193 @@ console.log(factorial); // Output: 120`
         }
     },
     {
+        name: "whileloop",
+
+        section1: {
+            title1: "While Loop",
+            desc: "A while loop is a type of loop in JavaScript (and other programming languages) that allows you to repeatedly execute a block of code as long as a particular condition remains true.",
+            desc1: "The basic syntax of a while loop in JavaScript is as follows:",
+            codeTemplate1: `while (condition) {
+  // Code to be executed while the condition is true
+}
+`
+
+        },
+        section2: {
+            desc2: "Here, condition is a Boolean expression that is evaluated before each iteration of the loop. If the condition is true, the code inside the loop will be executed. After the code has been executed, the condition will be evaluated again. This process will continue until the condition is no longer true, at which point the loop will terminate and control will pass to the next statement in the program.",
+        },
+        section3: {
+            title3: "What are the breakdowns in While Loop?",
+            desc3: " In JavaScript, a while loop can be broken down into three main parts: ",
+            list3: ['Initialization: This is the first step in a while loop, where you initialize a variable that will be used as a counter or condition for the loop. For example, you might set let i = 0 to initialize a counter variable i to 0.', 'Condition: This is the second step in a while loop, where you define a condition that will be evaluated before each iteration of the loop. If the condition is true, the loop will execute the block of code inside the loop. If the condition is false, the loop will terminate. For example, you might use the condition i < 10 to make sure the loop runs as long as the value of i is less than 10.', 'Iteration: This is the third step in a while loop, where you update the value of the variable defined in the initialization step. This is typically done using an increment or decrement operator such as i++ or i--. This step ensures that the condition in the loop is eventually false and the loop terminates. For example, you might use i++ to add 1 to the value of i after each iteration of the loop.']
+        },
+        section4: {
+            desc4: "Putting all these steps together, a while loop in JavaScript might look like this:",
+            codeTemplate4: `let i = 0;          // Initialization
+while (i < 5) {    // Condition
+  console.log(i);   // Code to be executed while condition is true
+  i++;              // Iteration
+}
+
+/// Output : 1 2 3 4 5
+`
+        },
+        section5: {
+            desc5: "In this example, the loop will execute as long as the value of i is less than 5. Inside the loop, the value of i is printed to the console using console.log(), and then i is incremented by 1 using the ++ operator. This process will continue until the value of i is greater than or equal to 5, at which point the loop will terminate."
+
+        },
+        section6: {
+            desc6: "Here's an example of a while loop that counts from 1 to 5:",
+            codeTemplate6: `let i = 1;
+while (i <= 5) {
+  console.log(i);
+  i++; 
+} 
+// Output : 1
+//          2
+//          3
+//          4
+//          5 
+`
+        },
+        section7: {
+            desc7: "In this example, the loop will execute as long as the value of i is less than or equal to 5. Inside the loop, the value of i is printed to the console using console.log(), and then i is incremented by 1 using the ++ operator. This process will continue until the value of i is greater than 5, at which point the loop will terminate."
+        },
+        section8: {
+            title8: "Problems and Solutions",
+            desc8: "Here are a few examples of using for While loops to solve problems in JavaScript:"
+        },
+        section9: {
+            desc9: " 1. Example of a while loop that prompts the user to enter a password until they enter the correct password:",
+            codeTemplate9: `let password = "";
+while (password !== "1234") {
+  password = prompt("Please enter your password:");
+}
+console.log("Welcome Ts4u!");
+
+//Output: Please enter your password:1234
+//         Welcome Ts4u!
+`
+        },
+        section10: {
+            desc10: "2. Loop  an array to collect car names:",
+            codeTemplate10: `const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let text = "";
+let i = 0;
+while (i < cars.length) {
+  text += cars[i] + "<br>";
+  i++;
+}
+
+//Output: BMW
+//        Volvo
+//        Saab
+//        Ford`
+        },
+        section11: {
+            desc11: "3. Example of a while loop that calculates the factorial of a number:",
+            codeTemplate11: `let number = 5;
+let factorial = 1;
+while (number > 0) {
+  factorial *= number;
+  number--;
+}
+console.log(factorial);
+
+// Output : 120
+`
+
+        }
+    },
+    {
+        name: "dowhileloop",
+        section1: {
+            title1: "Do-While Loop",
+            desc1: "A do...while loop is another type of loop in JavaScript that is similar to the while loop. The difference is that in a do...while loop, the block of code inside the loop is executed at least once, even if the condition is initially false."
+        },
+        section2: {
+            title2: "What are the breakdowns in Do-While Loop?",
+            desc2: "The basic syntax of a do...while loop in JavaScript is as follows:",
+            codeTemplate2: `do {
+  // Code to be executed at least once
+} while (condition);
+`,
+            desc: "Here, condition is a Boolean expression that is evaluated after each iteration of the loop. If the condition is true, the loop will continue executing. If the condition is false, the loop will terminate and control will pass to the next statement in the program.",
+            list2: ['Body: This is the first step in a do...while loop, where you define a block of code that will be executed at least once, before checking the condition. For example, you might use the console.log() function to output some text to the console.', 'Condition: This is the second step in a do...while loop, where you define a condition that will be evaluated after each iteration of the loop. If the condition is true, the loop will continue executing. If the condition is false, the loop will terminate. For example, you might use the condition i < 10 to make sure the loop runs as long as the value of i is less than 10.', 'Iteration: This is the third step in a do...while loop, where you update the value of the variable or condition defined in the condition step. This is typically done using an increment or decrement operator such as i++ or i--. This step ensures that the condition in the loop is eventually false and the loop terminates. For example, you might use i++ to add 1 to the value of i after each iteration of the loop.']
+        },
+        section3: {
+            desc3: "Here's an example of a do...while loop that prompts the user to enter a number between 1 and 10:",
+            codeTemplate3: `let number;
+do {
+  number = prompt("Please enter a number between 1 and 10:");
+} while (number < 1 || number > 10);
+console.log("You entered the number " + number + ".");
+
+//  Output: 
+//  Please enter a number between 1 and 5:6
+//  Please enter a number between 1 and 5:7
+//  Please enter a number between 1 and 5:8
+//  Please enter a number between 1 and 5:1
+//  You entered the number 1.
+
+
+`
+        },
+        section4: {
+            title4: "Problems and Solutions:",
+            desc4: "In this example, the loop will execute at least once, because the value of number is not defined before the loop. Inside the loop, the user is prompted to enter a number between 1 and 10 using the prompt() function. After the user enters a number, the loop condition is checked to make sure the number is between 1 and 10. If the number is not between 1 and 10, the loop will continue executing and the user will be prompted to enter a number again. This process will continue until the user enters a number between 1 and 10, at which point the loop will terminate and the value of number will be printed to the console.",
+            codeTemplate4: `let text = "";
+let i = 0;
+do {
+  text += i ;
+  i++;
+}
+while (i < 5);
+
+//   Output: 
+//          0
+//          1
+//          2
+//          3
+//          4
+//          5
+`
+        },
+        section5: {
+            desc5: "1. Execute a code block once, an then continue if condition (i < 5) is true:",
+
+        },
+        section6: {
+            desc6: "2. Example of the do...while loop iterates at least once and reiterates until i is no longer less than 5",
+            codeTemplate6: `let result = '';
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+//  output: "12345"`
+        },
+        section7: {
+            desc7: "3. Example of a do...while loop that prompts the user to enter a password until they enter the correct password:",
+            codeTemplate7: `let password;
+do {
+  password = prompt("Please enter your password:");
+} while (password !== "54321");
+console.log("Welcome Ts4u Website!");
+
+
+//Output: Please enter your password:54321
+//         Welcome Ts4u Website!
+
+
+`
+        }
+
+    },
+    {
         name: 'set', //component name wise property
         title: 'Object Sets',
         desc: "A Set is an object that allows you to store unique values of any type. It can be used to efficiently store and manipulate collections of data without the need for duplicate values.",
