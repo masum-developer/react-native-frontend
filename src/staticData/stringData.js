@@ -285,125 +285,385 @@ const inputStr = "hello, world!";
 const charCount = countCharacters(inputStr);
 console.log("Character Count:", charCount);`
     },
-    // ,{
-    //     id: 21,
-    //     title: '',
-    //     codeSnippet: ``
-    // }
-    // ,{
-    //     id: 22,
-    //     title: '',
-    //     codeSnippet: ``
-    // }
-    // ,{
-    //     id: 23,
-    //     title: '',
-    //     codeSnippet: ``
-    // },{
-    //     id: 24,
-    //     title: '',
-    //     codeSnippet: ``
-    // },{
-    //     id: 25,
-    //     title: '',
-    //     codeSnippet: ``
-    // },{
-    //     id: 26,
-    //     title: '',
-    //     codeSnippet: ``
-    // },{
-    //     id: 27,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 28,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 29,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 30,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 31,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 32,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 33,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 34,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 35,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 36,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 37,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 38,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 39,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 40,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 41,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 42,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 43,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 44,
-    //     title: '',
-    //     codeSnippet: ``
-    // },
-    // {
-    //     id: 45,
-    //     title: '',
-    //     codeSnippet: ``
-    // }
+    ,{
+        id: 21,
+        title: 'Reverse the order of words in a sentence while maintaining the order of characters within each word.',
+        codeSnippet: `function reverseWordsInSentence(sentence) {
+    const words = sentence.split(' ');
+    const reversedWords = words.map(word => word.split('').reverse().join(''));
+    const reversedSentence = reversedWords.join(' ');
+    return reversedSentence;
+}
+          
+const inputSentence = "Hello, World!";
+const reversedSentence = reverseWordsInSentence(inputSentence);
+console.log("Reversed Sentence:", reversedSentence);`
+    }
+    ,{
+        id: 22,
+        title: 'Check if a string has balanced parentheses (every opening parenthesis has a corresponding closing parenthesis).',
+        codeSnippet: `function hasBalancedParentheses(str) {
+        const stack = [];
+        for (let char of str) {
+            if (char === '(') {
+                stack.push(char);
+            } else if (char === ')') {
+            if (stack.length === 0) {
+                return false;
+            }
+            stack.pop();
+            }
+        }
+    return stack.length === 0;
+}
+          
+const inputStr = "(a + b) * (c - d)";
+const isBalanced = hasBalancedParentheses(inputStr);
+console.log("Is Balanced:", isBalanced);`
+    }
+    ,{
+        id: 23,
+        title: 'Convert a string to title case (capitalize the first letter of each word while converting the remaining letters to lowercase).',
+        codeSnippet: `function toTitleCase(str) {
+    const words = str.toLowerCase().split(' ');
+    const titleCaseWords = words.map(word => word.charAt(0)toUpperCase() + word.slice(1));
+    const titleCaseStr = titleCaseWords.join(' ');
+    return titleCaseStr;
+}
+          
+const inputStr = "hello, world!";
+const titleCaseStr = toTitleCase(inputStr);
+console.log("Title Case String:", titleCaseStr);`
+    },{
+        id: 24,
+        title: 'Check if a string is a valid email address.',
+        codeSnippet: `function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+          
+const inputEmail = "test@example.com";
+const isValid = isValidEmail(inputEmail);
+console.log("Is Valid Email:", isValid);`
+    },{
+        id: 25,
+        title: 'Remove extra whitespace from a string.',
+        codeSnippet: `function removeExtraWhitespace(str) {
+    return str.replace(/\s+/g, ' ').trim();
+}
+          
+const inputStr = "   Hello,    World!   ";
+const trimmedStr = removeExtraWhitespace(inputStr);
+console.log("Trimmed String:", trimmedStr);`
+    },{
+        id: 26,
+        title: 'Calculate the hamming distance between two strings of equal length',
+        codeSnippet: `function hammingDistance(str1, str2) {
+    let distance = 0;
+    if (str1.length !== str2.length) {
+            return -1; // Strings must have equal length
+        }
+        for (let i = 0; i < str1.length; i++) {
+        if (str1[i] !== str2[i]) {
+            distance++;
+            }
+        }
+    return distance;
+}
+          
+const string1 = "karolin";
+const string2 = "kathrin";
+const distance = hammingDistance(string1, string2);
+console.log("Hamming Distance:", distance);`
+    },{
+        id: 27,
+        title: 'Check if a string is a valid palindrome by considering only letters and ignoring case.',
+        codeSnippet: `function isPalindrome(str) {
+    const alphanumericStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const reversedStr = alphanumericStr.split('').reverse().join('');
+    return alphanumericStr === reversedStr;
+}
+          
+const inputStr = "A man, a plan, a canal: Panama!";
+const isPalindromeResult = isPalindrome(inputStr);
+console.log("Is Palindrome:", isPalindromeResult);`
+    },
+    {
+        id: 28,
+        title: 'Find the first non-repeating character in a string.',
+        codeSnippet: `function findFirstNonRepeatingChar(str) {
+        const charCount = {};
+        for (let char of str) {
+            if (charCount[char]) {
+                charCount[char]++;
+              } else {
+                charCount[char] = 1;
+              }
+            }
+            for (let char of str) {
+            if (charCount[char] === 1) {
+            return char;
+        }
+    }
+    return null; // No non-repeating character found
+}
+          
+const inputStr = "abracadabra";
+const nonRepeatingChar = findFirstNonRepeatingChar(inputStr);
+console.log("First Non-Repeating Character:", nonRepeatingChar);`
+    },
+    {
+        id: 29,
+        title: 'Generate all permutations of a string.',
+        codeSnippet: `function permuteString(str) {
+        if (str.length <= 1) {
+            return [str];
+        }
+          
+        const permutations = [];
+          
+        for (let i = 0; i < str.length; i++) {
+            const char = str[i];
+            const remainingChars = str.slice(0, i) + str.slice(i + 1);
+            const innerPermutations = permuteString(remainingChars);
+            for (let perm of innerPermutations) {
+                permutations.push(char + perm);
+            }
+        }
+          
+        return permutations;
+    }
+          
+const inputStr = "abc";
+const result = permuteString(inputStr);
+console.log("Permutations:", result);`
+    },
+    {
+        id: 30,
+        title: 'Count the number of words in a sentence.',
+        codeSnippet: `function countWords(sentence) {
+    const words = sentence.trim().split(/\s+/);
+    return words.length;
+}   
+          
+const inputSentence = "   Hello, World!   ";
+const wordCount = countWords(inputSentence);
+console.log("Word Count:", wordCount);`
+    },
+    {
+        id: 31,
+        title: 'Convert a sentence to pig latin.',
+        codeSnippet: `function convertToPigLatin(sentence) {
+        const words = sentence.trim().split(/\s+/);
+        const pigLatinWords = words.map(word => {
+        const firstLetter = word[0];
+        const remainingLetters = word.slice(1);
+        return remainingLetters + firstLetter + "ay";
+    });
+        return pigLatinWords.join(" ");
+    }
+          
+const inputSentence = "Hello, World!";
+const pigLatinSentence = convertToPigLatin(inputSentence);
+console.log("Pig Latin Sentence:", pigLatinSentence);`
+    },
+    {
+        id: 32,
+        title: 'Check if a string is a valid URL.',
+        codeSnippet: `function isValidURL(url) {
+        const regex = /^(https?:\/\/)?[\w.-]+\.[a-zA-Z]{2,}(\/.*)?$/;
+         return regex.test(url);
+    }
+          
+const inputURL = "https://www.example.com";
+const isValid = isValidURL(inputURL);
+console.log("Is Valid URL:", isValid);`
+    },
+    {
+        id: 33,
+        title: 'Find the second most frequent character in a string.',
+        codeSnippet: `function findSecondMostFrequentChar(str) {
+    const charCount = {};
+    for (let char of str) {
+        if (charCount[char]) {
+            charCount[char]++;
+            } else {
+                charCount[char] = 1;
+            }
+        }
+          
+    let maxCount = 0;
+    let secondMaxCount = 0;
+    let secondMostFrequentChar = null;
+          
+    for (let char in charCount) {
+        const count = charCount[char];
+        if (count > maxCount) {
+        secondMaxCount = maxCount;
+        maxCount = count;
+        secondMostFrequentChar = char;
+        } else if (count > secondMaxCount && count < maxCount) {
+            secondMaxCount = count;
+            secondMostFrequentChar = char;
+        }
+    }
+          
+    return secondMostFrequentChar;
+}
+          
+const inputStr = "abracadabra";
+const secondMostFrequentCharfindSecondMostFrequentChar(inputStr);
+console.log("Second Most Frequent Character:", secondMostFrequentChar);`
+    },
+    {
+        id: 34,
+        title: 'Remove vowels from a string.',
+        codeSnippet: `function removeVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    const result = [];
+    for (let char of str) {
+        if (!vowels.includes(char.toLowerCase())) {
+        result.push(char);
+        }
+    }
+        return result.join('');
+}
+          
+const inputStr = "Hello, World!";
+const withoutVowels = removeVowels(inputStr);
+console.log("Without Vowels:", withoutVowels);`
+    },
+    {
+        id: 35,
+        title: 'Check if a string contains only unique characters.',
+        codeSnippet: `function hasUniqueCharacters(str) {
+    const charSet = new Set(str);
+    return charSet.size === str.length;
+}
+          
+const inputStr = "abcdefg";
+const hasUnique = hasUniqueCharacters(inputStr);
+console.log("Has Unique Characters:", hasUnique);`
+    },
+    {
+        id: 36,
+        title: 'Reverse the order of words in a sentence while preserving whitespace.',
+        codeSnippet: `function reverseWordsWithWhitespace(sentence) {
+    const words = sentence.split(/\s+/);
+    const reversedWords = words.reverse();
+    const reversedSentence = reversedWords.join(' ');
+    return reversedSentence;
+}
+          
+const inputSentence = "   Hello,    World!   ";
+const reversedSentence = reverseWordsWithWhitespace(inputSentence);
+console.log("Reversed Sentence with Whitespace:", reversedSentence);`
+    },
+    {
+        id: 37,
+        title: 'Check if a string is a valid IPv4 address.',
+        codeSnippet: `function isValidIPv4Address(ip) {
+    const regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    return regex.test(ip);
+}
+          
+const inputIP = "192.168.0.1";
+const isValidIPv4 = isValidIPv4Address(inputIP);
+console.log("Is Valid IPv4 Address:", isValidIPv4);`
+    },
+    {
+        id: 38,
+        title: 'Count the number of occurrences of a substring in a string.',
+        codeSnippet: `function countSubstringOccurrences(str, substr) {
+    const regex = new RegExp(substr, 'g');
+    const matches = str.match(regex);
+    return matches ? matches.length : 0;
+}
+          
+const inputStr = "Hello, Hello, Hello, World!";
+const substring = "Hello";
+const occurrenceCount = countSubstringOccurrences(inputStr, substring);
+console.log("Substring Occurrence Count:", occurrenceCount);`
+    },
+    {
+        id: 39,
+        title: 'Check if a string is a valid palindrome, considering alphanumeric characters and ignoring case.',
+        codeSnippet: `function isPalindrome(str) {
+    const alphanumericStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const reversedStr = alphanumericStr.split('').reverse().join('');
+    return alphanumericStr === reversedStr;
+}
+          
+const inputStr = "A man, a plan, a canal: Panama!";
+const isPalindromeResult = isPalindrome(inputStr);
+console.log("Is Palindrome:", isPalindromeResult);`
+    },
+    {
+        id: 40,
+        title: 'Convert a string to snake case.',
+        codeSnippet: `function toSnakeCase(str) {
+    return str.replace(/\s+/g, '_').toLowerCase();
+}
+          
+const inputStr = "Hello, World!";
+const snakeCaseStr = toSnakeCase(inputStr);
+console.log("Snake Case String:", snakeCaseStr);`
+    },
+    {
+        id: 41,
+        title: 'Find the first recurring character in a string.',
+        codeSnippet: `function findFirstRecurringChar(str) {
+const charSet = new Set();
+for (let char of str) {
+    if (charSet.has(char)) {
+    return char;
+    }
+    charSet.add(char);
+}
+return null; // No recurring character found
+}
+          
+const inputStr = "abcaedf";
+const firstRecurringChar = findFirstRecurringChar(inputStr);
+console.log("First Recurring Character:", firstRecurringChar);`
+    },
+    {
+        id: 42,
+        title: 'Capitalize the first letter of each word in a sentence.',
+        codeSnippet: `function capitalizeWords(sentence) {
+const words = sentence.split(' ');
+const capitalizedWords = words.map(word => {
+    const firstLetter = word.charAt(0).toUpperCase();
+    const restOfWord = word.slice(1).toLowerCase();
+    return firstLetter + restOfWord;
+});
+return capitalizedWords.join(' ');
+}
+          
+const inputSentence = "hello, world!";
+const capitalizedSentence = capitalizeWords(inputSentence);
+console.log("Capitalized Sentence:", capitalizedSentence);`
+    },
+    {
+        id: 43,
+        title: 'Find the length of the longest common prefix among an array of strings.',
+        codeSnippet: `function longestCommonPrefix(strs) {
+if (strs.length === 0) {
+    return '';
+}
+          
+let prefix = strs[0];
+for (let i = 1; i < strs.length; i++) {
+    while (strs[i].indexOf(prefix) !== 0) {
+    prefix = prefix.slice(0, -1);
+    }
+}
+          
+    return prefix;
+}
+          
+const inputStrs = ['flower', 'flow', 'flight'];
+const commonPrefix = longestCommonPrefix(inputStrs);
+console.log("Longest Common Prefix:", commonPrefix);`
+    },
 ]
