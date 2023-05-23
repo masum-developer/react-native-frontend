@@ -150,6 +150,7 @@ import Map from '../src/components/sass/Map';
 import SassSelectors from '../src/components/sass/SassSelectors';
 import SassColors from '../src/components/sass/SassColors';
 import LoopJs from '../src/components/CoreJavaScript/LoopJs';
+import ArrayJs from '../src/components/CoreJavaScript/ArrayJs';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -463,8 +464,10 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                 <StringJs></StringJs> :
                                                                                                                                                                                                                                                                                                                 active === 'js-loop' ?
                                                                                                                                                                                                                                                                                                                   <LoopJs></LoopJs> :
+                                                                                                                                                                                                                                                                                                                  active === 'js-array' ?
+                                                                                                                                                                                                                                                                                                                    <ArrayJs></ArrayJs> :
 
-                                                                                                                                                                                                                                                                                                                  ''
+                                                                                                                                                                                                                                                                                                                    ''
         }
       </Aside>
 
