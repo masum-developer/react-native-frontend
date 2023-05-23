@@ -7,6 +7,7 @@ export const loopData = [
 console.log(i);
 }`
     },
+    
     {
         id: 2,
         title: "Calculate the sum of numbers from 1 to 10.",
