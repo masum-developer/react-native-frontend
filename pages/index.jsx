@@ -151,6 +151,7 @@ import SassSelectors from '../src/components/sass/SassSelectors';
 import SassColors from '../src/components/sass/SassColors';
 import LoopJs from '../src/components/CoreJavaScript/LoopJs';
 import ArrayJs from '../src/components/CoreJavaScript/ArrayJs';
+import ObjectJs from '../src/components/CoreJavaScript/ObjectJs';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -466,6 +467,8 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                   <LoopJs></LoopJs> :
                                                                                                                                                                                                                                                                                                                   active === 'js-array' ?
                                                                                                                                                                                                                                                                                                                     <ArrayJs></ArrayJs> :
+                                                                                                                                                                                                                                                                                                                    active === 'js-object' ?
+                                                                                                                                                                                                                                                                                                                      <ObjectJs></ObjectJs> :
 
                                                                                                                                                                                                                                                                                                                     ''
         }

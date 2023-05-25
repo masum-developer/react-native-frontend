@@ -267,6 +267,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'js-string')}>String</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js-loop')}>Loop</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js-array')}>Array</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'js-object')}>Object</MenuItem>
                                 </SubMenu>
 
                                 {/* {
