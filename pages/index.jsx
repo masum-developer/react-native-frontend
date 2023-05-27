@@ -152,6 +152,7 @@ import SassColors from '../src/components/sass/SassColors';
 import LoopJs from '../src/components/CoreJavaScript/LoopJs';
 import ArrayJs from '../src/components/CoreJavaScript/ArrayJs';
 import ObjectJs from '../src/components/CoreJavaScript/ObjectJs';
+import AgileLogin from '../src/components/agileALM/login/AgileLogin';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -469,8 +470,10 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                     <ArrayJs></ArrayJs> :
                                                                                                                                                                                                                                                                                                                     active === 'js-object' ?
                                                                                                                                                                                                                                                                                                                       <ObjectJs></ObjectJs> :
+                                                                                                                                                                                                                                                                                                                      active === 'agileALM-login' ?
+                                                                                                                                                                                                                                                                                                                        <AgileLogin></AgileLogin> :
 
-                                                                                                                                                                                                                                                                                                                    ''
+                                                                                                                                                                                                                                                                                                                        ''
         }
       </Aside>
 

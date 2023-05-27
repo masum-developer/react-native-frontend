@@ -270,6 +270,10 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'js-object')}>Object</MenuItem>
                                 </SubMenu>
 
+                                <SubMenu label="AgileALM Breakdown">
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-login')}>Login Module</MenuItem>
+                                </SubMenu>
+
                                 {/* {
                                     SideMenus?.map((menu, i) =>
                                         <GetSubMenu menu={menu} key={i}></GetSubMenu>
