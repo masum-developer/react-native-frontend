@@ -742,7 +742,6 @@ const modelList = [
     "The schema includes an additional configuration option: timestamps: true: It automatically adds createdAt and updatedAt fields to the schema, tracking the creation and modification timestamps of the organization documents."
 ]
 
-
 const model2 = `const mongoose = require("mongoose");
 
 const organizatinoMemberSchema = new mongoose.Schema(
