@@ -152,7 +152,11 @@ import SassColors from '../src/components/sass/SassColors';
 import LoopJs from '../src/components/CoreJavaScript/LoopJs';
 import ArrayJs from '../src/components/CoreJavaScript/ArrayJs';
 import ObjectJs from '../src/components/CoreJavaScript/ObjectJs';
-import AgileLogin from '../src/components/agileALM/login/AgileLogin';
+import AgileLogin from '../src/components/agileALM/module/AgileLogin';
+import AgileRegister from '../src/components/agileALM/module/AgileRegister';
+import AgileForgetPass from '../src/components/agileALM/module/AgileForgetPass';
+import ShowProject from '../src/components/agileALM/module/ShowProject';
+import CreateProject from '../src/components/agileALM/module/CreateProject';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -472,8 +476,16 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                       <ObjectJs></ObjectJs> :
                                                                                                                                                                                                                                                                                                                       active === 'agileALM-login' ?
                                                                                                                                                                                                                                                                                                                         <AgileLogin></AgileLogin> :
+                                                                                                                                                                                                                                                                                                                        active === 'agileALM-register' ?
+                                                                                                                                                                                                                                                                                                                          <AgileRegister></AgileRegister> :
+                                                                                                                                                                                                                                                                                                                          active === 'agileALM-forgetPassword' ?
+                                                                                                                                                                                                                                                                                                                            <AgileForgetPass></AgileForgetPass> :
+                                                                                                                                                                                                                                                                                                                            active === 'agileALM-showproject' ?
+                                                                                                                                                                                                                                                                                                                              <ShowProject></ShowProject> :
+                                                                                                                                                                                                                                                                                                                              active === 'agileALM-createproject' ?
+                                                                                                                                                                                                                                                                                                                                <CreateProject></CreateProject> :
 
-                                                                                                                                                                                                                                                                                                                        ''
+                                                                                                                                                                                                                                                                                                                                ''
         }
       </Aside>
 

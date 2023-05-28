@@ -272,6 +272,10 @@ const Aside = ({ children }) => {
 
                                 <SubMenu label="AgileALM Breakdown">
                                     <MenuItem onClick={() => handlePush('tab', 'agileALM-login')}>Login Module</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-register')}>Register Module</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-forgetPassword')}>Forget Password Module</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-showproject')}>Show All Project</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-createproject')}>Create Project</MenuItem>
                                 </SubMenu>
 
                                 {/* {
