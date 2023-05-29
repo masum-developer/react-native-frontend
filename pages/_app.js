@@ -27,18 +27,18 @@ function MyApp(props) {
 	React.useEffect(() => {
 		const handleRouteStart = () => NProgress.start();
 		const handleRouteDone = () => NProgress.done();
-	
+
 		Router.events.on('routeChangeStart', handleRouteStart);
 		Router.events.on('routeChangeComplete', handleRouteDone);
 		Router.events.on('routeChangeError', handleRouteDone);
-	
+
 		return () => {
-		  // Make sure to remove the event handler on unmount!
-		  Router.events.off('routeChangeStart', handleRouteStart);
-		  Router.events.off('routeChangeComplete', handleRouteDone);
-		  Router.events.off('routeChangeError', handleRouteDone);
+			// Make sure to remove the event handler on unmount!
+			Router.events.off('routeChangeStart', handleRouteStart);
+			Router.events.off('routeChangeComplete', handleRouteDone);
+			Router.events.off('routeChangeError', handleRouteDone);
 		};
-	  }, []);
+	}, []);
 
 	const theme = createTheme({
 		typography: {
@@ -48,7 +48,17 @@ function MyApp(props) {
 				].join(','),
 				fontWeight: 700,
 				fontSize: '45px',
-				lineHeight: '57px'
+				lineHeight: '57px',
+
+				'@media (max-width: 800px)': {
+					fontSize: '35px',
+					lineHeight: '30px'
+				},
+
+				'@media (max-width: 600px)': {
+					fontSize: '30px',
+					lineHeight: '30px'
+				}
 			},
 			h2: {
 				fontFamily: [
@@ -56,7 +66,11 @@ function MyApp(props) {
 				].join(','),
 				fontWeight: 700,
 				fontSize: '40px',
-				lineHeight: '49px'
+				lineHeight: '49px',
+				'@media (max-width: 80px)': {
+					fontSize: '35px',
+					lineHeight: '30px'
+				},
 			},
 			h3: {
 				fontFamily: [
@@ -64,7 +78,11 @@ function MyApp(props) {
 				].join(','),
 				fontWeight: 700,
 				fontSize: '28px',
-				lineHeight: '49px'
+				lineHeight: '49px',
+				'@media (max-width: 600px)': {
+					fontSize: '20px',
+					lineHeight: '20px'
+				}
 			},
 			h4: {
 				fontFamily: [
@@ -80,7 +98,11 @@ function MyApp(props) {
 				].join(','),
 				fontWeight: 400,
 				fontSize: '18px',
-				lineHeight: '26.44px'
+				lineHeight: '26.44px',
+				'@media (max-width: 600px)': {
+					fontSize: '15px',
+					lineHeight: '15px'
+				}
 			},
 			subtitle2: {
 				fontFamily: [
@@ -88,7 +110,11 @@ function MyApp(props) {
 				].join(','),
 				fontWeight: 400,
 				fontSize: '16px',
-				lineHeight: '24px'
+				lineHeight: '24px',
+				'@media (max-width: 600px)': {
+					fontSize: '14px',
+					lineHeight: '15px'
+				}
 			},
 			subtitle3: {
 				fontFamily: [
@@ -96,7 +122,11 @@ function MyApp(props) {
 				].join(','),
 				fontWeight: 400,
 				fontSize: '14px',
-				lineHeight: '24px'
+				lineHeight: '24px',
+				'@media (max-width: 600px)': {
+					fontSize: '13px',
+					lineHeight: '15px'
+				}
 			},
 			body1: {
 				fontFamily: [

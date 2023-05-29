@@ -5,6 +5,8 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { SideMenus } from '../../staticData/menus';
+import { AiFillDatabase } from 'react-icons/ai';
+import IconCom from './IconCom';
 
 const Aside = ({ children }) => {
     const matches = useMediaQuery('(min-width:600px)');
@@ -44,7 +46,15 @@ const Aside = ({ children }) => {
             <Grid container>
                 <Grid item xs={2} md={2} lg={1} xl={1}>
                     <ProSidebarProvider>
-                        <Sidebar defaultCollapsed={!matches} className='sidebar' style={{ marginTop: '109px', height: '90vh', position: 'fixed', paddingBottom: '10px' }} backgroundColor="#ECE4EC" width='250px'>
+                        <Sidebar
+                        toggled={matches ? true : false}
+                        defaultCollapsed={!matches}
+                        className='sidebar'
+                        style={{ height: '90vh' , position: 'fixed', paddingBottom: '10px' }}
+                        backgroundColor="#ECE4EC" 
+                        width='250px'
+                        collapsed={true}
+                        >
                             <Menu
                                 menuItemStyles={{
                                     button: ({ level, active, disabled }) => {
@@ -63,8 +73,8 @@ const Aside = ({ children }) => {
                                     },
                                 }}
                             >
-                                <MenuItem onClick={() => handlePush('tab', 'get_started')}>Get Started</MenuItem>
-                                <SubMenu label="Environment Setup" defaultOpen>
+                                <MenuItem onClick={() => handlePush('tab', 'get_started')} icon={<IconCom image={'/sidebar/start.svg'} />}>Get Started</MenuItem>
+                                <SubMenu icon={<img src='/sidebar/git.svg' size={18} />} label="Environment Setup" defaultOpen>
                                     <MenuItem onClick={() => handlePush('tab', 'vscode-installation')}>VS Code Installation</MenuItem>
 
                                     <MenuItem onClick={() => handlePush('tab', 'vscode-extentions')}>VS Code Extensions</MenuItem>
@@ -76,7 +86,7 @@ const Aside = ({ children }) => {
                                 </SubMenu>
                                 {/* <MenuItem >Agile Scrum</MenuItem> */}
 
-                                <SubMenu label="HTML">
+                                <SubMenu label="HTML" icon={<IconCom image={'/sidebar/html5.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'html_overview')}>Overview</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'basic_tags')}>Basic Tags</MenuItem>
@@ -88,7 +98,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'lists')}>Lists</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'textlinks')}>Text Links</MenuItem>
                                 </SubMenu>
-                                <SubMenu label="CSS" >
+                                <SubMenu label="CSS" icon={<IconCom image={'/sidebar/css3.svg'} />} >
                                     <MenuItem onClick={() => handlePush('tab', 'css_introduction')}>CSS Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'selectors')}>Selectors</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'colors')}>Colors</MenuItem>
@@ -124,7 +134,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'mediaqueries')}>Media Queries</MenuItem>
                                 </SubMenu>
 
-                                <SubMenu label="SASS" >
+                                <SubMenu label="SASS" icon={<IconCom image={'/sidebar/sass.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'sassintroduction')}>SASS Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'sassinstallation')}>SASS Installation</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'sassvariable')}>Variables</MenuItem>
@@ -140,7 +150,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'sasscolors')}>Color</MenuItem>
                                 </SubMenu>
 
-                                <SubMenu label="JavaScript">
+                                <SubMenu label="JavaScript"  icon={<IconCom image={'/sidebar/javascript.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js_syntax')}>Syntax</MenuItem>
@@ -212,7 +222,7 @@ const Aside = ({ children }) => {
                                     </SubMenu>
                                 </SubMenu>
 
-                                <SubMenu label="ReactJS">
+                                <SubMenu label="ReactJS" icon={<IconCom image={'/sidebar/react.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'react-introduction')}>Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'react-installation')}>Installation</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'react-jsx')}>JSX</MenuItem>
@@ -233,12 +243,12 @@ const Aside = ({ children }) => {
 
                                 </SubMenu>
 
-                                <SubMenu label="NodeJs">
+                                <SubMenu label="NodeJs" icon={<IconCom image={'/sidebar/nodejs.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'nodejs-introduction')}>Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'nodejs-server')}>Basic Server</MenuItem>
                                 </SubMenu>
 
-                                <SubMenu label="ExpressJs">
+                                <SubMenu label="ExpressJs" icon={<IconCom image={'/sidebar/express-js.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'expreejs-introduction')}>Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'expreejs-installation')}>Installation & Setup</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'req-object')}>req Object</MenuItem>
@@ -250,7 +260,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'express-error-handling')}>Error Handling</MenuItem>
                                 </SubMenu>
 
-                                <SubMenu label="Database">
+                                <SubMenu label="Database" icon={<IconCom image={'/sidebar/database.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>Database Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-getting-started')}>MongoDB Get Started</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-query')}>MongoDB Query</MenuItem>
@@ -262,7 +272,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'mongodb-delete')}>MongoDB Delete</MenuItem>
                                 </SubMenu>
 
-                                <SubMenu label="Technical Assessment">
+                                <SubMenu label="Technical Assessment" icon={<IconCom image={'/sidebar/assessment.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'core-javascript')}>Core JavaScript</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js-string')}>String</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js-loop')}>Loop</MenuItem>
@@ -270,12 +280,17 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'js-object')}>Object</MenuItem>
                                 </SubMenu>
 
-                                <SubMenu label="AgileALM Breakdown">
+                                <SubMenu label="AgileALM Breakdown" icon={<IconCom image={'/sidebar/AgileAlM-Navy-Blue-V2.png'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'agileALM-login')}>Login Module</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'agileALM-register')}>Register Module</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'agileALM-forgetPassword')}>Forget Password Module</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'agileALM-showproject')}>Show All Project</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'agileALM-createproject')}>Create Project</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-addUserToProject')}>Add User To Project</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-itemSearch')}>Item Search</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-dashboard')}>Dashboard View</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-itemsFilter')}>Items Filter</MenuItem>
+                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-workItemModal')}>Work Items Modal</MenuItem>
                                 </SubMenu>
 
                                 {/* {
@@ -288,7 +303,7 @@ const Aside = ({ children }) => {
                         </Sidebar>
                     </ProSidebarProvider>
                 </Grid>
-                <Grid item xs={8} md={8} lg={9} xl={11} sx={{ marginTop: '150px', marginLeft: { sm: '300px' }, height: '100vh' }}>
+                <Grid item xs={10} md={8} lg={9} xl={11} sx={{ marginTop: { xs: '80px', md: '150px' }, marginLeft: { sm: '300px' }, height: '100vh', padding: {xs: '20px'} }}>
                     {children}
                 </Grid>
             </Grid>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <Container sx={{ py: 15, margin: '100px' }}>
+        <Container sx={{ py: {md: 15}, margin: { md: '100px' } }}>
             <Grid container spacing={2}>
                 <Grid xs={12} md={6} sx={{ margin: 'auto' }}>
                     <Typography variant='h1'>

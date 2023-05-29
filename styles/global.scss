@@ -7,8 +7,19 @@
 .search_input {
     height: 40px;
     border: 1px solid #D9C7BF !important;
+
     &:focus {
         border: 2px solid red;
+    }
+
+    @media (max-width: 600px) {
+        min-width: 140% !important;
+        // width: 400px;
+    }
+
+    @media (max-width: 365px) {
+        min-width: 110% !important;
+        // width: 400px;
     }
 }
 
@@ -154,4 +165,18 @@ body,
 
         background: #b2a4e9 !important;
     }
+}
+
+
+.sidebar {
+    margin-top: 109px;
+    z-index: 1000;
+
+    @media (max-width: 600px) {
+        margin-top: 70px;
+    }
+}
+
+.mui-style-19kzrtu {
+    padding: 0 !important;
 }

@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
@@ -46,6 +46,9 @@ function a11yProps(index) {
 const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp }) => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const matches = useMediaQuery('(max-width:600px)');
+
+  console.log('matches', matches);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -64,8 +67,9 @@ const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp }) =>
             onChange={handleChange}
             indicatorColor="secondary"
             textColor="inherit"
-            variant="fullWidth"
+            variant={matches ? 'scrollable' : 'fullWidth'}
             aria-label="full width tabs example"
+            allowScrollButtonsMobile
           >
             <Tab label="User Interface" {...a11yProps(0)} />
             <Tab label="Frontend Implementation" {...a11yProps(1)} />

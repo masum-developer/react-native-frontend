@@ -157,6 +157,11 @@ import AgileRegister from '../src/components/agileALM/module/AgileRegister';
 import AgileForgetPass from '../src/components/agileALM/module/AgileForgetPass';
 import ShowProject from '../src/components/agileALM/module/ShowProject';
 import CreateProject from '../src/components/agileALM/module/CreateProject';
+import AddUserToProject from '../src/components/agileALM/module/AddUserToProject';
+import ItemSearch from '../src/components/agileALM/module/ItemSearch';
+import ShowDashboard from '../src/components/agileALM/module/ShowDashboard';
+import ItemsFilter from '../src/components/agileALM/module/ItemsFilter';
+import WorkItemModal from '../src/components/agileALM/module/WorkItemModal';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -484,8 +489,18 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                               <ShowProject></ShowProject> :
                                                                                                                                                                                                                                                                                                                               active === 'agileALM-createproject' ?
                                                                                                                                                                                                                                                                                                                                 <CreateProject></CreateProject> :
+                                                                                                                                                                                                                                                                                                                                active === 'agileALM-addUserToProject' ?
+                                                                                                                                                                                                                                                                                                                                  <AddUserToProject></AddUserToProject> :
+                                                                                                                                                                                                                                                                                                                                  active === 'agileALM-itemSearch' ?
+                                                                                                                                                                                                                                                                                                                                    <ItemSearch></ItemSearch> :
+                                                                                                                                                                                                                                                                                                                                    active === 'agileALM-dashboard' ?
+                                                                                                                                                                                                                                                                                                                                      <ShowDashboard></ShowDashboard> :
+                                                                                                                                                                                                                                                                                                                                      active === 'agileALM-itemsFilter' ?
+                                                                                                                                                                                                                                                                                                                                        <ItemsFilter></ItemsFilter> :
+                                                                                                                                                                                                                                                                                                                                        active === 'agileALM-workItemModal' ?
+                                                                                                                                                                                                                                                                                                                                          <WorkItemModal></WorkItemModal> :
 
-                                                                                                                                                                                                                                                                                                                                ''
+                                                                                                                                                                                                                                                                                                                                          ''
         }
       </Aside>
 
