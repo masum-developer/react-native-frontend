@@ -37,7 +37,7 @@ const navItems = [
     {
         id: 1,
         title: 'Get Started',
-        slug: '?tab=html_introduction'
+        slug: '?tab=get_started'
     },
     // {
     //     id: 2,
@@ -114,7 +114,7 @@ const Navbar = (props) => {
                 {navItems.map((item) => (
                     <ListItem key={item?.id} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item?.title} />
+                            <ListItemText onClick={() => router.push(item?.slug)} primary={item?.title} />
                         </ListItemButton>
                     </ListItem>
                 ))}
