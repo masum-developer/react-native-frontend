@@ -6,6 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import AgileProcess from '../agileProcess/AgileProcess';
 
 
 function TabPanel(props) {
@@ -43,12 +44,12 @@ function a11yProps(index) {
 
 
 
-const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp }) => {
+const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp, agileExecution }) => {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const matches = useMediaQuery('(max-width:600px)');
 
-  console.log('matches', matches);
+  // console.log('matches', matches);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -71,10 +72,12 @@ const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp }) =>
             aria-label="full width tabs example"
             allowScrollButtonsMobile
           >
-            <Tab label="User Interface" {...a11yProps(0)} />
-            <Tab label="Frontend Implementation" {...a11yProps(1)} />
-            <Tab label="Backend Implementation" {...a11yProps(2)} />
-            <Tab label="Database Model" {...a11yProps(3)} />
+            <Tab label="Agile Methodology" {...a11yProps(0)} />
+            <Tab label="Execution Phase" {...a11yProps(1)} />
+            <Tab label="UI" {...a11yProps(2)} />
+            <Tab label="FI" {...a11yProps(3)} />
+            <Tab label="BI" {...a11yProps(4)} />
+            <Tab label="DB" {...a11yProps(5)} />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -83,20 +86,28 @@ const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp }) =>
           onChangeIndex={handleChangeIndex}
         >
           <TabPanel value={value} index={0} dir={theme.direction}>
+            {/* agile process */}
+           <AgileProcess></AgileProcess>
+          </TabPanel>
+          {agileExecution && <TabPanel value={value} index={1} dir={theme.direction}>
+            {/* execution */}
+            {agileExecution}
+          </TabPanel>}
+          <TabPanel value={value} index={2} dir={theme.direction}>
             {/* image */}
             {imageComp}
           </TabPanel>
-          <TabPanel value={value} index={1} dir={theme.direction}>
+          <TabPanel value={value} index={3} dir={theme.direction}>
             {/* frontend */}
             {frontendComp}
           </TabPanel>
-          <TabPanel value={value} index={2} dir={theme.direction}>
+          <TabPanel value={value} index={4} dir={theme.direction}>
             {/* backend */}
             {backendComp}
           </TabPanel>
 
-          <TabPanel value={value} index={3} dir={theme.direction}>
-            {/* backend */}
+          <TabPanel value={value} index={5} dir={theme.direction}>
+            {/* database mode */}
             {databaseComp}
           </TabPanel>
         </SwipeableViews>

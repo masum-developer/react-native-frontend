@@ -104,9 +104,11 @@ const Navbar = (props) => {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
 
-            <Box sx={{ flexGrow: 1, color: '#413434', display: { xs: 'none', sm: 'block' } }}>
+            <Box sx={{ flexGrow: 1, color: '#413434', display: { xs: 'block', sm: 'none' } }}>
+                <Link href="/">
+                    <img style={{ height: '50px', width: '100px', objectFit: 'contain' }} src="/logo2.png" alt="logo"></img>
+                </Link>
 
-                <img src="logo.svg" slt="logo"></img>
             </Box>
 
             <Divider />
@@ -121,6 +123,7 @@ const Navbar = (props) => {
             </List>
 
             <Stack direction="column" alignItems="center" justifyContent="center">
+
                 <Link href="/auth/login">
                     <ButtonComp myWidth='110px'>Sign In</ButtonComp>
                 </Link>
