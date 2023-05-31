@@ -180,3 +180,32 @@ body,
 .mui-style-19kzrtu {
     padding: 0 !important;
 }
+
+.all_benefits {
+    padding: 1px 1px;
+
+    ul {
+        margin-left: -25px !important;
+      li {
+        color: #062539;
+        font-size: 15px;
+        // font-family: "Poppins", sans-serif;
+        position: relative;
+        list-style: none;
+        padding-left: 15px;
+        margin-top: 10px;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 7px;
+          height: 8px;
+          width: 8px;
+          border-radius: 10px;
+          content: "";
+          background: #597dfc;
+          display: inline-block;
+        }
+      }
+    }
+  }

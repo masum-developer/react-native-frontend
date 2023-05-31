@@ -6,6 +6,8 @@ import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
 import StepComp from '../../EnvironmentSetup/StepComp';
 import MuiAlert from '@mui/material/Alert';
+import TabSelection2 from '../TabSelection2';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -534,169 +536,41 @@ const BackendComp = () => {
 }
 
 const AgileExecution = () => {
-    const epicList = [
-        "Title: AgileALM web application developement.",
-        "Assinged To: Rafiur Rahman Protik",
-        "Description: The application will be built on several requirements. It includes frontend implementation, backend implementation, and database modeling, The user interface will be built from the Figma file.",
-        "Priority: 1",
-        "Risk: 1",
-        "Effort: 3 months",
-        "Start Date: 2023/03/30",
-        "Effort: 2023/05/30",
-    ];
-
-    const featureList = [
-        "Title: Authentication process development",
-        "Assinged To: Rafiur Rahman Protik",
-        "Description: The authentication process development will consist of user signing, and registering, User sign-in and register will contain the user interface, frontend, backend, and database model.",
-        "Priority: 1",
-        "Risk: 1",
-        "Effort: 7 days",
-        "Start Date: 2023/03/01",
-        "Effort: 2023/03/07",
-    ];
-
-    const userStoryList = [
-        "Title: User sign in user interface building",
-        "Assinged To: Rafiur Rahman Protik",
-        `Description: The user interface will be designed from the Figma file,
-        Link: https://www.figma.com/file/RWGn1WB8agL4ipB7T5Dcr8/%F0%9F%93%81-Azure-ALM-(1)?node-id=203%3A1669&t=2D9blv0UiSNmJvKR-0`,
-        "Priority: 1",
-        "Risk: 1",
-        "Effort: 2 days",
-        "Start Date: 2023/03/01",
-        "Effort: 2023/03/03",
-    ];
-
-    const task1 = [
-        "Title: Sign in page form design.",
-        "Assinged To: Rafiur Rahman Protik",
-        `Description: Sign-in form design with SASS`,
-        "Priority: 1",
-        "Risk: 1",
-        "Effort: 4 hours",
-        "Start Date: 2023/03/01",
-        "Effort: 2023/03/01",
-    ]
-
-    const task2 = [
-        "Title: Mobile responsiveness adding in the form page",
-        "Assinged To: Rafiur Rahman Protik",
-        `Description: Mobile responsiveness will be added so user can use from their phone smoothly.`,
-        "Priority: 1",
-        "Risk: 1",
-        "Effort: 1 hour",
-        "Start Date: 2023/03/01",
-        "Effort: 2023/03/01",
-    ]
-
-    const stages = [
-        "New: This is the initial stage of a task where it is created and has not yet been assigned or actively worked on. In this stage, the task is typically awaiting assignment or further action.",
-
-        "Active: When a task is actively being worked on by a team member, it transitions to the Active or In Progress stage. This indicates that the assigned individual is actively performing the required work to complete the task.",
-
-        "Resolved: The Resolved stage indicates that the work on the task has been completed by the assigned team member. At this stage, the task is considered finished from the perspective of development or implementation.",
-
-        "Closed: Once the task is reviewed, validated, and accepted by relevant stakeholders or the Scrum Master, it can be transitioned to the Closed or Done stage. This stage signifies that the task has been completed successfully and is considered closed."
-    ]
+    const userStory = {
+        title: 'User Registration development.',
+        assignedTo: 'Rafiur Rahman Protik',
+        description: {
+            title: "As a full-stack developer, I want to develop the user login process on the website, So that users can securely access their accounts and leverage the platform's functionalities.",
+            list: [
+                "Design and develop the user login page UI with necessary input fields and styling.",
+                 "Implement backend logic to authenticate user credentials against the Azure DevOps authentication system.",
+                 "Apply password validation and security measures like encryption and minimum length requirements.",
+                 "Handle and display appropriate error messages for failed login attempts or authentication errors.",
+                 "Implement the logic to redirect users to their personalized dashboard or the last visited page upon successful login.",
+                 "Ensure the login functionality is responsive and optimized for different devices and screen sizes using responsive design techniques."
+                ]
+        },
+        priority: "1",
+        risk: "1",
+        effort: "2 days",
+        startDate: "2023-03-01",
+        endDate: "2023-03-02"
+    }
     return (
         <Box>
-            <Box mt={5}>
-                <StepComp stepText="Step 1:"></StepComp>
-            </Box>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <ImageComp image="/agile/login/epic.png"></ImageComp>
-            </Box>
-            <Box>
-                <Typography variant='h3'>What is an Epic?</Typography>
-                <Typography variant='subtitle2'>An Epic is a high-level work item type used to represent large and valuable pieces of work that cannot be easily completed within a single iteration or sprint. Epics provide a way to organize and manage large-scale initiatives or features in a structured manner. They help break down complex projects into manageable units and allow for better planning and tracking of work.</Typography>
-
-                <Typography variant='h4' mt={2}>Here we give some information related to the epic:
-                </Typography>
-
-                <Process list={epicList}></Process>
-            </Box>
 
             <Box mt={2}>
-                <Box mt={5}>
-                    <StepComp stepText="Step 2:"></StepComp>
-                </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <ImageComp image="/agile/login/feature.png"></ImageComp>
-                </Box>
-                <Typography variant='h3'>What is Feature?</Typography>
-                <Typography variant='subtitle2'>A Feature is a work item type used to represent a distinct and valuable functionality or capability of a software application. Features are typically smaller in scope than Epics but larger than User Stories. They provide a way to organize and manage the development of specific functionalities or enhancements within a product or project.</Typography>
-
-                <Typography variant='h4' mt={2}>Here we give some information related to the feature:
-                </Typography>
-
-                <Process list={featureList}></Process>
-            </Box>
-
-            <Box mt={2}>
-                <Box mt={5}>
-                    <StepComp stepText="Step 3:"></StepComp>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <ImageComp image="/agile/login/userStory.png"></ImageComp>
+                    <ImageComp image="/agile/login.png"></ImageComp>
                 </Box>
                 <Typography variant='h3'>What is User Story?</Typography>
                 <Typography variant='subtitle2'>A User Story is a work item type used to represent a single piece of functionality or a specific requirement from the perspective of an end user or customer. User Stories are used to capture and describe user requirements or desired system behavior in a concise and actionable manner.</Typography>
 
-                <Typography variant='h4' mt={2}>Here we give some information related to the user story:
+                <Typography variant='h4' mt={2}>Here we give some information related to the user sign in user story:
                 </Typography>
 
-                <Process list={userStoryList}></Process>
-            </Box>
+                <UserStoryComp userStory={userStory}></UserStoryComp>
 
-            {/* task 1 */}
-
-            <Box mt={2}>
-                <Box mt={5}>
-                    <StepComp stepText="Step 4:"></StepComp>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <ImageComp image="/agile/login/task1.png"></ImageComp>
-                </Box>
-                <Typography variant='h3'>What is a Task?</Typography>
-                <Typography variant='subtitle2'>A Task is a work item type used to represent a specific unit of work or an individual action required to complete a User Story or other work items. Tasks break down the work into smaller, actionable items that can be assigned, tracked, and completed by individual team members.</Typography>
-
-                <Typography variant='h4' mt={2}>Here we give some information related to the task:
-                </Typography>
-
-                <Process list={task1}></Process>
-            </Box>
-
-            {/* task 2 */}
-
-            <Box mt={2}>
-                <Box mt={5}>
-                    <StepComp stepText="Step 5:"></StepComp>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <ImageComp image="/agile/login/task2.png"></ImageComp>
-                </Box>
-
-                <Typography variant='h4' mt={2}>Another task:
-                </Typography>
-
-                <Process list={task2}></Process>
-
-                <Box mt={3}>
-                    <MuiAlert severity="info" variant="filled">Note: User Story can have multiple tasks.</MuiAlert>
-                </Box>
-            </Box>
-
-            <Box mt={2}>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <ImageComp image="/agile/login/taskboard.png"></ImageComp>
-                </Box>
-
-                <Typography variant='h3' mt={2}>Different stages of the tasks on the Taskboard
-                </Typography>
-                <Typography variant='subtitle2'>Work items such as Tasks can go through different stages or states to reflect their current status within the development process. While the specific names and stages may vary based on the customization of the project, here are some common task stages:</Typography>
-
-                <Process list={stages}></Process>
             </Box>
 
         </Box>

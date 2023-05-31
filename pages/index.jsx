@@ -162,6 +162,8 @@ import ItemSearch from '../src/components/agileALM/module/ItemSearch';
 import ShowDashboard from '../src/components/agileALM/module/ShowDashboard';
 import ItemsFilter from '../src/components/agileALM/module/ItemsFilter';
 import WorkItemModal from '../src/components/agileALM/module/WorkItemModal';
+import CreateOrganization from '../src/components/agileALM/module/CreateOrganization';
+import AddUserToOrg from '../src/components/agileALM/module/AddUserToOrg';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -499,8 +501,12 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                         <ItemsFilter></ItemsFilter> :
                                                                                                                                                                                                                                                                                                                                         active === 'agileALM-workItemModal' ?
                                                                                                                                                                                                                                                                                                                                           <WorkItemModal></WorkItemModal> :
+                                                                                                                                                                                                                                                                                                                                          active === 'agileALM-createOrganization' ?
+                                                                                                                                                                                                                                                                                                                                            <CreateOrganization></CreateOrganization> :
+                                                                                                                                                                                                                                                                                                                                            active === 'agileALM-addUserToOrg' ?
+                                                                                                                                                                                                                                                                                                                                            <AddUserToOrg></AddUserToOrg> :
 
-                                                                                                                                                                                                                                                                                                                                          ''
+                                                                                                                                                                                                                                                                                                                                            ''
         }
       </Aside>
 

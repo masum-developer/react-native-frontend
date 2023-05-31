@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery } from '@mui/material';
+import { Box, Tooltip, Typography, useMediaQuery } from '@mui/material';
 import React from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
@@ -7,6 +7,7 @@ import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import AgileProcess from '../agileProcess/AgileProcess';
+import { useRouter } from 'next/router';
 
 
 function TabPanel(props) {
@@ -49,7 +50,6 @@ const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp, agil
   const [value, setValue] = React.useState(0);
   const matches = useMediaQuery('(max-width:600px)');
 
-  // console.log('matches', matches);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -58,6 +58,7 @@ const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp, agil
   const handleChangeIndex = (index) => {
     setValue(index);
   };
+
 
   return (
     <Box pb={3}>
@@ -72,12 +73,27 @@ const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp, agil
             aria-label="full width tabs example"
             allowScrollButtonsMobile
           >
-            <Tab label="Agile Methodology" {...a11yProps(0)} />
-            <Tab label="Execution Phase" {...a11yProps(1)} />
-            <Tab label="UI" {...a11yProps(2)} />
-            <Tab label="FI" {...a11yProps(3)} />
-            <Tab label="BI" {...a11yProps(4)} />
-            <Tab label="DB" {...a11yProps(5)} />
+
+            <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>Requirement from the perspective of an end user.</Typography>}>
+              <Tab label="User Story" {...a11yProps(0)} />
+            </Tooltip>
+            <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>User Interface of the page.</Typography>}>
+              <Tab label="UI" {...a11yProps(1)} />
+            </Tooltip>
+
+            <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>Frontend implementation</Typography>}>
+              <Tab label="FI" {...a11yProps(2)} />
+            </Tooltip>
+
+            <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>Backend implementation</Typography>}>
+              <Tab label="BI" {...a11yProps(3)} />
+            </Tooltip>
+
+
+            <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>Database model of the requirement</Typography>}>
+              <Tab label="DB" {...a11yProps(4)} />
+            </Tooltip>
+
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -86,27 +102,23 @@ const TabSelection = ({ imageComp, frontendComp, backendComp, databaseComp, agil
           onChangeIndex={handleChangeIndex}
         >
           <TabPanel value={value} index={0} dir={theme.direction}>
-            {/* agile process */}
-           <AgileProcess></AgileProcess>
-          </TabPanel>
-          {agileExecution && <TabPanel value={value} index={1} dir={theme.direction}>
             {/* execution */}
             {agileExecution}
-          </TabPanel>}
-          <TabPanel value={value} index={2} dir={theme.direction}>
+          </TabPanel>
+          <TabPanel value={value} index={1} dir={theme.direction}>
             {/* image */}
             {imageComp}
           </TabPanel>
-          <TabPanel value={value} index={3} dir={theme.direction}>
+          <TabPanel value={value} index={2} dir={theme.direction}>
             {/* frontend */}
             {frontendComp}
           </TabPanel>
-          <TabPanel value={value} index={4} dir={theme.direction}>
+          <TabPanel value={value} index={3} dir={theme.direction}>
             {/* backend */}
             {backendComp}
           </TabPanel>
 
-          <TabPanel value={value} index={5} dir={theme.direction}>
+          <TabPanel value={value} index={4} dir={theme.direction}>
             {/* database mode */}
             {databaseComp}
           </TabPanel>

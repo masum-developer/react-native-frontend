@@ -4,6 +4,7 @@ import CodeBox from '../../global/CodeBox';
 import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -455,6 +456,47 @@ const FrontendComp = () => {
     )
 }
 
+const AgileExecution = () => {
+    const userStory = {
+        title: 'Forgot Password functionality development',
+        assignedTo: 'Rafiur Rahman Protik',
+        description: {
+            title: 'As a full-stack developer, I want to develop the "Forgot Password" feature on the website, So that users can securely reset their passwords and regain access to their accounts.',
+            list: [
+                'Design and implement the "Forgot Password" link on the login page for easy access.',
+                 "Develop the password reset page where users can enter their registered email addresses.",
+                 "Implement the logic to generate a unique password reset token and send it via email to the user.",
+                 "Create a password reset page where users can enter a new password securely.",
+                 "Handle and display clear error messages for invalid email addresses or network errors during the password reset process.",
+                ]
+        },
+        priority: "1",
+        risk: "1",
+        effort: "6 hours",
+        startDate: "2023-05-31",
+        endDate: "2023-05-32"
+    }
+    return (
+        <Box>
+
+            <Box mt={2}>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <ImageComp image="/agile/login.png"></ImageComp>
+                </Box>
+                <Typography variant='h3'>What is User Story?</Typography>
+                <Typography variant='subtitle2'>A User Story is a work item type used to represent a single piece of functionality or a specific requirement from the perspective of an end user or customer. User Stories are used to capture and describe user requirements or desired system behavior in a concise and actionable manner.</Typography>
+
+                <Typography variant='h4' mt={2}>Here we give some information related to the forget password in user story:
+                </Typography>
+
+                <UserStoryComp userStory={userStory}></UserStoryComp>
+
+            </Box>
+
+        </Box>
+    )
+}
+
 const BackendComp = () => {
     return (
         <Box>
@@ -473,7 +515,7 @@ const AgileForgetPass = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp/>}></TabSelection>
+            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp/>} agileExecution={<AgileExecution />}></TabSelection>
         </Box>
     );
 };

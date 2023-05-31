@@ -106,7 +106,7 @@ const Navbar = (props) => {
 
             <Box sx={{ flexGrow: 1, color: '#413434', display: { xs: 'block', sm: 'none' } }}>
                 <Link href="/">
-                    <img style={{ height: '50px', width: '100px', objectFit: 'contain' }} src="/logo2.png" alt="logo"></img>
+                    <img style={{ height: '50px', width: '100px', objectFit: 'contain' }} src="/logo2.jpg" alt="logo"></img>
                 </Link>
 
             </Box>
@@ -212,7 +212,7 @@ const Navbar = (props) => {
                         <Box sx={{ flexGrow: 1, color: '#413434', display: { xs: 'none', sm: 'block' } }}>
 
                             <Link href='/'>
-                                <img style={{ height: '100px', width: '100px', objectFit: 'contain', cursor: 'pointer' }} src="/logo2.png" slt="logo"></img>
+                                <img style={{ height: '100px', width: '100px', objectFit: 'contain', cursor: 'pointer' }} src="/logo2.jpg" slt="logo"></img>
                             </Link>
                         </Box>
 

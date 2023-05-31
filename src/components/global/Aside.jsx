@@ -39,7 +39,7 @@ const Aside = ({ children }) => {
             </MenuItem>
         )
     }
-    
+
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -48,13 +48,13 @@ const Aside = ({ children }) => {
                 <Grid item xs={2} md={2} lg={1} xl={1}>
                     <ProSidebarProvider>
                         <Sidebar
-                        toggled={matches ? true : false}
-                        defaultCollapsed={!matches}
-                        className='sidebar'
-                        style={{ height: '90vh' , position: 'fixed', paddingBottom: '10px' }}
-                        backgroundColor="#ECE4EC" 
-                        width='250px'
-                        collapsed={true}
+                            toggled={matches ? true : false}
+                            defaultCollapsed={!matches}
+                            className='sidebar'
+                            style={{ height: '90vh', position: 'fixed', paddingBottom: '10px' }}
+                            backgroundColor="#ECE4EC"
+                            width='250px'
+                            collapsed={true}
                         >
                             <Menu
                                 menuItemStyles={{
@@ -151,7 +151,7 @@ const Aside = ({ children }) => {
                                     <MenuItem onClick={() => handlePush('tab', 'sasscolors')}>Color</MenuItem>
                                 </SubMenu>
 
-                                <SubMenu label="JavaScript"  icon={<IconCom image={'/sidebar/javascript.svg'} />}>
+                                <SubMenu label="JavaScript" icon={<IconCom image={'/sidebar/javascript.svg'} />}>
                                     <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>
                                     <MenuItem onClick={() => handlePush('tab', 'js_syntax')}>Syntax</MenuItem>
@@ -282,16 +282,25 @@ const Aside = ({ children }) => {
                                 </SubMenu>
 
                                 <SubMenu label="AgileALM Breakdown" icon={<IconCom image={'/sidebar/AgileAlM-Navy-Blue-V2.png'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-login')}>Login Module</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-register')}>Register Module</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-forgetPassword')}>Forget Password Module</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-showproject')}>Show All Project</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-createproject')}>Create Project</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-addUserToProject')}>Add User To Project</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-itemSearch')}>Item Search</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-dashboard')}>Dashboard View</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-itemsFilter')}>Items Filter</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'agileALM-workItemModal')}>Work Items Modal</MenuItem>
+                                    <SubMenu label="User">
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-register')}>User Registration</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-login')}>User Login</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-forgetPassword')}>Forget Password</MenuItem>
+                                    </SubMenu>
+                                    <SubMenu label="Organization">
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-createOrganization')}>Create Organization</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-addUserToOrg')}>Add User To Organization</MenuItem>
+                                        {/* <MenuItem onClick={() => handlePush('tab', 'agileALM-forgetPassword')}>Forget Password</MenuItem> */}
+                                    </SubMenu>
+                                    <SubMenu label="Project">
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-showproject')}>Show All Project</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-createproject')}>Create Project</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-addUserToProject')}>Add User To Project</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-itemSearch')}>Item Search</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-dashboard')}>Dashboard View</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-itemsFilter')}>Items Filter</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-workItemModal')}>Work Items Modal</MenuItem>
+                                    </SubMenu>
                                 </SubMenu>
 
                                 {/* {
@@ -304,7 +313,7 @@ const Aside = ({ children }) => {
                         </Sidebar>
                     </ProSidebarProvider>
                 </Grid>
-                <Grid item xs={10} md={8} lg={9} xl={11} sx={{ marginTop: { xs: '80px', md: '150px' }, marginLeft: { sm: '300px' }, height: '100vh', padding: {xs: '20px'} }}>
+                <Grid item xs={10} md={8} lg={9} xl={11} sx={{ marginTop: { xs: '80px', md: '150px' }, marginLeft: { sm: '300px' }, height: '100vh', padding: { xs: '20px' } }}>
                     {children}
                 </Grid>
             </Grid>

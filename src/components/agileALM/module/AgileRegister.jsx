@@ -4,6 +4,10 @@ import CodeBox from '../../global/CodeBox';
 import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
+import StepComp from '../../EnvironmentSetup/StepComp';
+import MuiAlert from '@mui/material/Alert';
+import TabSelection2 from '../TabSelection2';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -589,15 +593,15 @@ const dbModelList = [
 ]
 const ModelComp = () => {
     return (
-      <Box>
-        <Typography mt={2} variant='h4'>Database model</Typography>
-        {/* <StepComp stepText="Login.js"></StepComp> */}
-        <CodeBox codeSnippet={model}></CodeBox>
-        <Typography mt={2} variant='h4'>Description of the codebase</Typography>
-        <Process list={dbModelList}></Process>
-      </Box>
+        <Box>
+            <Typography mt={2} variant='h4'>Database model</Typography>
+            {/* <StepComp stepText="Login.js"></StepComp> */}
+            <CodeBox codeSnippet={model}></CodeBox>
+            <Typography mt={2} variant='h4'>Description of the codebase</Typography>
+            <Process list={dbModelList}></Process>
+        </Box>
     )
-  }
+}
 
 const ImageInterface = () => {
     return (
@@ -646,13 +650,55 @@ const BackendComp = () => {
     )
 }
 
+const AgileExecution = () => {
+
+    const userStory = {
+        title: 'User Registration development.',
+        assignedTo: 'Rafiur Rahman Protik',
+        description: {
+            title: "As a full-stack developer, I want to develop the user registration process on the website, So that new users can easily create an account and access the platform's features.",
+            list: [
+                "Design and develop the user registration form UI with proper input fields and validation.",
+                 "Implement backend logic for processing the registration form data and saving user information securely.",
+                 "Implement the logic to validate email addresses and mark user accounts as verified upon successful verification.",
+                 "Handle and display clear error messages for any registration form issues or validation errors.",
+                 "Ensure the user registration process is responsive and optimized for different devices using responsive design techniques."
+                ]
+        },
+        priority: "1",
+        risk: "1",
+        effort: "2 days",
+        startDate: "2023-03-02",
+        endDate: "2023-03-03"
+    }
+
+    return (
+        <Box>
+
+            <Box mt={2}>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <ImageComp image="/agile/register.png"></ImageComp>
+                </Box>
+                <Typography mt={2} variant='h3'>What is User Story?</Typography>
+                <Typography variant='subtitle2'>A User Story is a work item type used to represent a single piece of functionality or a specific requirement from the perspective of an end user or customer. User Stories are used to capture and describe user requirements or desired system behavior in a concise and actionable manner.</Typography>
+
+                <Typography variant='h4' mt={2}>Here we give some information related to the user registration user story:
+                </Typography>
+
+                <UserStoryComp userStory={userStory}></UserStoryComp>
+            </Box>
+
+        </Box>
+    )
+}
+
 
 
 const AgileRegister = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp/>}></TabSelection>
+            <TabSelection2 imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />} agileExecution={<AgileExecution />}></TabSelection2>
         </Box>
     );
 };
