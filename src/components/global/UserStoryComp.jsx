@@ -16,7 +16,7 @@ const UserStoryComp = ({ userStory }) => {
                 }
             </Box>
             <Typography variant='subtitle2'><b>Priority:</b> {priority}</Typography>
-            <Typography variant='subtitle2'><b>Eisk:</b> {risk}</Typography>
+            <Typography variant='subtitle2'><b>Risk:</b> {risk}</Typography>
             <Typography variant='subtitle2'><b>Effort:</b> {effort}</Typography>
             <Typography variant='subtitle2'><b>Start Date:</b> {startDate}</Typography>
             <Typography variant='subtitle2'><b>End Date:</b> {endDate}</Typography>
