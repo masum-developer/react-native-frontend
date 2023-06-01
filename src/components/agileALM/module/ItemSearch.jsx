@@ -4,6 +4,7 @@ import CodeBox from '../../global/CodeBox';
 import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -1063,13 +1064,54 @@ const BackendComp = () => {
     )
 }
 
+const AgileExecution = () => {
+  const userStory = {
+      title: 'Item search functionality in topbar.',
+      assignedTo: 'Rafiur Rahman Protik',
+      description: {
+          title: "As a developer, I want to implement the item search functionality at the top bar so that users can easily search for and locate specific items, such as work items, features, etc.",
+          list: [
+              "Make an input field to search the items",
+               "Give a suggestion box when the user focuses on the input field.",
+               "Ensure that the item search functionality is performant.",
+               "Make an API to get the items",
+               "Design the UI with SASS and Ant Design",
+              ]
+      },
+      priority: "1",
+      risk: "1",
+      effort: "4 hours",
+      startDate: "2023-06-01",
+      endDate: "2023-06-01"
+  }
+  return (
+      <Box>
+
+          <Box mt={2}>
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <ImageComp image="/agile/item_search.png"></ImageComp>
+              </Box>
+              <Typography variant='h3'>What is User Story?</Typography>
+              <Typography variant='subtitle2'>As a developer, I want to implement the item search functionality at the top bar so that users can easily search for and locate specific items, such as work items, features, etc.</Typography>
+
+              <Typography variant='h4' mt={2}>Here we give some information related to search items to Organization user story:
+              </Typography>
+
+              <UserStoryComp userStory={userStory}></UserStoryComp>
+
+          </Box>
+
+      </Box>
+  )
+}
+
 
 
 const ItemSearch = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />}></TabSelection>
+            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />} agileExecution={<AgileExecution/>}></TabSelection>
         </Box>
     );
 };

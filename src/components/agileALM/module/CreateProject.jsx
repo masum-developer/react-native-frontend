@@ -4,6 +4,7 @@ import CodeBox from '../../global/CodeBox';
 import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -960,6 +961,46 @@ const ModelComp = () => {
     )
 }
 
+const AgileExecution = () => {
+  const userStory = {
+      title: 'Create project in a organization.',
+      assignedTo: 'Rafiur Rahman Protik',
+      description: {
+          title: "As a developer, I want to implement the project creation functionality in AgileALM so that users can easily create new projects and initiate the project setup process.",
+          list: [
+              "The project should have a name, description, and category(basic, agile)",
+               "Implement error handling and exception handling mechanisms to handle any unexpected issues or failures during the project creation process",
+               "Create the backend API to create the project",
+               "Design the user interface with Sass"
+              ]
+      },
+      priority: "1",
+      risk: "1",
+      effort: "5 hours",
+      startDate: "2023-01-06",
+      endDate: "2023-01-06"
+  }
+  return (
+      <Box>
+
+          <Box mt={2}>
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <ImageComp image="/agile/createProject.png"></ImageComp>
+              </Box>
+              <Typography variant='h3'>What is User Story?</Typography>
+              <Typography variant='subtitle2'>A User Story is a work item type used to represent a single piece of functionality or a specific requirement from the perspective of an end user or customer. User Stories are used to capture and describe user requirements or desired system behavior in a concise and actionable manner.</Typography>
+
+              <Typography variant='h4' mt={2}>Here we give some information related to create project user story:
+              </Typography>
+
+              <UserStoryComp userStory={userStory}></UserStoryComp>
+
+          </Box>
+
+      </Box>
+  )
+}
+
 const ImageInterface = () => {
     return (
         <ImageComp image={"/agileALM/createProject.png"} imageTitle={"Screenshot 1: Login"}></ImageComp>
@@ -1006,7 +1047,7 @@ const CreateProject = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />}></TabSelection>
+            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />} agileExecution={<AgileExecution/>}></TabSelection>
         </Box>
     );
 };

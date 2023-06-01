@@ -5,6 +5,7 @@ import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
 import NoDataFound from '../../global/NoDataFound';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -698,6 +699,47 @@ const dbModelList = [
     "The ItemModal model is exported from the module, making it accessible to other parts of the application.",
 ]
 
+const AgileExecution = () => {
+    const userStory = {
+        title: 'Work Item modal creation.',
+        assignedTo: 'Rafiur Rahman Protik',
+        description: {
+            title: "As a developer, I want to implement the modal design.",
+            list: [
+                "Create a modal with a header and footer.",
+                 "Give primary color to the header and footer.",
+                 "Add drag-and-drop functionality to the modal.",
+                 "Fetch data from API.",
+                 "Give export functionality.",
+                ]
+        },
+        priority: "1",
+        risk: "1",
+        effort: "41 hours",
+        startDate: "2023-06-01",
+        endDate: "2023-06-01"
+    }
+    return (
+        <Box>
+  
+            <Box mt={2}>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <ImageComp image="/agile/dashboard.png"></ImageComp>
+                </Box>
+                <Typography variant='h3'>What is User Story?</Typography>
+                <Typography variant='subtitle2'>As a developer, I want to implement the item search functionality at the top bar so that users can easily search for and locate specific items, such as work items, features, etc.</Typography>
+  
+                <Typography variant='h4' mt={2}>Here we give some information related to create work item modal user story:
+                </Typography>
+  
+                <UserStoryComp userStory={userStory}></UserStoryComp>
+  
+            </Box>
+  
+        </Box>
+    )
+  }
+
 
 const ModelComp = () => {
     return (
@@ -757,7 +799,7 @@ const WorkItemModal = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<NoDataFound />} databaseComp={<NoDataFound />}></TabSelection>
+            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<NoDataFound />} databaseComp={<NoDataFound />} agileExecution={<AgileExecution/>}></TabSelection>
         </Box>
     );
 };

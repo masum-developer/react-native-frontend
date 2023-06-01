@@ -4,6 +4,7 @@ import CodeBox from '../../global/CodeBox';
 import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -1408,6 +1409,48 @@ const ModelComp = () => {
     )
 }
 
+
+const AgileExecution = () => {
+    const userStory = {
+        title: 'Add user to project',
+        assignedTo: 'Rafiur Rahman Protik',
+        description: {
+            title: "As a full-stack developer, I want to develop the user addition to project feature in AgileALM, So that project owners can easily add users to their project and manage access to projects.",
+            list: [
+                "Design and develop the user interface for the user addition feature, allowing project owners to enter user details.",
+                 "Implement the backend logic to validate the entered email address or username and ensure the associated user exists.",
+                 "Create the functionality to add the specified user to the project with the appropriate access level.",
+                 "Implement the logic to handle permission and access control for the added user within the project.",
+                 "Design the UI with SASS",
+                ]
+        },
+        priority: "1",
+        risk: "1",
+        effort: "6 hours",
+        startDate: "2023-06-01",
+        endDate: "2023-06-01"
+    }
+    return (
+        <Box>
+
+            <Box mt={2}>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <ImageComp image="/agile/addUserToProject.png"></ImageComp>
+                </Box>
+                <Typography variant='h3'>What is User Story?</Typography>
+                <Typography variant='subtitle2'>A User Story is a work item type used to represent a single piece of functionality or a specific requirement from the perspective of an end user or customer. User Stories are used to capture and describe user requirements or desired system behavior in a concise and actionable manner.</Typography>
+
+                <Typography variant='h4' mt={2}>Here we give some information related to add user to Organization user story:
+                </Typography>
+
+                <UserStoryComp userStory={userStory}></UserStoryComp>
+
+            </Box>
+
+        </Box>
+    )
+}
+
 const ImageInterface = () => {
     return (
         <ImageComp image={"/agileALM/addUser.png"} imageTitle={"Screenshot 1: Login"}></ImageComp>
@@ -1453,7 +1496,7 @@ const AddUserToProject = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />}></TabSelection>
+            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />} agileExecution={<AgileExecution/>}></TabSelection>
         </Box>
     );
 };

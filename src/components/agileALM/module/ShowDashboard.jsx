@@ -4,6 +4,7 @@ import CodeBox from '../../global/CodeBox';
 import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -660,12 +661,54 @@ const BackendComp = () => {
 }
 
 
+const AgileExecution = () => {
+    const userStory = {
+        title: 'Dashboard view of the project',
+        assignedTo: 'Rafiur Rahman Protik',
+        description: {
+            title: "As a developer, I want to implement the dashboard view with the total number of items and with a table that contains the items.",
+            list: [
+                "Give total tasks, epic, features, bugs, and user stories.",
+                 "Design a table that can contain all the items.",
+                 "Give pagination of the table.",
+                 "Fetch data from API.",
+                 "Create a database model for that with Mongoose.",
+                ]
+        },
+        priority: "1",
+        risk: "1",
+        effort: "6 hours",
+        startDate: "2023-06-01",
+        endDate: "2023-06-01"
+    }
+    return (
+        <Box>
+  
+            <Box mt={2}>
+                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <ImageComp image="/agile/dashboard.png"></ImageComp>
+                </Box>
+                <Typography variant='h3'>What is User Story?</Typography>
+                <Typography variant='subtitle2'>As a developer, I want to implement the item search functionality at the top bar so that users can easily search for and locate specific items, such as work items, features, etc.</Typography>
+  
+                <Typography variant='h4' mt={2}>Here we give some information related to dashboard view user story:
+                </Typography>
+  
+                <UserStoryComp userStory={userStory}></UserStoryComp>
+  
+            </Box>
+  
+        </Box>
+    )
+  }
+
+
 
 const ShowDashboard = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />}></TabSelection>
+            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />} agileExecution={<AgileExecution/>}></TabSelection>
         </Box>
     );
 };

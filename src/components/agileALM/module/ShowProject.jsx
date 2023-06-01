@@ -4,6 +4,7 @@ import CodeBox from '../../global/CodeBox';
 import Process from '../../EnvironmentSetup/Process';
 import ImageComp from '../../EnvironmentSetup/ImageComp';
 import TabSelection from '../TabSelection';
+import UserStoryComp from '../../global/UserStoryComp';
 
 const res = {
     data: {
@@ -883,13 +884,51 @@ const BackendComp = () => {
     )
 }
 
+const AgileExecution = () => {
+  const userStory = {
+      title: 'View all the projects in single organization.',
+      assignedTo: 'Rafiur Rahman Protik',
+      description: {
+          title: "As a developer, I need to implement the project view functionality in AgileALM to provide users with a comprehensive overview of their projects. This functionality will allow users to navigate through different projects, view project details, track progress, and access relevant resources.",
+          list: [
+              "Ensuring that the project view functionality is responsive and works well on different devices and screen sizes.",
+               "Implement appropriate access controls and permissions to ensure that users only see projects they have permission to access",
+              ]
+      },
+      priority: "1",
+      risk: "1",
+      effort: "5 hours",
+      startDate: "2023-03-06",
+      endDate: "2023-03-06"
+  }
+  return (
+      <Box>
+
+          <Box mt={2}>
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <ImageComp image="/agile/projectView.png"></ImageComp>
+              </Box>
+              <Typography variant='h3'>What is User Story?</Typography>
+              <Typography variant='subtitle2'>A User Story is a work item type used to represent a single piece of functionality or a specific requirement from the perspective of an end user or customer. User Stories are used to capture and describe user requirements or desired system behavior in a concise and actionable manner.</Typography>
+
+              <Typography variant='h4' mt={2}>Here we give some information related to view all projects user story:
+              </Typography>
+
+              <UserStoryComp userStory={userStory}></UserStoryComp>
+
+          </Box>
+
+      </Box>
+  )
+}
+
 
 
 const ShowProject = () => {
 
     return (
         <Box pb={3}>
-            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />}></TabSelection>
+            <TabSelection imageComp={<ImageInterface />} frontendComp={<FrontendComp />} backendComp={<BackendComp />} databaseComp={<ModelComp />} agileExecution={<AgileExecution />}></TabSelection>
         </Box>
     );
 };
