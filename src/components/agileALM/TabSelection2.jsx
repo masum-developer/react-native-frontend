@@ -82,15 +82,15 @@ const TabSelection2 = ({ imageComp, frontendComp, backendComp, databaseComp, agi
                             <Tab label="User Story" {...a11yProps(1)} />
                         </Tooltip>
                         <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>User Interface of the page.</Typography>}>
-                            <Tab label="UI" {...a11yProps(2)} />
+                            <Tab label="UI/UX" {...a11yProps(2)} />
                         </Tooltip>
 
                         <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>Frontend implementation</Typography>}>
-                            <Tab label="FI" {...a11yProps(3)} />
+                            <Tab label="FE" {...a11yProps(3)} />
                         </Tooltip>
 
                         <Tooltip placement="top" title={<Typography textAlign={"center"} variant='subtitle2'>Backend implementation</Typography>}>
-                            <Tab label="BI" {...a11yProps(4)} />
+                            <Tab label="BE" {...a11yProps(4)} />
                         </Tooltip>
 
 
