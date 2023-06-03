@@ -296,6 +296,8 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-showproject')}>Show All Project</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-createproject')}>Create Project</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-addUserToProject')}>Add User To Project</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-createSprint')}>Create Sprint</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'agileALM-updateSprint')}>Update Sprint</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-itemSearch')}>Item Search</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-dashboard')}>Dashboard View</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-itemsFilter')}>Items Filter</MenuItem>

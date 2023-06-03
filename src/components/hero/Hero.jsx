@@ -12,7 +12,7 @@ const Hero = () => {
                         Learn MERN stack and become a Full-Stack Developer
                     </Typography>
                     <Typography variant='subtitle1' maxWidth={'80%'}>
-                        Explore MERN stack courses to expand your web development knowledge.
+                        Explore MERN stack course to expand your web development knowledge.
                     </Typography>
                     <ButtonComp sx={{ mt: 2 }} myWidth='150px'>
                         <Link href="?tab=html_introduction">

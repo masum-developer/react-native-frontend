@@ -164,6 +164,8 @@ import ItemsFilter from '../src/components/agileALM/module/ItemsFilter';
 import WorkItemModal from '../src/components/agileALM/module/WorkItemModal';
 import CreateOrganization from '../src/components/agileALM/module/CreateOrganization';
 import AddUserToOrg from '../src/components/agileALM/module/AddUserToOrg';
+import CreateSprint from '../src/components/agileALM/module/CreateSprint';
+import UpdateSprint from '../src/components/agileALM/module/UpdateSprint';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -504,9 +506,13 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                           active === 'agileALM-createOrganization' ?
                                                                                                                                                                                                                                                                                                                                             <CreateOrganization></CreateOrganization> :
                                                                                                                                                                                                                                                                                                                                             active === 'agileALM-addUserToOrg' ?
-                                                                                                                                                                                                                                                                                                                                            <AddUserToOrg></AddUserToOrg> :
+                                                                                                                                                                                                                                                                                                                                              <AddUserToOrg></AddUserToOrg> :
+                                                                                                                                                                                                                                                                                                                                              active === 'agileALM-createSprint' ?
+                                                                                                                                                                                                                                                                                                                                                <CreateSprint></CreateSprint> :
+                                                                                                                                                                                                                                                                                                                                                active === 'agileALM-updateSprint' ?
+                                                                                                                                                                                                                                                                                                                                                  <UpdateSprint></UpdateSprint> :
 
-                                                                                                                                                                                                                                                                                                                                            ''
+                                                                                                                                                                                                                                                                                                                                                  ''
         }
       </Aside>
 
