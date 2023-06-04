@@ -87,190 +87,199 @@ const Aside = ({ children }) => {
                                 </SubMenu>
                                 {/* <MenuItem >Agile Scrum</MenuItem> */}
 
-                                <SubMenu label="HTML" icon={<IconCom image={'/sidebar/html5.svg'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'html_overview')}>Overview</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'basic_tags')}>Basic Tags</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'elements')}>Elements</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'attributes')}>Attributes</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'formatting')}>Formatting</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'images')}>Images</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'tables')}>Tables</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'lists')}>Lists</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'textlinks')}>Text Links</MenuItem>
-                                </SubMenu>
-                                <SubMenu label="CSS" icon={<IconCom image={'/sidebar/css3.svg'} />} >
-                                    <MenuItem onClick={() => handlePush('tab', 'css_introduction')}>CSS Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'selectors')}>Selectors</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'colors')}>Colors</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'background')}>Background</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'margin')}>Margin</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'padding')}>Padding</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'boxmodel')}>Box Model</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'heightandwidth')}>Height and Width</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'font')}>Font</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'icons')}>Icons</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'list')}>Lists</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'css_table')}>Tables</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'display')} >Display</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'position')}>Position</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'z-index')}>Z-Index</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'float')}>Float</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'block')}>Block</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'align')}>Align</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'dropdown')}>DropDown</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'form')}>Form</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'cssimages')}>Image</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'units')}> Unit</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'specificity')}>Specificity</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'important')}>!Important</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'flexbox')}>Flexbox</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'grid')}>Grid</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'websitelayout')}>Website Layout</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'cssanimation')}>Animation</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'navigationbar')}>Navigation Bar</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'opacity')}>Opacity</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'shadows')}>Shadows</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'transition')}>Transition</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mediaqueries')}>Media Queries</MenuItem>
-                                </SubMenu>
-
-                                <SubMenu label="SASS" icon={<IconCom image={'/sidebar/sass.svg'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'sassintroduction')}>SASS Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'sassinstallation')}>SASS Installation</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'sassvariable')}>Variables</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'nesting')}>Nesting</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'import')}>@import</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mixin')}>@mixin</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'extend')}>@extend</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'sassstring')}>String</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'numberic')}>Numeric</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'sasslist')}>List</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'map')}>Map</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'sassselector')} >Selector</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'sasscolors')}>Color</MenuItem>
-                                </SubMenu>
-
-                                <SubMenu label="JavaScript" icon={<IconCom image={'/sidebar/javascript.svg'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'js_syntax')}>Syntax</MenuItem>
-                                    <SubMenu label="Variables">
-                                        <MenuItem onClick={() => handlePush('tab', 'js_var')}>Var</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'js_let')}>Let</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'js_const')}>Const</MenuItem>
+                                <SubMenu label="Frontend Development">
+                                    <SubMenu label="HTML" icon={<IconCom image={'/sidebar/html5.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'html_overview')}>Overview</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'basic_tags')}>Basic Tags</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'elements')}>Elements</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'attributes')}>Attributes</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'formatting')}>Formatting</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'images')}>Images</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'tables')}>Tables</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'lists')}>Lists</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'textlinks')}>Text Links</MenuItem>
                                     </SubMenu>
-                                    <SubMenu label="Operators">
-                                        <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Overview</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'arithmetic')}>Arithmetic</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'assignment')}>Assignment</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>Comparison</MenuItem>
-                                    </SubMenu>
-                                    <MenuItem onClick={() => handlePush('tab', 'dataTypes')}>Data Types</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'string')}>Strings</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'numbers')}>Numbers</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'array')}>Array</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'objects')}>Objects</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'function')}>Functions</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'date')}>Date</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'random')}>Random</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'if-else')}>If Else Statement</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'switch')}>Switch Statement</MenuItem>
-                                    <SubMenu label="Loop">
-                                        <MenuItem onClick={() => handlePush('tab', 'loop-intro')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'for-loop')}>For</MenuItem>
-                                        {/* <MenuItem onClick={() => handlePush('tab', 'assignment')}>For In</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>For Of</MenuItem> */}
-                                        <MenuItem onClick={() => handlePush('tab', 'whileloop')}>While</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'dowhileloop')}>Do While</MenuItem>
-                                    </SubMenu>
-                                    <MenuItem onClick={() => handlePush('tab', 'set')}>Set</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'map')}>Maps</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'typeof')}>Typeof</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'scope')}>Scope</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'type-conversion')}>Type Conversion</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'json')}>JSON</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'class')}>Class</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'error-handling')}>Error Handling</MenuItem>
-                                    <SubMenu label="JavaScript ES6">
-                                        <MenuItem onClick={() => handlePush('tab', 'es6-introduction')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'arrow-function')}>Arrow Function</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'es6-let')}>Let</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'es6-const')}>Const</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'destructuring')}>Destructuring</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'modules')}>Modules</MenuItem>
-                                    </SubMenu>
-                                    <SubMenu label="In-depth Functions">
-                                        <MenuItem onClick={() => handlePush('tab', 'func_declaration')}>Declarations</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'func-expressions')}>Expressions</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'arrow-function')}>Arrow Function</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'anonymous-function')}>Anonymous Function</MenuItem>
-                                    </SubMenu>
-
-                                    <SubMenu label="Asynchronus JavaScript">
-                                        <MenuItem onClick={() => handlePush('tab', 'callbacks')}>Callbacks</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'asynchronous')}>Asynchronous</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'promise')}>Promises</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'async-await')}>Async/Await</MenuItem>
-                                    </SubMenu>
-
-                                    <SubMenu label="DOM Manipulation">
-                                        <MenuItem onClick={() => handlePush('tab', 'dom-introduction')}>Introduction</MenuItem>
+                                    <SubMenu label="CSS" icon={<IconCom image={'/sidebar/css3.svg'} />} >
+                                        <MenuItem onClick={() => handlePush('tab', 'css_introduction')}>CSS Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'selectors')}>Selectors</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'dom-styling')}>Styling</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'dom-events')}>Events</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'dom-event-listener')}>Event Listener</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'colors')}>Colors</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'background')}>Background</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'margin')}>Margin</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'padding')}>Padding</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'boxmodel')}>Box Model</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'heightandwidth')}>Height and Width</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'font')}>Font</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'icons')}>Icons</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'list')}>Lists</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'css_table')}>Tables</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'display')} >Display</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'position')}>Position</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'z-index')}>Z-Index</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'float')}>Float</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'block')}>Block</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'align')}>Align</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'dropdown')}>DropDown</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'form')}>Form</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'cssimages')}>Image</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'units')}> Unit</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'specificity')}>Specificity</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'important')}>!Important</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'flexbox')}>Flexbox</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'grid')}>Grid</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'websitelayout')}>Website Layout</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'cssanimation')}>Animation</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'navigationbar')}>Navigation Bar</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'opacity')}>Opacity</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'shadows')}>Shadows</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'transition')}>Transition</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mediaqueries')}>Media Queries</MenuItem>
+                                    </SubMenu>
+
+                                    <SubMenu label="SASS" icon={<IconCom image={'/sidebar/sass.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'sassintroduction')}>SASS Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'sassinstallation')}>SASS Installation</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'sassvariable')}>Variables</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'nesting')}>Nesting</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'import')}>@import</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mixin')}>@mixin</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'extend')}>@extend</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'sassstring')}>String</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'numberic')}>Numeric</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'sasslist')}>List</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'map')}>Map</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'sassselector')} >Selector</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'sasscolors')}>Color</MenuItem>
+                                    </SubMenu>
+
+                                    <SubMenu label="ReactJS" icon={<IconCom image={'/sidebar/react.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-installation')}>Installation</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-jsx')}>JSX</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-component')}>Component</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-props')}>Props</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-events')}>Events</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-conditional-rendering')}>Conditional Rendering</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-list')}>List</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-form')}>Form</MenuItem>
+
+                                        <SubMenu label="Hooks">
+                                            <MenuItem onClick={() => handlePush('tab', 'hooks-introduction')}>Introduction</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'hooks-useState')}>useState</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'hooks-useEffect')}>useEffect</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'hooks-useContext')}>useContext</MenuItem>
+                                            <MenuItem>Custom Hooks</MenuItem>
+                                        </SubMenu>
+
+                                    </SubMenu>
+
+                                </SubMenu>
+
+                                <SubMenu label="Programming Language">
+                                    <SubMenu label="JavaScript" icon={<IconCom image={'/sidebar/javascript.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'js_syntax')}>Syntax</MenuItem>
+                                        <SubMenu label="Variables">
+                                            <MenuItem onClick={() => handlePush('tab', 'js_var')}>Var</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'js_let')}>Let</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'js_const')}>Const</MenuItem>
+                                        </SubMenu>
+                                        <SubMenu label="Operators">
+                                            <MenuItem onClick={() => handlePush('tab', 'operator_overview')}>Overview</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'arithmetic')}>Arithmetic</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'assignment')}>Assignment</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'comparison')}>Comparison</MenuItem>
+                                        </SubMenu>
+                                        <MenuItem onClick={() => handlePush('tab', 'dataTypes')}>Data Types</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'string')}>Strings</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'numbers')}>Numbers</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'array')}>Array</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'objects')}>Objects</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'function')}>Functions</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'date')}>Date</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'random')}>Random</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'if-else')}>If Else Statement</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'switch')}>Switch Statement</MenuItem>
+                                        <SubMenu label="Loop">
+                                            <MenuItem onClick={() => handlePush('tab', 'loop-intro')}>Introduction</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'for-loop')}>For</MenuItem>
+                                            {/* <MenuItem onClick={() => handlePush('tab', 'assignment')}>For In</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'comparison')}>For Of</MenuItem> */}
+                                            <MenuItem onClick={() => handlePush('tab', 'whileloop')}>While</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'dowhileloop')}>Do While</MenuItem>
+                                        </SubMenu>
+                                        <MenuItem onClick={() => handlePush('tab', 'set')}>Set</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'map')}>Maps</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'typeof')}>Typeof</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'scope')}>Scope</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'type-conversion')}>Type Conversion</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'json')}>JSON</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'class')}>Class</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'error-handling')}>Error Handling</MenuItem>
+                                        <SubMenu label="JavaScript ES6">
+                                            <MenuItem onClick={() => handlePush('tab', 'es6-introduction')}>Introduction</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'arrow-function')}>Arrow Function</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'es6-let')}>Let</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'es6-const')}>Const</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'destructuring')}>Destructuring</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'modules')}>Modules</MenuItem>
+                                        </SubMenu>
+                                        <SubMenu label="In-depth Functions">
+                                            <MenuItem onClick={() => handlePush('tab', 'func_declaration')}>Declarations</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'func-expressions')}>Expressions</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'arrow-function')}>Arrow Function</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'anonymous-function')}>Anonymous Function</MenuItem>
+                                        </SubMenu>
+
+                                        <SubMenu label="Asynchronus JavaScript">
+                                            <MenuItem onClick={() => handlePush('tab', 'callbacks')}>Callbacks</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'asynchronous')}>Asynchronous</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'promise')}>Promises</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'async-await')}>Async/Await</MenuItem>
+                                        </SubMenu>
+
+                                        <SubMenu label="DOM Manipulation">
+                                            <MenuItem onClick={() => handlePush('tab', 'dom-introduction')}>Introduction</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'selectors')}>Selectors</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'dom-styling')}>Styling</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'dom-events')}>Events</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'dom-event-listener')}>Event Listener</MenuItem>
+                                        </SubMenu>
                                     </SubMenu>
                                 </SubMenu>
 
-                                <SubMenu label="ReactJS" icon={<IconCom image={'/sidebar/react.svg'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-introduction')}>Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-installation')}>Installation</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-jsx')}>JSX</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-component')}>Component</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-props')}>Props</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-events')}>Events</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-conditional-rendering')}>Conditional Rendering</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-list')}>List</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'react-form')}>Form</MenuItem>
+                                <SubMenu label="Runtime Engine">
+                                    <SubMenu label="NodeJs" icon={<IconCom image={'/sidebar/nodejs.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'nodejs-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'nodejs-server')}>Basic Server</MenuItem>
+                                    </SubMenu>
+                                </SubMenu>
 
-                                    <SubMenu label="Hooks">
-                                        <MenuItem onClick={() => handlePush('tab', 'hooks-introduction')}>Introduction</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'hooks-useState')}>useState</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'hooks-useEffect')}>useEffect</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'hooks-useContext')}>useContext</MenuItem>
-                                        <MenuItem>Custom Hooks</MenuItem>
+                                <SubMenu label="Backend Development">
+                                    <SubMenu label="ExpressJs" icon={<IconCom image={'/sidebar/express-js.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'expreejs-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'expreejs-installation')}>Installation & Setup</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'req-object')}>req Object</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'res-object')}>res Object</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'status-code')}>Status Code</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'express-js-routing')}>Routing</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'http-methods')}>HTTP Methods</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'middleware')}>Middleware</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'express-error-handling')}>Error Handling</MenuItem>
                                     </SubMenu>
 
-                                </SubMenu>
-
-                                <SubMenu label="NodeJs" icon={<IconCom image={'/sidebar/nodejs.svg'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'nodejs-introduction')}>Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'nodejs-server')}>Basic Server</MenuItem>
-                                </SubMenu>
-
-                                <SubMenu label="ExpressJs" icon={<IconCom image={'/sidebar/express-js.svg'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'expreejs-introduction')}>Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'expreejs-installation')}>Installation & Setup</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'req-object')}>req Object</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'res-object')}>res Object</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'status-code')}>Status Code</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'express-js-routing')}>Routing</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'http-methods')}>HTTP Methods</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'middleware')}>Middleware</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'express-error-handling')}>Error Handling</MenuItem>
-                                </SubMenu>
-
-                                <SubMenu label="Database" icon={<IconCom image={'/sidebar/database.svg'} />}>
-                                    <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>Database Introduction</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-getting-started')}>MongoDB Get Started</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-query')}>MongoDB Query</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-atlas')}>MongoDB Atlas</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-database-collection')}>Database & Collection</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-insert')}>MongoDB Insert</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Find</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Update</MenuItem>
-                                    <MenuItem onClick={() => handlePush('tab', 'mongodb-delete')}>MongoDB Delete</MenuItem>
+                                    <SubMenu label="Database" icon={<IconCom image={'/sidebar/database.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'db-introduction')}>Database Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-getting-started')}>MongoDB Get Started</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-query')}>MongoDB Query</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-atlas')}>MongoDB Atlas</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-database-collection')}>Database & Collection</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-insert')}>MongoDB Insert</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Find</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Update</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-delete')}>MongoDB Delete</MenuItem>
+                                    </SubMenu>
                                 </SubMenu>
 
                                 <SubMenu label="Technical Assessment" icon={<IconCom image={'/sidebar/assessment.svg'} />}>
@@ -302,7 +311,13 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-dashboard')}>Dashboard View</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-itemsFilter')}>Items Filter</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-workItemModal')}>Work Items Modal</MenuItem>
+                                        <SubMenu label="Retro Board">
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-view')}>Board View</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-delete')}>Retro Delete</MenuItem>
+
+                                        </SubMenu>
                                     </SubMenu>
+
                                 </SubMenu>
 
                                 {/* {

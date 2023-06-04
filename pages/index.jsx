@@ -166,6 +166,8 @@ import CreateOrganization from '../src/components/agileALM/module/CreateOrganiza
 import AddUserToOrg from '../src/components/agileALM/module/AddUserToOrg';
 import CreateSprint from '../src/components/agileALM/module/CreateSprint';
 import UpdateSprint from '../src/components/agileALM/module/UpdateSprint';
+import GetRetroBoard from '../src/components/agileALM/module/GetRetroBoard';
+import RetroDelete from '../src/components/agileALM/module/RetroDelete';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -509,10 +511,12 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                               <AddUserToOrg></AddUserToOrg> :
                                                                                                                                                                                                                                                                                                                                               active === 'agileALM-createSprint' ?
                                                                                                                                                                                                                                                                                                                                                 <CreateSprint></CreateSprint> :
-                                                                                                                                                                                                                                                                                                                                                active === 'agileALM-updateSprint' ?
-                                                                                                                                                                                                                                                                                                                                                  <UpdateSprint></UpdateSprint> :
+                                                                                                                                                                                                                                                                                                                                                active === 'agileALM-retro-view' ?
+                                                                                                                                                                                                                                                                                                                                                  <GetRetroBoard></GetRetroBoard> :
+                                                                                                                                                                                                                                                                                                                                                  active === 'agileALM-retro-delete' ?
+                                                                                                                                                                                                                                                                                                                                                    <RetroDelete></RetroDelete> :
 
-                                                                                                                                                                                                                                                                                                                                                  ''
+                                                                                                                                                                                                                                                                                                                                                    ''
         }
       </Aside>
 
