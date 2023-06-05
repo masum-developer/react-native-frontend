@@ -314,6 +314,7 @@ const Aside = ({ children }) => {
                                         <SubMenu label="Retro Board">
                                             <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-view')}>Board View</MenuItem>
                                             <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-delete')}>Retro Delete</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-single-retro')}>Retro Comments</MenuItem>
 
                                         </SubMenu>
                                     </SubMenu>

@@ -168,6 +168,7 @@ import CreateSprint from '../src/components/agileALM/module/CreateSprint';
 import UpdateSprint from '../src/components/agileALM/module/UpdateSprint';
 import GetRetroBoard from '../src/components/agileALM/module/GetRetroBoard';
 import RetroDelete from '../src/components/agileALM/module/RetroDelete';
+import SingleRetro from '../src/components/agileALM/module/SingleRetro';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -515,8 +516,10 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                                   <GetRetroBoard></GetRetroBoard> :
                                                                                                                                                                                                                                                                                                                                                   active === 'agileALM-retro-delete' ?
                                                                                                                                                                                                                                                                                                                                                     <RetroDelete></RetroDelete> :
+                                                                                                                                                                                                                                                                                                                                                    active === 'agileALM-single-retro' ?
+                                                                                                                                                                                                                                                                                                                                                      <SingleRetro></SingleRetro>:
 
-                                                                                                                                                                                                                                                                                                                                                    ''
+                                                                                                                                                                                                                                                                                                                                                      ''
         }
       </Aside>
 
