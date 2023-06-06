@@ -87,7 +87,7 @@ const Aside = ({ children }) => {
                                 </SubMenu>
                                 {/* <MenuItem >Agile Scrum</MenuItem> */}
 
-                                <SubMenu label="Frontend Development">
+                                <SubMenu label="Frontend Development" icon={<IconCom image={'/sidebar/frontend.svg'} />}>
                                     <SubMenu label="HTML" icon={<IconCom image={'/sidebar/html5.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'html_introduction')}>HTML Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'html_overview')}>Overview</MenuItem>
@@ -134,6 +134,7 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'shadows')}>Shadows</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'transition')}>Transition</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'mediaqueries')}>Media Queries</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'responsiveness')}>Responsiveness</MenuItem>
                                     </SubMenu>
 
                                     <SubMenu label="SASS" icon={<IconCom image={'/sidebar/sass.svg'} />}>
@@ -175,7 +176,7 @@ const Aside = ({ children }) => {
 
                                 </SubMenu>
 
-                                <SubMenu label="Programming Language">
+                                <SubMenu label="Programming Language" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
                                     <SubMenu label="JavaScript" icon={<IconCom image={'/sidebar/javascript.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'js_overview')}>Overview</MenuItem>
@@ -249,14 +250,14 @@ const Aside = ({ children }) => {
                                     </SubMenu>
                                 </SubMenu>
 
-                                <SubMenu label="Runtime Engine">
+                                <SubMenu label="Runtime Engine" icon={<IconCom image={'/sidebar/nodejs.svg'} />}>
                                     <SubMenu label="NodeJs" icon={<IconCom image={'/sidebar/nodejs.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'nodejs-introduction')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'nodejs-server')}>Basic Server</MenuItem>
                                     </SubMenu>
                                 </SubMenu>
 
-                                <SubMenu label="Backend Development">
+                                <SubMenu label="Backend Development" icon={<IconCom image={'/sidebar/back-end-development.svg'} />}>
                                     <SubMenu label="ExpressJs" icon={<IconCom image={'/sidebar/express-js.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'expreejs-introduction')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'expreejs-installation')}>Installation & Setup</MenuItem>
@@ -313,8 +314,9 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'agileALM-workItemModal')}>Work Items Modal</MenuItem>
                                         <SubMenu label="Retro Board">
                                             <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-view')}>Board View</MenuItem>
-                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-delete')}>Retro Delete</MenuItem>
-                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-single-retro')}>Retro Comments</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-create')}>Create</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-delete')}>Delete</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-sprint-experience')}>Sprint Experience</MenuItem>
 
                                         </SubMenu>
                                     </SubMenu>
