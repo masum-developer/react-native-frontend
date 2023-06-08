@@ -171,6 +171,9 @@ import RetroDelete from '../src/components/agileALM/module/RetroDelete';
 import SingleRetro from '../src/components/agileALM/module/SingleRetro';
 import CreateRetro from '../src/components/agileALM/module/CreateRetro';
 import Responsiveness from '../src/components/css/Responsiveness';
+import CreateCommentRetro from '../src/components/agileALM/module/CreateCommentRetro';
+import RetroLike from '../src/components/agileALM/module/RetroLike';
+import ProjectStructure from '../src/components/react/ProjectStructure';
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -524,8 +527,14 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                                         <SingleRetro></SingleRetro> :
                                                                                                                                                                                                                                                                                                                                                         active === 'agileALM-retro-create' ?
                                                                                                                                                                                                                                                                                                                                                           <CreateRetro></CreateRetro> :
+                                                                                                                                                                                                                                                                                                                                                          active === 'agileALM-retro-comments' ?
+                                                                                                                                                                                                                                                                                                                                                            <CreateCommentRetro></CreateCommentRetro> :
+                                                                                                                                                                                                                                                                                                                                                            active === 'agileALM-retro-like' ?
+                                                                                                                                                                                                                                                                                                                                                              <RetroLike></RetroLike> :
+                                                                                                                                                                                                                                                                                                                                                              active === 'react-project-structure' ?
+                                                                                                                                                                                                                                                                                                                                                                <ProjectStructure></ProjectStructure> :
 
-                                                                                                                                                                                                                                                                                                                                                          ''
+                                                                                                                                                                                                                                                                                                                                                                ''
         }
       </Aside>
 

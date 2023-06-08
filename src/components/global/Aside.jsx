@@ -156,6 +156,7 @@ const Aside = ({ children }) => {
                                     <SubMenu label="ReactJS" icon={<IconCom image={'/sidebar/react.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'react-introduction')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'react-installation')}>Installation</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'react-project-structure')}>Project Structure</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'react-jsx')}>JSX</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'react-component')}>Component</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'react-props')}>Props</MenuItem>
@@ -317,6 +318,8 @@ const Aside = ({ children }) => {
                                             <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-create')}>Create</MenuItem>
                                             <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-delete')}>Delete</MenuItem>
                                             <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-sprint-experience')}>Sprint Experience</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-comments')}>Comments</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'agileALM-retro-like')}>Like</MenuItem>
 
                                         </SubMenu>
                                     </SubMenu>
