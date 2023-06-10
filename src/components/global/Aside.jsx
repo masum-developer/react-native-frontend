@@ -262,6 +262,7 @@ const Aside = ({ children }) => {
                                     <SubMenu label="ExpressJs" icon={<IconCom image={'/sidebar/express-js.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'expreejs-introduction')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'expreejs-installation')}>Installation & Setup</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'express-project-structure')}>Project Structure</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'req-object')}>req Object</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'res-object')}>res Object</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'status-code')}>Status Code</MenuItem>
@@ -281,6 +282,12 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Find</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'mongodb-find')}>MongoDB Update</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'mongodb-delete')}>MongoDB Delete</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'mongodb-query-operator')}>MongoDB Query Operator</MenuItem>
+                                        <SubMenu label="MongoDB Aggregations">
+                                            <MenuItem onClick={() => handlePush('tab', 'aggregations-introduction')}>Introduction</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'aggregations-group')}>$group</MenuItem>
+
+                                        </SubMenu>
                                     </SubMenu>
                                 </SubMenu>
 
