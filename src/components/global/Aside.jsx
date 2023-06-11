@@ -286,6 +286,8 @@ const Aside = ({ children }) => {
                                         <SubMenu label="MongoDB Aggregations">
                                             <MenuItem onClick={() => handlePush('tab', 'aggregations-introduction')}>Introduction</MenuItem>
                                             <MenuItem onClick={() => handlePush('tab', 'aggregations-group')}>$group</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'aggregations-limit')}>$limit</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'aggregations-project')}>$project</MenuItem>
 
                                         </SubMenu>
                                     </SubMenu>
