@@ -12,6 +12,11 @@ const Aside = ({ children }) => {
     const matches = useMediaQuery('(min-width:600px)');
     const router = useRouter();
 
+    // For temporary uses
+    /*const tempPush = (value) => {
+        router.push(`/nextjs/${value}`);
+    };*/
+
     const handlePush = (key, value) => {
         let query = router.query;
 
@@ -172,6 +177,14 @@ const Aside = ({ children }) => {
                                             <MenuItem onClick={() => handlePush('tab', 'hooks-useContext')}>useContext</MenuItem>
                                             <MenuItem>Custom Hooks</MenuItem>
                                         </SubMenu>
+
+                                    </SubMenu>
+
+                                    <SubMenu label="NextJS" icon={<IconCom image={'/sidebar/next.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-installation')}>Installation</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-project-structure')}>Project Structure</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-routing')}>Routing</MenuItem>
 
                                     </SubMenu>
 
