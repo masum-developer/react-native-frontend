@@ -12,11 +12,6 @@ const Aside = ({ children }) => {
     const matches = useMediaQuery('(min-width:600px)');
     const router = useRouter();
 
-    // For temporary uses
-    /*const tempPush = (value) => {
-        router.push(`/nextjs/${value}`);
-    };*/
-
     const handlePush = (key, value) => {
         let query = router.query;
 
@@ -185,6 +180,11 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'next-installation')}>Installation</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-project-structure')}>Project Structure</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-routing')}>Routing</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-error-page')}>404 Error Page</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'next-layouts')}>Layouts</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-image-components')}>Image Components</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'next-script-components')}>Script Component</MenuItem>
+
 
                                     </SubMenu>
 
