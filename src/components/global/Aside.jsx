@@ -182,8 +182,13 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'next-routing')}>Routing</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-error-page')}>404 Error Page</MenuItem> 
                                         <MenuItem onClick={() => handlePush('tab', 'next-layouts')}>Layouts</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'next-image-components')}>Image Components</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'next-image-components')}>Image Component</MenuItem> 
                                         <MenuItem onClick={() => handlePush('tab', 'next-script-components')}>Script Component</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-head-components')}>Head Component</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'next-link-components')}>Link Component</MenuItem>
+
+                                        <MenuItem onClick={() => handlePush('tab', 'next-styling')}>Styling</MenuItem>
+
 
 
                                     </SubMenu>
