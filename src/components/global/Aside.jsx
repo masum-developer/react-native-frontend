@@ -189,6 +189,11 @@ const Aside = ({ children }) => {
 
                                         <MenuItem onClick={() => handlePush('tab', 'next-styling')}>Styling</MenuItem>
 
+                                        <SubMenu label="Data Fetching">
+                                            <MenuItem onClick={() => handlePush('tab', 'next-getStaticProps')}>getStaticProps</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'next-getServerSideProps')}>getServerSideProps</MenuItem>                                             
+                                        </SubMenu>
+
 
 
                                     </SubMenu>

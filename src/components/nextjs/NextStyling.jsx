@@ -66,7 +66,7 @@ const NextStyling = () => {
         The 'styles/globals.css' file serves as a central location to define CSS rules that will be applied to all pages and components in your Next.js application. By understanding and utilizing global styling effectively, you can achieve consistency in design, layout, and behavior throughout your application.
         </Typography>
 
-        <Typography mt={1} variant="subtitle2">Inorder to use this default global style sheet or a stylesheet of your own, navigate to `pages/_app.js` and import it at the top.</Typography>
+        <Typography mt={1} variant="subtitle2">Inorder to use the default global stylesheet or a stylesheet of your own, navigate to `pages/_app.js` and import it at the top.</Typography>
         <CodeBox codeSnippet={code}></CodeBox>
       </Box>
 
