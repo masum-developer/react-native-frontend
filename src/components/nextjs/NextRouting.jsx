@@ -13,9 +13,8 @@ const home = `function Home() {
         <p>Welcome to the Home Page!</p>
       </>
     );
-  }
-  
-  export default Home;`
+}
+export default Home;`
 
 const about = 
 `function About() {
@@ -41,18 +40,33 @@ function Products() {
   const router = useRouter();
   const productId = router.query.productId;
 
-  return <h1>Product Id: {productId}</h1>;
+  return(
+    <>
+        <h1>Product Id: {productId}</h1>
+        <p>Product details</p>
+    </>
+  )
 }
 
 export default Products;`
 
 const firstCode=`function firstProduct(){
-    return <h1>First Product Page<h1>
+    return (
+        <>
+            <h1>First Product Page</h1>
+            <p>Product details</p>
+        </>
+    )
 }
 export default firstProduct`
 
 const secondCode=`function secondProduct(){
-    return <h1>Second Product Page<h1>
+    return (
+        <>
+            <h1>Second Product Page</h1>
+            <p>Product details</p>
+        </>
+    )
 }
 export default secondProduct`
 
@@ -61,23 +75,23 @@ export default secondProduct`
 const NextRouting = () => {
     return (
         <Box pb={3}>
-            <Typography variant='h3'>Routing in NextJS</Typography>
+            <Typography variant='h3'>What is Routing in NextJS?</Typography>
             <Typography variant='subtitle2'>
-                Routing is an essential aspect of any web application, allowing users to navigate between different pages or views. In Next.js, routing is handled through a file-based routing system, making it intuitive and straightforward to define routes for your application.
-            </Typography>
-
-            <Typography variant='subtitle2'>
-            Next.js provides a convention-based routing mechanism where each file inside the pages directory represents a unique route in your application.
+                Routing is an essential aspect of any web application, allowing users to navigate between different pages. In Next.js, routing is handled through a file-based routing system, making it intuitive and straightforward to define routes for your application.
+            Each file inside the `pages` directory represents a unique route in your application.
             </Typography>
 
             <Box pb={3}>
                 <Typography mt={2} variant='subtitle2'>Before we get into the different types of routing in Next.js, it is important to understand the <span>Default Route</span>.</Typography>
                 <Process list={["The `index.js` file in the pages directory serves as the default route for the root URL of your application."]}></Process>
-                <Process list={["What that entails is when you run your application and navigate to `http://localhost:3000` in your browser, Next.js will render the `pages/index.js` in the landing page."]}></Process>
-                <Process list={["Go into the `index.js` file in the pages directory and clear out all the boilerplate code. Replace it with content of your choice."]}></Process>
+                <Process list={["When you run your application and navigate to `http://localhost:3000` in your browser, Next.js will render the `pages/index.js` in the landing page."]}></Process>
+                <Process list={["Go into the `index.js` file in the `pages` directory and clear out all the boilerplate code. Replace it with content of your choice."]}></Process>
                 <CodeBox codeSnippet={home}></CodeBox>
                 <Process list={["When you access the root URL of your application (e.g., /), this `Home` component will be rendered."]}></Process>
+                <ImageComp image={"/nextjs/Screenshot_homepage.png"} imageTitle={"HomePage"}></ImageComp>
             </Box>
+
+            <Typography mt={3} variant='h3'>How to implement Routes in NextJS?</Typography>
 
             <Box pb={3}>
                 <Typography mt={2} variant='h4'>1. File-Based Routing:</Typography>
@@ -109,9 +123,23 @@ const NextRouting = () => {
                 <Process list={['Create a `index.js` file inside the `pages/products` directory. This is the page that will be rendered by default when `/products` route is accessed.']}></Process>
                 <CodeBox codeSnippet={products}></CodeBox>
 
-                <Process list={['Inside the `products` create two files; first.js and second.js.']}></Process>
+                <Process list={['Go into the `/products` route. You will see the page being rendered.']}></Process>
+                <ImageComp image={"/nextjs/Screenshot_products.png"} imageTitle={"/products output"}></ImageComp>
+
+
+                <Process list={['In the `products` directory create a file called `first.js`.']}></Process>
                 <CodeBox codeSnippet={firstCode}></CodeBox>
+
+                <Process list={['If you go to the `/products/first` route you will see this component being rendered.']}></Process>
+                <ImageComp image={"/nextjs/Screenshot_firstjs.png"} imageTitle={"first.js codesnippet"}></ImageComp>
+
+
+                <Process list={['In the `products` directory create a file called `second.js`.']}></Process>
                 <CodeBox codeSnippet={secondCode}></CodeBox>
+
+                <Process list={['If you go to the `/products/second` route you will see this component being rendered.']}></Process>
+                <ImageComp image={"/nextjs/Screenshot_secondjs.png"} imageTitle={"second.js codesnippet"}></ImageComp>
+
 
                 <Typography mt={2} variant='subtitle2'>When you access '/products' route, the component in `index.js` will be rendered. Accessing '/products/first' route, the `firstProduct` component will be rendered. Similarly in the '/products/second' route, the `secondProduct` component will be rendered.</Typography>
                 <Typography mt={2} variant='subtitle2'>The issue with this is that defining routes using predefined paths is not efficient for complex applications. For example if we had a hundred products; we would have had to create that many number of paths to display each product listing.</Typography>
@@ -135,9 +163,12 @@ const NextRouting = () => {
                 <Process list={["In the `[productId].js` file, you can define the content for your dynamic product page:"]}></Process>
                 <CodeBox codeSnippet={prodId}></CodeBox>
                 
-                <Process list={["Note we are using the router object in Next.js inorder to extract dynamic route parameters, in this case the productId"]}></Process>
+                <Process list={["Note we are using the router object in Next.js inorder to extract dynamic route parameters, in this case the productId."]}></Process>
 
                 <Typography mt={1} variant='subtitle2'>When you access a route like `/products/123`, the Product component will be rendered, and the value `123` will be accessible through the productId parameter. Hence we will see `Product Id: 123` being rendered on this route.</Typography>
+
+                <ImageComp image={"/nextjs/Screenshot_123.png"} imageTitle={"second.js codesnippet"}></ImageComp>
+
 
             </Box>
 

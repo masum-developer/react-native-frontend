@@ -29,8 +29,8 @@ const NextImageComponents = () => {
   return (
     <Box pb={3}>
       <Box>
-        <Typography variant="h3">Image Components in NextJS</Typography>
-        <Typography variant="subtitle2">
+        <Typography variant="h3">What is Image Component in NextJS?</Typography>
+        <Typography mt={2} variant="subtitle2">
         Integrating images seamlessly and optimizing their performance is vital for creating engaging web applications. In Next.js, you can achieve this effortlessly using the built-in `next/image` component. The `next/image` component provides a streamlined way to handle and optimize images, resulting in faster loading times and an improved user experience.
         </Typography>
 
@@ -43,7 +43,7 @@ const NextImageComponents = () => {
       </Box>
 
       <Box>
-        <Typography mt={2} variant="h3">Setting up Image Components</Typography>
+        <Typography mt={2} variant="h3">How to use Image Components?</Typography>
         <Process list={["Create a folder named public in the root directory of your Next.js project. This folder will serve as the storage location for your images."]}></Process>
         <Process list={["Place the image file you want to use within the public folder."]}></Process>
         <Process list={["In the component file you are using, import `next/image` and incorporate the `Image` component as follows:"]}></Process>

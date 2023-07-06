@@ -7,7 +7,6 @@ import ImageComp from "../EnvironmentSetup/ImageComp";
 import Process from "../EnvironmentSetup/Process";
 
 const code=`// pages/index.js
-
 function HomePage({ posts }) {
   // Render the list of blog posts
   return (

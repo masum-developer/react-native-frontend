@@ -78,18 +78,20 @@ const NextStyling = () => {
         CSS Modules is a popular approach for component level styling in Next.js. It allows you to write CSS stylesheets alongside your components and automatically generates unique class names to avoid style conflicts. CSS Modules provide local scoping of styles, ensuring that styles defined within a component are only applied to that component.
         </Typography>
 
-        <Typography mt={1} variant="subtitle2">In the `styles` directory create a file names 'MyComponent.module.css'. This module will be used to style our `MyComponent` component.</Typography>
+        <Process list={["In the `styles` directory create a file names 'MyComponent.module.css'. This module will be used to style our `MyComponent` component."]}></Process>
         <CodeBox codeSnippet={styleCode}></CodeBox>
 
-        <Typography mt={2} variant="subtitle2">In the `components` directory create a file names 'MyComponent.js'. At the top import 'MyComponent.module.css' and apply the styles to the elements as follows:</Typography>
+        <Process list={["In the `components` directory create a file names 'MyComponent.js'. At the top import 'MyComponent.module.css' and apply the styles to the elements as follows:"]}></Process>
         <CodeBox codeSnippet={componentCode}></CodeBox>
 
-        <Typography mt={2} variant="subtitle2">You will see the styles being applied to each element accordingly. Lets look at some benefits of using Modules:</Typography>
+        <Typography mt={1} variant="subtitle2">You will see the styles being applied to each element accordingly.</Typography>
 
+      </Box>
+
+      <Box>
+        <Typography variant="h3">Why do we use Modules?</Typography>
+        <Typography>Lets look at some benefits of using Modules:</Typography>
         <Process list={benefits}></Process>
-
-
-
       </Box>
 
     </Box>
