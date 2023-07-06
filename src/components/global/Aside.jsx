@@ -186,7 +186,6 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'next-script-components')}>Script Component</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-head-components')}>Head Component</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-link-components')}>Link Component</MenuItem>
-
                                         <MenuItem onClick={() => handlePush('tab', 'next-styling')}>Styling</MenuItem>
 
                                         <SubMenu label="Data Fetching">
@@ -194,9 +193,17 @@ const Aside = ({ children }) => {
                                             <MenuItem onClick={() => handlePush('tab', 'next-getServerSideProps')}>getServerSideProps</MenuItem>                                             
                                         </SubMenu>
 
-
-
                                     </SubMenu>
+
+                                    <SubMenu label="Redux" icon={<IconCom image={'/sidebar/redux.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'redux-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'redux-concepts')}>Core Concepts</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'redux-installation')}>Installation</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'redux-usage')}>Usage</MenuItem>
+
+                                        
+                                    </SubMenu>
+                                        
 
                                 </SubMenu>
 
