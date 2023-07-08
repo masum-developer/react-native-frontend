@@ -198,8 +198,9 @@ const Aside = ({ children }) => {
                                     <SubMenu label="Redux" icon={<IconCom image={'/sidebar/redux.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'redux-introduction')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'redux-concepts')}>Core Concepts</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'redux-installation')}>Installation</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'redux-usage')}>Usage</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'redux-installation')}>Installation</MenuItem>
+
 
                                         
                                     </SubMenu>

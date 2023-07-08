@@ -31,11 +31,15 @@ const ReduxUsage = () => {
                 <Box mt={3}>                    
                     <Typography mt={1} variant='subtitle2'>When it comes to managing state in React applications, developers have the flexibility to choose from different approaches. Two popular options are the Context API and Redux. Both offer solutions for state management, but they have distinct characteristics and are suited for different scenarios.</Typography>
                     <Typography mt={1} variant='subtitle2'>In this section, we will delve into the comparison between the Context API and Redux, understanding their strengths and use cases. By exploring these options, you'll gain a better understanding of when to leverage the Context API and when to consider integrating Redux into your project.</Typography>
+                    
+                    <Typography mt={3} variant='h3'>When to consider Context API?</Typography>
                     <Process list={context}></Process>
                 </Box>
 
                 <Box mt={2} variant='subtitle2'>
                     <Typography>While the Context API provides a convenient way to manage state in simpler scenarios, there are situations where applications require more advanced state management capabilities. This is where Redux shines. Redux is a powerful state management library that offers a structured and comprehensive solution for handling complex state interactions in React applications. Let's explore when and why you would want to use Redux as your state management tool. </Typography>
+                    
+                    <Typography mt={3} variant='h3'>When to consider Redux?</Typography>
                     <Process list={uses}></Process>
                 </Box>
 
