@@ -199,10 +199,7 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'redux-introduction')}>Introduction</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'redux-concepts')}>Core Concepts</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'redux-usage')}>Usage</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'redux-installation')}>Installation</MenuItem>
-
-
-                                        
+                                        <MenuItem onClick={() => handlePush('tab', 'redux-installation')}>Setup</MenuItem>
                                     </SubMenu>
                                         
 
