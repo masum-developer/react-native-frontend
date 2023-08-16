@@ -282,6 +282,7 @@ const Aside = ({ children }) => {
                                 <SubMenu label="Runtime Engine" icon={<IconCom image={'/sidebar/nodejs.svg'} />}>
                                     <SubMenu label="NodeJs" icon={<IconCom image={'/sidebar/nodejs.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'nodejs-introduction')}>Introduction</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'nodejs-installation')}>Installation</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'nodejs-server')}>Basic Server</MenuItem>
                                     </SubMenu>
                                 </SubMenu>
