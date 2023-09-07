@@ -3,7 +3,6 @@ import React from 'react';
 import ImageComp from '../EnvironmentSetup/ImageComp';
 import Process from '../EnvironmentSetup/Process';
 
-
 const agileList = [
     "Iterative Development: Instead of following a linear, sequential process, Agile promotes breaking down the development cycle into smaller iterations or sprints. Each iteration typically lasts 1-4 weeks and results in a working, potentially shippable product increment.",
 
