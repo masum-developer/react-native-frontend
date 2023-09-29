@@ -205,6 +205,17 @@ const Aside = ({ children }) => {
 
                                 </SubMenu>
 
+                                <SubMenu label="Web Automation" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
+                                    <SubMenu label="Cypress" icon={<IconCom image={'/sidebar/redux.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'cypress-introduction')}>Introduction</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'cypress-pre-reqs')}>Pre-requisite Tools</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'cypress-setup')}>Cypress Setup</MenuItem>
+                                        <MenuItem onClick={() => handlePush('tab', 'cypress-project-structure')}>Project Structure</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'cypress-assertions')}>Assertions</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'cypress-locators')}>Locators</MenuItem>
+                                    </SubMenu>
+                                </SubMenu>
+
                                 <SubMenu label="Programming Language" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
                                     <SubMenu label="JavaScript" icon={<IconCom image={'/sidebar/javascript.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'js_introduction')}>Introduction</MenuItem>
