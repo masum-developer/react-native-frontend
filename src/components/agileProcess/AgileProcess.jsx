@@ -35,7 +35,7 @@ const phaseList = [
 
 const phaseListTools = [
     "Backlog or To-Do: This phase represents the initial stage where all the tasks, user stories, or requirements are captured and organized. It serves as a backlog or to-do list for the project, containing all the items that need to be completed.",
-    
+
     'In Progress or Active: In this phase, the tasks that are currently being worked on by the development team are moved from the backlog to the "In Progress" column. It indicates that the tasks are actively being worked on or are in progress.',
 
     "Testing or Quality Assurance (QA): Once the development phase is complete, the tasks or features move to the testing or QA phase. Here, the assigned testers perform various tests, including functional testing, integration testing, regression testing, and other quality assurance activities, to ensure that the software meets the required quality standards.",

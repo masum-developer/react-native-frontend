@@ -180,9 +180,9 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'next-installation')}>Installation</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-project-structure')}>Project Structure</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-routing')}>Routing</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'next-error-page')}>404 Error Page</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'next-error-page')}>404 Error Page</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-layouts')}>Layouts</MenuItem>
-                                        <MenuItem onClick={() => handlePush('tab', 'next-image-components')}>Image Component</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'next-image-components')}>Image Component</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-script-components')}>Script Component</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-head-components')}>Head Component</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'next-link-components')}>Link Component</MenuItem>
@@ -190,7 +190,7 @@ const Aside = ({ children }) => {
 
                                         <SubMenu label="Data Fetching">
                                             <MenuItem onClick={() => handlePush('tab', 'next-getStaticProps')}>getStaticProps</MenuItem>
-                                            <MenuItem onClick={() => handlePush('tab', 'next-getServerSideProps')}>getServerSideProps</MenuItem>                                             
+                                            <MenuItem onClick={() => handlePush('tab', 'next-getServerSideProps')}>getServerSideProps</MenuItem>
                                         </SubMenu>
 
                                     </SubMenu>
@@ -201,7 +201,7 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'redux-usage')}>Usage</MenuItem>
                                         <MenuItem onClick={() => handlePush('tab', 'redux-installation')}>Setup</MenuItem>
                                     </SubMenu>
-                                        
+
 
                                 </SubMenu>
 
@@ -282,7 +282,7 @@ const Aside = ({ children }) => {
 
                                         <SubMenu label="DOM Manipulation">
                                             <MenuItem onClick={() => handlePush('tab', 'dom-introduction')}>Introduction</MenuItem>
-                                            <MenuItem onClick={() => handlePush('tab', 'selectors')}>Selectors</MenuItem>
+                                            <MenuItem onClick={() => handlePush('tab', 'dom-selectors')}>Selectors</MenuItem>
                                             <MenuItem onClick={() => handlePush('tab', 'dom-styling')}>Styling</MenuItem>
                                             <MenuItem onClick={() => handlePush('tab', 'dom-events')}>Events</MenuItem>
                                             <MenuItem onClick={() => handlePush('tab', 'dom-event-listener')}>Event Listener</MenuItem>
