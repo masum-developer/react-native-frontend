@@ -205,7 +205,7 @@ const Aside = ({ children }) => {
 
                                 </SubMenu>
 
-                                <SubMenu label="Web Automation" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
+                                <SubMenu label="Test Automation" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
                                     <SubMenu label="Cypress" icon={<IconCom image={'/sidebar/redux.svg'} />}>
                                         <MenuItem onClick={() => handlePush('tab', 'cypress-introduction')}>Introduction</MenuItem> 
                                         <MenuItem onClick={() => handlePush('tab', 'cypress-pre-reqs')}>Pre-requisite Tools</MenuItem>
@@ -214,6 +214,21 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'cypress-assertions')}>Assertions</MenuItem> 
                                         <MenuItem onClick={() => handlePush('tab', 'cypress-locators')}>Locators</MenuItem>
                                     </SubMenu>
+
+                                    <SubMenu label="Web Automation" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
+                                        <MenuItem onClick={() => handlePush('tab', 'POM-introduction')}>Page Object Model</MenuItem> 
+                                        <MenuItem onClick={() => handlePush('tab', 'selectors-hub')}>SelectorsHub</MenuItem> 
+                                        <SubMenu label="AgileALM with Cypress" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
+                                            <MenuItem onClick={() => handlePush('tab', 'login-automation')}>Login</MenuItem> 
+
+                                        </SubMenu>
+
+                                    </SubMenu>
+
+                                    <SubMenu label="Backend Automation" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
+
+                                    </SubMenu>
+                                    
                                 </SubMenu>
 
                                 <SubMenu label="Programming Language" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
