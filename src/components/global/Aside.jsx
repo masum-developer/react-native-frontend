@@ -220,7 +220,8 @@ const Aside = ({ children }) => {
                                         <MenuItem onClick={() => handlePush('tab', 'selectors-hub')}>SelectorsHub</MenuItem> 
                                         <SubMenu label="AgileALM with Cypress" icon={<IconCom image={'/sidebar/programming-language.svg'} />}>
                                             <MenuItem onClick={() => handlePush('tab', 'login-automation')}>Login</MenuItem> 
-
+                                            <MenuItem onClick={() => handlePush('tab', 'create-organization-automation')}>Organization</MenuItem> 
+                                            <MenuItem onClick={() => handlePush('tab', 'create-project-automation')}>Project</MenuItem> 
                                         </SubMenu>
 
                                     </SubMenu>

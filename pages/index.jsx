@@ -211,6 +211,9 @@ import CypressLocators from '../src/components/cypress/CypressLocators';
 import PageObjectModel from '../src/components/web-automation/PageObjectModel';
 import LoginAgileALM from '../src/components/web-automation/LoginAgileALM';
 import SelectorsHub from '../src/components/web-automation/SelectorsHub';
+import OrganizationAgileALM from '../src/components/web-automation/OrganizationAgileALM';
+import ProjectAgileALM from '../src/components/web-automation/ProjectAgileALM';
+
 
 const Home = () => {
   const [active, setActive] = useState('get_started');
@@ -636,7 +639,10 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                                                                                               <LoginAgileALM></LoginAgileALM> :
                                                                                                                                                                                                                                                                                                                                                                                                                 active === 'selectors-hub' ?
                                                                                                                                                                                                                                                                                                                                                                                                                 <SelectorsHub></SelectorsHub> :
-
+                                                                                                                                                                                                                                                                                                                                                                                                                  active === 'create-organization-automation' ?
+                                                                                                                                                                                                                                                                                                                                                                                                                  <OrganizationAgileALM></OrganizationAgileALM> :
+                                                                                                                                                                                                                                                                                                                                                                                                                   active === 'create-project-automation' ? 
+                                                                                                                                                                                                                                                                                                                                                                                                                   <ProjectAgileALM></ProjectAgileALM> :
                                                                                                                                                                                                                                                                                                                                                                                                                 ''
         }
       </Aside>

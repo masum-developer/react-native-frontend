@@ -63,6 +63,14 @@ const LoginAgileALM = () => {
             <Typography variant='subtitle1'>In the terminal run the command 'npx cypress open' to run the project. On the right side of the screen you will see that we were successfully able to login to our account.</Typography>
             <ImageComp image={'/cypress/cypress-UI-final.png'} imageTitle={"Screenshot"}></ImageComp>
             <br></br>
+
+            <Typography variant='h3'>What are Fixtures in Cypress?</Typography>
+            <Typography variant='subtitle1'>In Cypress, fixtures are used to provide external data to your tests. Fixtures are essentially JSON files that contain data that can be loaded into your Cypress tests. Let's create a fixture file to store our login credentials:</Typography>
+            <ImageComp image={'/cypress/cypress-fixture.png'} imageTitle={"Screenshot"}></ImageComp>
+            <br></br>
+            <Typography variant='subtitle1'>We are extracting data from the userLoginData fixture file and passing the values in the setEmail and setPassword methods as parameters.</Typography>
+            <br></br>
+
         </Box>
       )
 }
