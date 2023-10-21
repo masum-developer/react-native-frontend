@@ -222,6 +222,8 @@ const Aside = ({ children }) => {
                                             <MenuItem onClick={() => handlePush('tab', 'login-automation')}>Login</MenuItem> 
                                             <MenuItem onClick={() => handlePush('tab', 'create-organization-automation')}>Organization</MenuItem> 
                                             <MenuItem onClick={() => handlePush('tab', 'create-project-automation')}>Project</MenuItem> 
+                                            <MenuItem onClick={() => handlePush('tab', 'create-userstory-automation')}>User Story</MenuItem> 
+                                            <MenuItem onClick={() => handlePush('tab', 'create-task-automation')}>Task</MenuItem> 
                                         </SubMenu>
 
                                     </SubMenu>
