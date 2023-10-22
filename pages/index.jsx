@@ -215,6 +215,7 @@ import OrganizationAgileALM from '../src/components/web-automation/OrganizationA
 import ProjectAgileALM from '../src/components/web-automation/ProjectAgileALM';
 import UserStoryAgileALM from '../src/components/web-automation/UserStoryAgileALM';
 import TaskAgileALM from '../src/components/web-automation/TaskAgileALM';
+import RetroAgileALM from '../src/components/web-automation/RetroAgileALM';
 
 
 const Home = () => {
@@ -649,6 +650,8 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                                                                                                     <UserStoryAgileALM></UserStoryAgileALM> :
                                                                                                                                                                                                                                                                                                                                                                                                                      active === 'create-task-automation' ?
                                                                                                                                                                                                                                                                                                                                                                                                                      <TaskAgileALM></TaskAgileALM> :
+                                                                                                                                                                                                                                                                                                                                                                                                                      active === 'create-retro-automation' ?
+                                                                                                                                                                                                                                                                                                                                                                                                                      <RetroAgileALM></RetroAgileALM> :
                                                                                                                                                                                                                                                                                                                                                                                                                 ''
         }
       </Aside>

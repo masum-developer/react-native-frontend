@@ -33,8 +33,18 @@ const TaskAgileALM = () => {
 
             <ImageComp image={'/cypress/automation/task/cypress-task-js.png'}></ImageComp>
 
-            <Typography variant='subtitle1'>Create the task.cy.js file and call the functions.
-            </Typography> 
+            <br></br>
+
+            <Typography variant='subtitle1'>Create the task.cy.js file and call the functions.</Typography> 
+
+            <ImageComp image={'/cypress/automation/task/cypress-taskcy.png'}></ImageComp>
+
+            <br></br>
+
+            <Typography variant='subtitle1'>In the terminal run the command 'npx cypress open' to run the project. You will see the Task has been created.</Typography> 
+            
+            <ImageComp image={'/cypress/automation/task/cypress-task-created.png'}></ImageComp>
+
 
 
         </Box>

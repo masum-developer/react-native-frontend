@@ -224,6 +224,7 @@ const Aside = ({ children }) => {
                                             <MenuItem onClick={() => handlePush('tab', 'create-project-automation')}>Project</MenuItem> 
                                             <MenuItem onClick={() => handlePush('tab', 'create-userstory-automation')}>User Story</MenuItem> 
                                             <MenuItem onClick={() => handlePush('tab', 'create-task-automation')}>Task</MenuItem> 
+                                            <MenuItem onClick={() => handlePush('tab', 'create-retro-automation')}>Retro Board</MenuItem> 
                                         </SubMenu>
 
                                     </SubMenu>
