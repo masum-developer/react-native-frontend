@@ -74,6 +74,7 @@ const Aside = ({ children }) => {
                                     },
                                 }}
                             >
+                                <MenuItem onClick={() => handlePush('tab', 'roadmap')} icon={<IconCom image={'/sidebar/roadmap.svg'} />}>Roadmap</MenuItem>
                                 <MenuItem onClick={() => handlePush('tab', 'get_started')} icon={<IconCom image={'/sidebar/start.svg'} />}>Get Started</MenuItem>
                                 <SubMenu icon={<IconCom image={'/sidebar/git.svg'} />} label="Environment Setup" defaultOpen>
                                     <MenuItem onClick={() => handlePush('tab', 'vscode-installation')}>VS Code Installation</MenuItem>

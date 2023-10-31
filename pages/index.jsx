@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../src/components/global/Layout';
 import Aside from '../src/components/global/Aside';
 import Hero from '../src/components/hero/Hero';
+import MernRoadmap from '../src/components/roadmap/roadmap';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { useRouter } from 'next/router';
@@ -216,6 +217,8 @@ import ProjectAgileALM from '../src/components/web-automation/ProjectAgileALM';
 import UserStoryAgileALM from '../src/components/web-automation/UserStoryAgileALM';
 import TaskAgileALM from '../src/components/web-automation/TaskAgileALM';
 import RetroAgileALM from '../src/components/web-automation/RetroAgileALM';
+// import Roadmap from '../src/components/roadmap/roadmap';
+// import MernRoadmap from '../src/components/roadmap/roadmap';
 
 
 const Home = () => {
@@ -652,6 +655,8 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                                                                                                      <TaskAgileALM></TaskAgileALM> :
                                                                                                                                                                                                                                                                                                                                                                                                                       active === 'create-retro-automation' ?
                                                                                                                                                                                                                                                                                                                                                                                                                       <RetroAgileALM></RetroAgileALM> :
+                                                                                                                                                                                                                                                                                                                                                                                                                        active === 'roadmap' ?
+                                                                                                                                                                                                                                                                                                                                                                                                                        <MernRoadmap></MernRoadmap> :
                                                                                                                                                                                                                                                                                                                                                                                                                 ''
         }
       </Aside>
