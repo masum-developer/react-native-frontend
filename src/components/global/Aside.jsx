@@ -207,11 +207,25 @@ const Aside = ({ children }) => {
                         Class 2: Overview of React Native vs. Other Mobile
                         Development Frameworks
                       </MenuItem>
+                    </SubMenu>
+                  </SubMenu>
+                  <SubMenu
+                    label="Week 2: Basic Components and Navigation"
+                    title="Basic Components and Navigation"
+                  >
+                    <SubMenu
+                      label="Chapter 1: React Native Components Deep Dive
+"
+                    >
                       <MenuItem
                         onClick={() => handlePush("tab", "agileALM-register")}
                       >
-                        Class 3: Review course outline and the TS4U app that we
-                        are going to build
+                        Class 1: Exploring Basic Components: View, Text, Image
+                      </MenuItem>
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 2: Handling User Input with Buttons and Touchables
                       </MenuItem>
                     </SubMenu>
                   </SubMenu>
@@ -219,20 +233,14 @@ const Aside = ({ children }) => {
                     label="Week 2: Basic Components and Navigation"
                     title="Basic Components and Navigation"
                   >
-                    <SubMenu label="masum">
+                    <SubMenu
+                      label="Chapter 1: React Native Components Deep Dive
+"
+                    >
                       <MenuItem
                         onClick={() => handlePush("tab", "agileALM-register")}
                       >
-                        User Registration
-                      </MenuItem>
-                    </SubMenu>
-                  </SubMenu>
-                  <SubMenu label="Week 3: Styling and Theming">
-                    <SubMenu label="masum">
-                      <MenuItem
-                        onClick={() => handlePush("tab", "agileALM-register")}
-                      >
-                        User Registration
+                        Class 1: Exploring Basic Components: View, Text, Image
                       </MenuItem>
                     </SubMenu>
                   </SubMenu>
