@@ -207,6 +207,62 @@ const Aside = ({ children }) => {
                         Class 2: Overview of React Native vs. Other Mobile
                         Development Frameworks
                       </MenuItem>
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 3: Review course outline and the TS4U app that we
+                        are going to build
+                      </MenuItem>
+                    </SubMenu>
+                    <SubMenu
+                      label="Chapter 2: Setting Up the Development Environment"
+                      title="Setting Up the Development Environment
+                      "
+                    >
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 4: Installing Node, expo, and React Native CLI
+                      </MenuItem>
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 5: Setting up an Emulator and Testing the
+                        Environment
+                      </MenuItem>
+                    </SubMenu>
+                    <SubMenu
+                      label="Chapter 3: Project Initialization"
+                      title="Project Initialization
+                      "
+                    >
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 6: Creating Your First React Native App named TS4U
+                      </MenuItem>
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 7: Understanding the Basic Structure of a React
+                        Native App
+                      </MenuItem>
+                    </SubMenu>
+                    <SubMenu
+                      label="Chapter 4: Building the Basic Home Screen of TS4U"
+                      title="Building the Basic Home Screen of TS4U"
+                    >
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 8: Designing a Simple Home Screen Layout
+                      </MenuItem>
+                      <MenuItem
+                        onClick={() => handlePush("tab", "agileALM-register")}
+                      >
+                        Class 9: Introduction to Basic React Native Components
+                        (View, Text, etc.)
+                      </MenuItem>
                     </SubMenu>
                   </SubMenu>
                   <SubMenu
