@@ -7,7 +7,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { SideMenus } from "../../staticData/menus";
 import { AiFillDatabase } from "react-icons/ai";
 import IconCom from "./IconCom";
-import Side from "./Side";
 
 const Aside = ({ children }) => {
   const courseOutline = {
