@@ -208,7 +208,7 @@ const Aside = ({ children }) => {
                             <MenuItem
                               key={classItem.class_number}
                               onClick={() =>
-                                handlePush("tab", "agileALM-register")
+                                handlePush("tab", `class${classItem.class_number}`)
                               }
                             >
                               {classItem.title}
