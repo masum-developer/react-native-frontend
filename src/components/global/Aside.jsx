@@ -200,7 +200,7 @@ const Aside = ({ children }) => {
                             "Chapter" +
                             chapter.chapter_number +
                             ":" +
-                            chapter.title
+                            chapter.shortTitle
                           }
                           title={chapter.title}
                         >
