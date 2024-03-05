@@ -217,9 +217,9 @@ import ProjectAgileALM from '../src/components/web-automation/ProjectAgileALM';
 import UserStoryAgileALM from '../src/components/web-automation/UserStoryAgileALM';
 import TaskAgileALM from '../src/components/web-automation/TaskAgileALM';
 import RetroAgileALM from '../src/components/web-automation/RetroAgileALM';
-import Class1 from '../src/components/classOne/Class1';
-import Class2 from '../src/components/classTwo/Class2';
-import Class3 from '../src/components/classThree/Class3';
+import ClassContent from '../src/components/classContent/ClassContent';
+
+
 // import Roadmap from '../src/components/roadmap/roadmap';
 // import MernRoadmap from '../src/components/roadmap/roadmap';
 
@@ -227,10 +227,21 @@ import Class3 from '../src/components/classThree/Class3';
 const Home = () => {
   const [active, setActive] = useState('get_started');
   const router = useRouter();
-
+// console.log(router.query?.tab)
+let myArray;
+if (router.query?.tab) {
+myArray = router?.query?.tab.split("-");
+}
   useEffect(() => {
     if (router.query?.tab) {
-      setActive(router.query?.tab)
+   
+      if(myArray[0]==='classContent'){
+        setActive(myArray[0])
+      }
+      else{
+        setActive(router.query?.tab)
+      }
+      
     } else {
       setActive('get_started')
     }
@@ -556,8 +567,8 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                     <AgileLogin></AgileLogin> :
                                                                                                                                                                                                                                                                                                                                     active === 'agileALM-register' ?
                                                                                                                                                                                                                                                                                                                                       <AgileRegister></AgileRegister> :
-                                                                                                                                                                                                                                                                                                                                      active === 'class1' ?
-                                                                                                                                                                                                                                                                                                                                      <Class1></Class1> :
+                                                                                                                                                                                                                                                                                                                                      active === myArray[0] ?
+                                                                                                                                                                                                                                                                                                                                      <ClassContent classContent={myArray[1]}></ClassContent> :
                                                                                                                                                                                                                                                                                                                                       active === 'class2' ?
                                                                                                                                                                                                                                                                                                                                       <Class2></Class2> :
                                                                                                                                                                                                                                                                                                                                       active === 'class3' ?
@@ -665,7 +676,7 @@ const Home = () => {
                                                                                                                                                                                                                                                                                                                                                                                                                       active === 'create-retro-automation' ?
                                                                                                                                                                                                                                                                                                                                                                                                                       <RetroAgileALM></RetroAgileALM> :
                                                                                                                                                                                                                                                                                                                                                                                                                         active === 'roadmap' ?
-                                                                                                                                                                                                                                                                                                                                                                                                                        <MernRoadmap></MernRoadmap> :
+                                                                                                                                                                                                                                                                                                                                                                                                    <MernRoadmap></MernRoadmap> :
                                                                                                                                                                                                                                                                                                                                                                                                                 ''
         }
       </Aside>

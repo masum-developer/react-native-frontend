@@ -8,13 +8,17 @@ import { SideMenus } from "../../staticData/menus";
 import { AiFillDatabase } from "react-icons/ai";
 import IconCom from "./IconCom";
 import courseOutline from "../../staticData/schoolHubContent.json";
+import {v4 as uuidv4} from 'uuid';
 const Aside = ({ children }) => {
+
+ // console.log(uuidv4());
+
   const matches = useMediaQuery("(min-width:600px)");
   const router = useRouter();
 
   const handlePush = (key, value) => {
     let query = router.query;
-
+//console.log(query)
     router.push({
       pathname: window.location.pathname,
       query: { ...query, [key]: value },
@@ -182,7 +186,7 @@ const Aside = ({ children }) => {
                     </MenuItem>
                   </SubMenu>
                 </SubMenu>
-
+                
                 <SubMenu
                   label="Schools Hub App"
                   icon={<IconCom image={"/sidebar/schoolhub.svg"} />}
@@ -198,17 +202,17 @@ const Aside = ({ children }) => {
                           key={chapter.chapter_number}
                           label={
                             "Chapter" +
-                            chapter.chapter_number +
+                            chapter.chapter_number +uuidv4()+
                             ":" +
                             chapter.shortTitle
                           }
                           title={chapter.title}
                         >
-                          {chapter.classes.map((classItem) => (
+                          {chapter.classes.map((classItem,index) => (
                             <MenuItem
                               key={classItem.class_number}
                               onClick={() =>
-                                handlePush("tab", `class${classItem.class_number}`)
+                                handlePush("tab", 'classContent' + '-'+ index++)
                               }
                             >
                               {classItem.title}

@@ -9,11 +9,13 @@
             "title": "Understanding React Native",
             "classes": [
               {
+                "id":"122khff",
                 "class_number": 1,
                 "title": "Introduction to React Native and Its Ecosystem",
                 "shortTitle": "Introduction to Ecosystem"
               },
               {
+                "id":"122kh",
                 "class_number": 2,
                 "title": "Overview of React Native vs. Other Mobile Development Frameworks"
               },
