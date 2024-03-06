@@ -1,0 +1,46 @@
+
+{
+    "corseContent":[
+        {
+            "id": "122khff",
+            "description": "Introduction to React Native and Its Ecosystem details"
+        },
+        {
+            "id": "122khfr",
+            "description": "Overview of React Native vs. Other Mobile Development Frameworks"
+        },
+        {
+            "id": "1a2b3c4d",
+            "description": "Introduction to Machine Learning and Its Applications"
+        },
+        {
+            "id": "5e6f7g8h",
+            "description": "Overview of Deep Learning vs. Traditional Machine Learning Methods"
+        },
+        {
+            "id": "9i8j7k6l",
+            "description": "Understanding Convolutional Neural Networks (CNNs)"
+        },
+        {
+            "id": "3m4n5o6p",
+            "description": "Introduction to Natural Language Processing (NLP)"
+        },
+        {
+            "id": "7q8r9s0t",
+            "description": "Exploring Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM)"
+        },
+        {
+            "id": "1u2v3w4x",
+            "description": "Understanding Generative Adversarial Networks (GANs)"
+        },
+        {
+            "id": "5y6z7a8b",
+            "description": "Overview of Reinforcement Learning and its Applications"
+        },
+        {
+            "id": "9c0d1e2f",
+            "description": "Introduction to Computer Vision and Image Recognition"
+        }
+    ]
+    
+}
