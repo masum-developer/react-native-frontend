@@ -1,46 +1,274 @@
-
-{
-    "corseContent":[
-        {
-            "id": "122khff",
-            "description": "Introduction to React Native and Its Ecosystem details"
-        },
-        {
-            "id": "122khfr",
-            "description": "Overview of React Native vs. Other Mobile Development Frameworks"
-        },
-        {
-            "id": "1a2b3c4d",
-            "description": "Introduction to Machine Learning and Its Applications"
-        },
-        {
-            "id": "5e6f7g8h",
-            "description": "Overview of Deep Learning vs. Traditional Machine Learning Methods"
-        },
-        {
-            "id": "9i8j7k6l",
-            "description": "Understanding Convolutional Neural Networks (CNNs)"
-        },
-        {
-            "id": "3m4n5o6p",
-            "description": "Introduction to Natural Language Processing (NLP)"
-        },
-        {
-            "id": "7q8r9s0t",
-            "description": "Exploring Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM)"
-        },
-        {
-            "id": "1u2v3w4x",
-            "description": "Understanding Generative Adversarial Networks (GANs)"
-        },
-        {
-            "id": "5y6z7a8b",
-            "description": "Overview of Reinforcement Learning and its Applications"
-        },
-        {
-            "id": "9c0d1e2f",
-            "description": "Introduction to Computer Vision and Image Recognition"
-        }
-    ]
-    
-}
+[
+  {
+    "id": "week1_chapter1_class1",
+    "description": "Introduction to React Native and Its Ecosystem"
+  },
+  {
+    "id": "week1_chapter1_class2",
+    "description": "Overview of React Native vs. Other Mobile Development Frameworks"
+  },
+  {
+    "id": "week1_chapter1_class3",
+    "description": "Review course outline and the TS4U app that we are going to build"
+  },
+  {
+    "id": "week1_chapter2_class4",
+    "description": "Installing Node, expo, and React Native CLI"
+  },
+  {
+    "id": "week1_chapter2_class5",
+    "description": "Setting up an Emulator and Testing the Environment"
+  },
+  {
+    "id": "week1_chapter3_class6",
+    "description": "Creating Your First React Native App named TS4U"
+  },
+  {
+    "id": "week1_chapter3_class7",
+    "description": "Understanding the Basic Structure of a React Native App"
+  },
+  {
+    "id": "week1_chapter4_class8",
+    "description": "Designing a Simple Home Screen Layout"
+  },
+  {
+    "id": "week1_chapter4_class9",
+    "description": "Introduction to Basic React Native Components (View, Text, etc.)"
+  },
+  {
+    "id": "week2_chapter1_class10",
+    "description": "Exploring Basic Components: View, Text, Image"
+  },
+  {
+    "id": "week2_chapter1_class11",
+    "description": "Handling User Input with Buttons and Touchables"
+  },
+  {
+    "id": "week2_chapter2_class12",
+    "description": "Introduction to React Navigation Library"
+  },
+  {
+    "id": "week2_chapter2_class13",
+    "description": "Implementing Stack Navigation in the App"
+  },
+  {
+    "id": "week2_chapter3_class14",
+    "description": "Setting Up Navigation to Different Screens"
+  },
+  {
+    "id": "week2_chapter3_class15",
+    "description": "Placeholder Screens for Chat, Calendar, Notifications, and Interview and auth screen"
+  },
+  {
+    "id": "week3_chapter1_class16",
+    "description": "Basics of Styling Components with Stylesheets"
+  },
+  {
+    "id": "week3_chapter1_class17",
+    "description": "Designing our Home Page"
+  },
+  {
+    "id": "week3_chapter2_class18",
+    "description": "Introduction to Theming and Global Styles"
+  },
+  {
+    "id": "week3_chapter2_class19",
+    "description": "Applying Themes in Home page"
+  },
+  {
+    "id": "week3_chapter3_class20",
+    "description": "Using Third Party Component Library"
+  },
+  {
+    "id": "week3_chapter3_class21",
+    "description": "Refining the UI with Third Party Component Library"
+  },
+  {
+    "id": "week4_chapter1_class22",
+    "description": "Making Network Requests in React Native"
+  },
+  {
+    "id": "week4_chapter1_class23",
+    "description": "Handling API Responses and Errors"
+  },
+  {
+    "id": "week4_chapter2_class24",
+    "description": "Implementing Login and Sign Up Screen"
+  },
+  {
+    "id": "week4_chapter2_class25",
+    "description": "Styling the Login and Sign Up Screen"
+  },
+  {
+    "id": "week4_chapter2_class26",
+    "description": "Implementing Login and Logout Functionality"
+  },
+  {
+    "id": "week4_chapter3_class27",
+    "description": "Storing the secret token in Secure Storage"
+  },
+  {
+    "id": "week4_chapter3_class28",
+    "description": "Managing User Sessions and Security"
+  },
+  {
+    "id": "week4_chapter4_class29",
+    "description": "Integrating Authentication Flows"
+  },
+  {
+    "id": "week4_chapter4_class30",
+    "description": "Testing and Refining Authentication Features"
+  },
+  {
+    "id": "week5_chapter1_class31",
+    "description": "Basics of Props in React Native"
+  },
+  {
+    "id": "week5_chapter1_class32",
+    "description": "State Management in React Native Components"
+  },
+  {
+    "id": "week5_chapter2_class33",
+    "description": "Creating Reusable Components of Authentication Screen"
+  },
+  {
+    "id": "week5_chapter2_class34",
+    "description": "Passing Data with Props in Custom Components"
+  },
+  {
+    "id": "week5_chapter3_class35",
+    "description": "Creating Reusable Components of Home Screen"
+  },
+  {
+    "id": "week5_chapter3_class36",
+    "description": "Passing Data with Props in Custom Components"
+  },
+  {
+    "id": "week6_chapter1_class37",
+    "description": "Basic Overview of Redux and Redux Persist"
+  },
+  {
+    "id": "week6_chapter1_class38",
+    "description": "Implementing redux and Redux Persist"
+  },
+  {
+    "id": "week6_chapter2_class39",
+    "description": "Implementing Global State Management"
+  },
+  {
+    "id": "week6_chapter2_class40",
+    "description": "Connecting Components to the Global State"
+  },
+  {
+    "id": "week6_chapter3_class41",
+    "description": "Refactoring Existing Features for State Management"
+  },
+  {
+    "id": "week6_chapter3_class42",
+    "description": "Testing and Debugging State Management"
+  },
+  {
+    "id": "week7_chapter1_class43",
+    "description": "Build the Chat Screen UI"
+  },
+  {
+    "id": "week7_chapter1_class44",
+    "description": "Build the Chat Messages UI"
+  },
+  {
+    "id": "week7_chapter2_class45",
+    "description": "Make API Request to Display Dynamic Chats"
+  },
+  {
+    "id": "week7_chapter2_class46",
+    "description": "Make API Request to Fetch Chat Messages and Render to UI"
+  },
+  {
+    "id": "week7_chapter3_class47",
+    "description": "Implement global state by redux"
+  },
+  {
+    "id": "week7_chapter3_class48",
+    "description": "Consuming data from global state"
+  },
+  {
+    "id": "week7_chapter4_class49",
+    "description": "Implement Socket for Real-time Data"
+  },
+  {
+    "id": "week7_chapter4_class50",
+    "description": "Handling Realtime Message and Update the Redux State"
+  },
+  {
+    "id": "week8_chapter1_class51",
+    "description": "Handling Dates and Times in React Native"
+  },
+  {
+    "id": "week8_chapter1_class52",
+    "description": "Displaying Current Date and Time in the App"
+  },
+  {
+    "id": "week8_chapter2_class53",
+    "description": "Exploring Third-Party Calendar Components"
+  },
+  {
+    "id": "week8_chapter2_class54",
+    "description": "Integrating Calendar in the App"
+  },
+  {
+    "id": "week8_chapter3_class55",
+    "description": "Adding Events to the Calendar"
+  },
+  {
+    "id": "week8_chapter3_class56",
+    "description": "Viewing Events on the Calendar"
+  },
+  {
+    "id": "week9_chapter1_class57",
+    "description": "Understanding Push Notifications in React Native"
+  },
+  {
+    "id": "week9_chapter1_class58",
+    "description": "Setting Up Firebase Cloud Messaging (FCM)"
+  },
+  {
+    "id": "week9_chapter2_class59",
+    "description": "Requesting Permission and Handling Device Tokens"
+  },
+  {
+    "id": "week9_chapter2_class60",
+    "description": "Sending Notifications from the Server"
+  },
+  {
+    "id": "week9_chapter3_class61",
+    "description": "Receiving and Handling Notifications in the App"
+  },
+  {
+    "id": "week9_chapter3_class62",
+    "description": "Navigating to Relevant Screens from Notifications"
+  },
+  {
+    "id": "week10_chapter1_class63",
+    "description": "Introduction to Testing in React Native"
+  },
+  {
+    "id": "week10_chapter1_class64",
+    "description": "Unit Testing Components and Functions"
+  },
+  {
+    "id": "week10_chapter2_class65",
+    "description": "Preparing the App for Deployment"
+  },
+  {
+    "id": "week10_chapter2_class66",
+    "description": "Deploying the App to the App Store and Google Play Store"
+  },
+  {
+    "id": "week10_chapter3_class67",
+    "description": "Handling Bug Fixes and Updates"
+  },
+  {
+    "id": "week10_chapter3_class68",
+    "description": "Monitoring and Analyzing App Performance"
+  }
+]

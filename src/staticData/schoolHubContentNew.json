@@ -52,11 +52,13 @@
           "classes": [
             {
               "class_number": 6,
+              "class_id": "week1_chapter3_class6",
               "title": "Creating Your First React Native App named TS4U",
               "shortTitle": "Creating First App"
             },
             {
               "class_number": 7,
+              "class_id": "week1_chapter3_class7",
               "title": "Understanding the Basic Structure of a React Native App",
               "shortTitle": "Understanding Structure"
             }
@@ -68,11 +70,13 @@
           "classes": [
             {
               "class_number": 8,
+              "class_id": "week1_chapter4_class8",
               "title": "Designing a Simple Home Screen Layout",
               "shortTitle": "Designing Layout"
             },
             {
               "class_number": 9,
+              "class_id": "week1_chapter4_class9",
               "title": "Introduction to Basic React Native Components (View, Text, etc.)",
               "shortTitle": "Basic Components Intro"
             }
@@ -89,12 +93,14 @@
           "title": "React Native Components Deep Dive",
           "classes": [
             {
-              "class_number": 1,
+              "class_number": 10,
+              "class_id": "week2_chapter1_class10",
               "title": "Exploring Basic Components: View, Text, Image",
               "shortTitle": "Exploring Basic Components"
             },
             {
-              "class_number": 2,
+              "class_number": 11,
+              "class_id": "week2_chapter1_class11",
               "title": "Handling User Input with Buttons and Touchables",
               "shortTitle": "Handling User Input"
             }
@@ -105,12 +111,14 @@
           "title": "Implementing Navigation",
           "classes": [
             {
-              "class_number": 3,
+              "class_number": 12,
+              "class_id": "week2_chapter2_class12",
               "title": "Introduction to React Navigation Library",
               "shortTitle": "React Navigation Intro"
             },
             {
-              "class_number": 4,
+              "class_number": 13,
+              "class_id": "week2_chapter2_class13",
               "title": "Implementing Stack Navigation in the App",
               "shortTitle": "Implementing Stack Navigation"
             }
@@ -121,12 +129,14 @@
           "title": "Building the App Skeleton of TS4U",
           "classes": [
             {
-              "class_number": 5,
+              "class_number": 14,
+              "class_id": "week2_chapter3_class14",
               "title": "Setting Up Navigation to Different Screens",
               "shortTitle": "Setting up Navigation"
             },
             {
-              "class_number": 6,
+              "class_number": 15,
+              "class_id": "week2_chapter3_class15",
               "title": "Placeholder Screens for Chat, Calendar, Notifications, and Interview and auth screen",
               "shortTitle": "Placeholder Screens"
             }
@@ -143,12 +153,14 @@
           "title": "Styling in React Native",
           "classes": [
             {
-              "class_number": 1,
+              "class_number": 16,
+              "class_id": "week3_chapter1_class16",
               "title": "Basics of Styling Components with Stylesheets",
               "shortTitle": "Styling Basics"
             },
             {
-              "class_number": 2,
+              "class_number": 17,
+              "class_id": "week3_chapter1_class17",
               "title": "Designing our Home Page",
               "shortTitle": "Designing Home Page"
             }
@@ -159,12 +171,14 @@
           "title": "Implementing Themes",
           "classes": [
             {
-              "class_number": 3,
+              "class_number": 18,
+              "class_id": "week3_chapter2_class18",
               "title": "Introduction to Theming and Global Styles",
               "shortTitle": "Theming Intro"
             },
             {
-              "class_number": 4,
+              "class_number": 19,
+              "class_id": "week3_chapter2_class19",
               "title": "Applying Themes in Home page",
               "shortTitle": "Applying Themes"
             }
@@ -175,12 +189,14 @@
           "title": "Enhancing User Interface",
           "classes": [
             {
-              "class_number": 5,
+              "class_number": 20,
+              "class_id": "week3_chapter3_class20",
               "title": "Using Third Party Component Library",
               "shortTitle": "Using Third Party Library"
             },
             {
-              "class_number": 6,
+              "class_number": 21,
+              "class_id": "week3_chapter3_class21",
               "title": "Refining the UI with Third Party Component Library",
               "shortTitle": "Refining UI"
             }
@@ -197,12 +213,14 @@
           "title": "Networking Basics",
           "classes": [
             {
-              "class_number": 1,
+              "class_number": 22,
+              "class_id": "week4_chapter1_class22",
               "title": "Making Network Requests in React Native",
               "shortTitle": "Network Requests"
             },
             {
-              "class_number": 2,
+              "class_number": 23,
+              "class_id": "week4_chapter1_class23",
               "title": "Handling API Responses and Errors",
               "shortTitle": "Handling API Responses"
             }
@@ -213,17 +231,20 @@
           "title": "User Authentication",
           "classes": [
             {
-              "class_number": 3,
+              "class_number": 24,
+              "class_id": "week4_chapter2_class24",
               "title": "Implementing Login and Sign Up Screen",
               "shortTitle": "Login & Sign Up"
             },
             {
-              "class_number": 4,
+              "class_number": 25,
+              "class_id": "week4_chapter2_class25",
               "title": "Styling the Login and Sign Up Screen",
               "shortTitle": "Styling Auth Screens"
             },
             {
-              "class_number": 5,
+              "class_number": 26,
+              "class_id": "week4_chapter2_class26",
               "title": "Implementing Login and Logout Functionality",
               "shortTitle": "Login & Logout"
             }
@@ -234,12 +255,14 @@
           "title": "Securing the App",
           "classes": [
             {
-              "class_number": 6,
+              "class_number": 27,
+              "class_id": "week4_chapter3_class27",
               "title": "Storing the secret token in Secure Storage",
               "shortTitle": "Storing Tokens"
             },
             {
-              "class_number": 7,
+              "class_number": 28,
+              "class_id": "week4_chapter3_class28",
               "title": "Managing User Sessions and Security",
               "shortTitle": "Managing Sessions"
             }
@@ -250,12 +273,14 @@
           "title": "Implementing Authentication in the App",
           "classes": [
             {
-              "class_number": 8,
+              "class_number": 29,
+              "class_id": "week4_chapter4_class29",
               "title": "Integrating Authentication Flows",
               "shortTitle": "Auth Integration"
             },
             {
-              "class_number": 9,
+              "class_number": 30,
+              "class_id": "week4_chapter4_class30",
               "title": "Testing and Refining Authentication Features",
               "shortTitle": "Testing Auth Features"
             }
@@ -272,12 +297,14 @@
           "title": "Understanding Props and State",
           "classes": [
             {
-              "class_number": 1,
+              "class_number": 31,
+              "class_id": "week5_chapter1_class31",
               "title": "Basics of Props in React Native",
               "shortTitle": "Props Basics"
             },
             {
-              "class_number": 2,
+              "class_number": 32,
+              "class_id": "week5_chapter1_class32",
               "title": "State Management in React Native Components",
               "shortTitle": "State Management"
             }
@@ -288,12 +315,14 @@
           "title": "Building Custom Components of Authentication Screen",
           "classes": [
             {
-              "class_number": 3,
+              "class_number": 33,
+              "class_id": "week5_chapter2_class33",
               "title": "Creating Reusable Components of Authentication Screen",
               "shortTitle": "Reusable Auth Components"
             },
             {
-              "class_number": 4,
+              "class_number": 34,
+              "class_id": "week5_chapter2_class34",
               "title": "Passing Data with Props in Custom Components",
               "shortTitle": "Passing Data with Props"
             }
@@ -304,12 +333,14 @@
           "title": "Building Custom Components of Home Screen",
           "classes": [
             {
-              "class_number": 5,
+              "class_number": 35,
+              "class_id": "week5_chapter3_class35",
               "title": "Creating Reusable Components of Home Screen",
               "shortTitle": "Reusable Home Components"
             },
             {
-              "class_number": 6,
+              "class_number": 36,
+              "class_id": "week5_chapter3_class36",
               "title": "Passing Data with Props in Custom Components",
               "shortTitle": "Passing Data with Props"
             }
@@ -326,12 +357,14 @@
           "title": "Advanced State Management Concepts",
           "classes": [
             {
-              "class_number": 1,
+              "class_number": 37,
+              "class_id": "week6_chapter1_class37",
               "title": "Basic Overview of Redux and Redux Persist",
               "shortTitle": "Redux Overview"
             },
             {
-              "class_number": 2,
+              "class_number": 38,
+              "class_id": "week6_chapter1_class38",
               "title": "Implementing redux and Redux Persist",
               "shortTitle": "Implementing Redux"
             }
@@ -342,12 +375,14 @@
           "title": "Refactoring the App",
           "classes": [
             {
-              "class_number": 3,
+              "class_number": 39,
+              "class_id": "week6_chapter2_class39",
               "title": "Implementing Global State Management",
               "shortTitle": "Global State Management"
             },
             {
-              "class_number": 4,
+              "class_number": 40,
+              "class_id": "week6_chapter2_class40",
               "title": "Connecting Components to the Global State",
               "shortTitle": "Connecting to Global State"
             }
@@ -358,12 +393,14 @@
           "title": "Enhancing App Functionality",
           "classes": [
             {
-              "class_number": 5,
+              "class_number": 41,
+              "class_id": "week6_chapter3_class41",
               "title": "Refactoring Existing Features for State Management",
               "shortTitle": "Refactoring for State Management"
             },
             {
-              "class_number": 6,
+              "class_number": 42,
+              "class_id": "week6_chapter3_class42",
               "title": "Testing and Debugging State Management",
               "shortTitle": "Testing and Debugging"
             }
@@ -380,12 +417,14 @@
           "title": "Building the UI",
           "classes": [
             {
-              "class_number": 1,
+              "class_number": 43,
+              "class_id": "week7_chapter1_class43",
               "title": "Build the Chat Screen UI",
               "shortTitle": "Building Chat UI"
             },
             {
-              "class_number": 2,
+              "class_number": 44,
+              "class_id": "week7_chapter1_class44",
               "title": "Build the Chat Messages UI",
               "shortTitle": "Building Messages UI"
             }
@@ -396,12 +435,14 @@
           "title": "Integrating API",
           "classes": [
             {
-              "class_number": 3,
+              "class_number": 45,
+              "class_id": "week7_chapter2_class45",
               "title": "Make API Request to Display Dynamic Chats",
               "shortTitle": "API for Dynamic Chats"
             },
             {
-              "class_number": 4,
+              "class_number": 46,
+              "class_id": "week7_chapter2_class46",
               "title": "Make API Request to Fetch Chat Messages and Render to UI",
               "shortTitle": "API for Chat Messages"
             }
@@ -412,12 +453,14 @@
           "title": "Integrate redux with chat",
           "classes": [
             {
-              "class_number": 5,
+              "class_number": 47,
+              "class_id": "week7_chapter3_class47",
               "title": "Implement global state by redux",
               "shortTitle": "Redux Global State"
             },
             {
-              "class_number": 6,
+              "class_number": 48,
+              "class_id": "week7_chapter3_class48",
               "title": "Consuming data from global state",
               "shortTitle": "Consuming Global State"
             }
@@ -428,12 +471,14 @@
           "title": "Working with real-time data",
           "classes": [
             {
-              "class_number": 7,
+              "class_number": 49,
+              "class_id": "week7_chapter4_class49",
               "title": "Implement Socket for Real-time Data",
               "shortTitle": "Implementing Socket"
             },
             {
-              "class_number": 8,
+              "class_number": 50,
+              "class_id": "week7_chapter4_class50",
               "title": "Handling Realtime Message and Update the Redux State",
               "shortTitle": "Real-time Messaging"
             }
@@ -450,62 +495,53 @@
           "title": "Working with Dates and Times",
           "classes": [
             {
-              "class_number": 1,
+              "class_number": 51,
+              "class_id": "week8_chapter1_class51",
               "title": "Handling Dates and Times in React Native",
               "shortTitle": "Handling Dates and Times"
             },
             {
-              "class_number": 2,
-              "title": "Exploring Third-party Calendar Components",
-              "shortTitle": "Exploring Calendar Components"
+              "class_number": 52,
+              "class_id": "week8_chapter1_class52",
+
+              "title": "Displaying Current Date and Time in the App",
+              "shortTitle": "Displaying Date and Time"
             }
           ]
         },
         {
           "chapter_number": 2,
-          "title": "Integrating a Calendar Component",
+          "title": "Integrating Calendar Component",
           "classes": [
             {
-              "class_number": 3,
-              "title": "Adding a Calendar to the App",
-              "shortTitle": "Adding Calendar"
+              "class_number": 53,
+              "class_id": "week8_chapter2_class53",
+              "title": "Exploring Third-Party Calendar Components",
+              "shortTitle": "Third-Party Calendar"
             },
             {
-              "class_number": 4,
-              "title": "Customizing the Calendar Component",
-              "shortTitle": "Customizing Calendar"
+              "class_number": 54,
+              "class_id": "week8_chapter2_class54",
+              "title": "Integrating Calendar in the App",
+              "shortTitle": "Integrating Calendar"
             }
           ]
         },
         {
           "chapter_number": 3,
-          "title": "Connecting Calendar with App Functionality",
+          "title": "Implementing Calendar Functionality",
           "classes": [
             {
-              "class_number": 5,
-              "title": "Implementing Calendar Features",
-              "shortTitle": "Implementing Features"
+              "class_number": 55,
+              "class_id": "week8_chapter3_class55",
+              "title": "Adding Events to the Calendar",
+              "shortTitle": "Adding Events"
             },
             {
-              "class_number": 6,
-              "title": "Refining the Calendar UI and Functionality",
-              "shortTitle": "Refining Calendar UI"
-            }
-          ]
-        },
-        {
-          "chapter_number": 4,
-          "title": "Integrate with API",
-          "classes": [
-            {
-              "class_number": 7,
-              "title": "Fetch Existing events and Render in UI",
-              "shortTitle": "Fetching Events"
-            },
-            {
-              "class_number": 8,
-              "title": "Storing and Updating new Event by API request",
-              "shortTitle": "Storing and Updating Events"
+              "class_number": 56,
+              "class_id": "week8_chapter3_class56",
+              "title": "Viewing Events on the Calendar",
+              "shortTitle": "Viewing Events"
             }
           ]
         }
@@ -513,53 +549,59 @@
     },
     {
       "week_number": 9,
-      "topic": "Adding Notifications",
+      "topic": "Implementing Notifications",
       "chapters": [
         {
           "chapter_number": 1,
-          "title": "Understanding Notifications",
+          "title": "Introduction to Push Notifications",
           "classes": [
             {
-              "class_number": 1,
-              "title": "Introduction to Local and Push Notifications",
-              "shortTitle": "Intro to Notifications"
+              "class_number": 57,
+              "class_id": "week9_chapter1_class57",
+              "title": "Understanding Push Notifications in React Native",
+              "shortTitle": "Push Notifications Overview"
             },
             {
-              "class_number": 2,
-              "title": "Configuring Notification Settings",
-              "shortTitle": "Notification Settings"
+              "class_number": 58,
+              "class_id": "week9_chapter1_class58",
+              "title": "Setting Up Firebase Cloud Messaging (FCM)",
+              "shortTitle": "Setting Up FCM"
             }
           ]
         },
         {
           "chapter_number": 2,
-          "title": "Implementing Notifications",
+          "title": "Implementing Notifications in the App",
           "classes": [
             {
-              "class_number": 3,
-              "title": "Getting the Past Notification by API Request",
-              "shortTitle": "Getting Past Notifications"
+              "class_number": 59,
+              "class_id": "week9_chapter2_class59",
+              "title": "Requesting Permission and Handling Device Tokens",
+              "shortTitle": "Permission and Device Tokens"
             },
             {
-              "class_number": 4,
-              "title": "Creating Notification Handlers",
-              "shortTitle": "Notification Handlers"
+              "class_number": 60,
+              "class_id": "week9_chapter2_class60",
+              "title": "Sending Notifications from the Server",
+              "shortTitle": "Sending Notifications"
             }
           ]
         },
         {
           "chapter_number": 3,
-          "title": "Integrating Notifications with the App",
+          "title": "Handling Notifications in the App",
           "classes": [
             {
-              "class_number": 5,
-              "title": "Designing Notification UI",
-              "shortTitle": "Designing Notification UI"
+              "class_number": 61,
+              "class_id": "week9_chapter3_class61",
+              "title": "Receiving and Handling Notifications in the App",
+              "shortTitle": "Receiving Notifications"
             },
             {
-              "class_number": 6,
-              "title": "Testing and Refining Notification Functionality",
-              "shortTitle": "Testing Notification"
+              "class_number": 62,
+              "class_id": "week9_chapter3_class62",
+              "title": "Navigating to Relevant Screens from Notifications",
+              "shortTitle": "Navigating from Notifications"
             }
           ]
         }
@@ -567,117 +609,59 @@
     },
     {
       "week_number": 10,
-      "topic": "Recording and Storing Interviews",
+      "topic": "Finalizing the App",
       "chapters": [
         {
           "chapter_number": 1,
-          "title": "Media Recording in React Native",
+          "title": "Testing and Debugging",
           "classes": [
             {
-              "class_number": 1,
-              "title": "Introduction to Media Recording",
-              "shortTitle": "Media Recording Intro"
+              "class_number": 63,
+              "class_id": "week10_chapter1_class63",
+              "title": "Introduction to Testing in React Native",
+              "shortTitle": "Testing Introduction"
             },
             {
-              "class_number": 2,
-              "title": "Implementing Audio/Video Recording",
-              "shortTitle": "Implementing Recording"
+              "class_number": 64,
+              "class_id": "week10_chapter1_class64",
+              "title": "Unit Testing Components and Functions",
+              "shortTitle": "Unit Testing"
             }
           ]
         },
         {
           "chapter_number": 2,
-          "title": "Building the Interview Record System",
+          "title": "Deployment",
           "classes": [
             {
-              "class_number": 3,
-              "title": "Designing the Interview Record UI",
-              "shortTitle": "Designing UI"
+              "class_number": 65,
+              "class_id": "week10_chapter2_class65",
+              "title": "Preparing the App for Deployment",
+              "shortTitle": "Preparing for Deployment"
             },
             {
-              "class_number": 4,
-              "title": "Implementing and Testing the Recording Features",
-              "shortTitle": "Testing Recording Features"
+              "class_number": 66,
+              "class_id": "week10_chapter2_class66",
+              "title": "Deploying the App to the App Store and Google Play Store",
+              "shortTitle": "Deploying to Stores"
             }
           ]
         },
         {
           "chapter_number": 3,
-          "title": "File Storage and Management",
+          "title": "Maintenance and Updates",
           "classes": [
             {
-              "class_number": 5,
-              "title": "Storing Recorded Interviews by API request",
-              "shortTitle": "Storing Interviews"
+              "class_number": 67,
+              "class_id": "week10_chapter3_class67",
+              "title": "Handling Bug Fixes and Updates",
+              "shortTitle": "Handling Bug Fixes"
             },
             {
-              "class_number": 6,
-              "title": "Managing and Accessing Recorded Files by API request",
-              "shortTitle": "Managing Recorded Files"
-            },
-            {
-              "class_number": 7,
-              "title": "Final Testing and Bug Fixes",
-              "shortTitle": "Final Testing"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "week_number": 11,
-      "topic": "Deployment and Publishing",
-      "chapters": [
-        {
-          "chapter_number": 1,
-          "title": "Preparing for Deployment",
-          "classes": [
-            {
-              "class_number": 1,
-              "title": "Building the App for Production deployment",
-              "shortTitle": "Building App for Deployment"
-            },
-            {
-              "class_number": 2,
-              "title": "Preparing Assets and Metadata for App Stores",
-              "shortTitle": "Preparing Assets"
-            },
-            {
-              "class_number": 3,
-              "title": "Adding App icon and Splash screen",
-              "shortTitle": "Adding Icons"
-            }
-          ]
-        },
-        {
-          "chapter_number": 2,
-          "title": "Publishing the App",
-          "classes": [
-            {
-              "class_number": 3,
-              "title": "Deploying to the App Store",
-              "shortTitle": "Deploying to App Store"
-            },
-            {
-              "class_number": 4,
-              "title": "Deploying to the Google Play Store",
-              "shortTitle": "Deploying to Play Store"
-            }
-          ]
-        },
-        {
-          "chapter_number": 3,
-          "title": "Updating the app",
-          "classes": [
-            {
-              "class_number": 5,
-              "title": "Updating the app via OTA",
-              "shortTitle": "OTA Updates"
-            },
-            {
-              "class_number": 6,
-              "title": "Updating the app in App Store and Google Play Store with version",
-              "shortTitle": "App Updates"
+              "class_number": 68,
+              "class_id": "week10_chapter3_class68",
+              "title": "Monitoring and Analyzing App Performance",
+              "shortTitle": "Monitoring Performance"
             }
           ]
         }

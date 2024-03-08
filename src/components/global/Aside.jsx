@@ -7,18 +7,17 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { SideMenus } from "../../staticData/menus";
 import { AiFillDatabase } from "react-icons/ai";
 import IconCom from "./IconCom";
-import courseOutline from "../../staticData/schoolHubContent.json";
-import {v4 as uuidv4} from 'uuid';
+import courseOutline from "../../staticData/schoolHubContentNew.json";
+import { v4 as uuidv4 } from "uuid";
 const Aside = ({ children }) => {
-
- // console.log(uuidv4());
+  // console.log(uuidv4());
 
   const matches = useMediaQuery("(min-width:600px)");
   const router = useRouter();
 
   const handlePush = (key, value) => {
     let query = router.query;
-//console.log(query)
+    //console.log(query)
     router.push({
       pathname: window.location.pathname,
       query: { ...query, [key]: value },
@@ -186,12 +185,12 @@ const Aside = ({ children }) => {
                     </MenuItem>
                   </SubMenu>
                 </SubMenu>
-                
+
                 <SubMenu
                   label="Schools Hub App"
                   icon={<IconCom image={"/sidebar/schoolhub.svg"} />}
                 >
-                  {courseOutline.weeks.map((week) => (
+                  {courseOutline.weeks.map((week, index) => (
                     <SubMenu
                       key={week.week_number}
                       label={week.topic}
@@ -202,20 +201,23 @@ const Aside = ({ children }) => {
                           key={chapter.chapter_number}
                           label={
                             "Chapter" +
-                            chapter.chapter_number +uuidv4()+
+                            chapter.chapter_number +
                             ":" +
-                            chapter.shortTitle
+                            chapter.title
                           }
                           title={chapter.title}
                         >
-                          {chapter.classes.map((classItem,index) => (
+                          {chapter.classes.map((classItem) => (
                             <MenuItem
-                              key={classItem.class_number}
+                              key={classItem.class_id}
                               onClick={() =>
-                                handlePush("tab", 'classContent' + '-'+ index++)
+                                handlePush(
+                                  "tab",
+                                  "classContent" + "-" + classItem.class_id
+                                )
                               }
                             >
-                              {classItem.title}
+                              {classItem.shortTitle}
                             </MenuItem>
                           ))}
                         </SubMenu>
