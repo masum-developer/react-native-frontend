@@ -186,10 +186,7 @@ const Aside = ({ children }) => {
                   </SubMenu>
                 </SubMenu>
 
-                <SubMenu
-                  label="Schools Hub App"
-                  icon={<IconCom image={"/sidebar/schoolhub.svg"} />}
-                >
+                <SubMenu label="Ts4U App" icon={<IconCom />}>
                   {courseOutline.weeks.map((week, index) => (
                     <SubMenu
                       key={week.week_number}

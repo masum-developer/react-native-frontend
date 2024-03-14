@@ -28,6 +28,10 @@ import ClassContent from "../src/components/classContent/ClassContent";
 import ClassOne from "../src/components/reactNative/weekOne/chapterOne/ClassOne";
 import ClassThree from "../src/components/reactNative/weekOne/chapterOne/ClassThree";
 import ClassTw from "../src/components/reactNative/weekOne/chapterOne/ClassTw";
+import ClassFour from "../src/components/reactNative/weekOne/chapterTwo/ClassFour";
+import ClassFive from "../src/components/reactNative/weekOne/chapterTwo/ClassFive";
+import ClassSix from "../src/components/reactNative/weekOne/chapterThree/ClassSix";
+import ClassSeven from "../src/components/reactNative/weekOne/chapterThree/ClassSeven";
 
 // import Roadmap from '../src/components/roadmap/roadmap';
 // import MernRoadmap from '../src/components/roadmap/roadmap';
@@ -71,6 +75,14 @@ const Home = () => {
           <ClassTw />
         ) : active === "week1_chapter1_class3" ? (
           <ClassThree />
+        ) : active === "week1_chapter2_class4" ? (
+          <ClassFour />
+        ) : active === "week1_chapter2_class5" ? (
+          <ClassFive />
+        ) : active === "week1_chapter3_class6" ? (
+          <ClassSix />
+        ) : active === "week1_chapter3_class6" ? (
+          <ClassSeven />
         ) : active === "roadmap" ? (
           <MernRoadmap></MernRoadmap>
         ) : (
