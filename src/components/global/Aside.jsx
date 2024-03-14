@@ -53,7 +53,7 @@ const Aside = ({ children }) => {
                 paddingBottom: "10px",
               }}
               backgroundColor="#ECE4EC"
-              width="250px"
+              width="280px"
               collapsed={true}
             >
               <Menu
@@ -211,10 +211,7 @@ const Aside = ({ children }) => {
                             <MenuItem
                               key={classItem.class_id}
                               onClick={() =>
-                                handlePush(
-                                  "tab",
-                                  "classContent" + "-" + classItem.class_id
-                                )
+                                handlePush("tab", classItem.class_id)
                               }
                             >
                               {classItem.shortTitle}
