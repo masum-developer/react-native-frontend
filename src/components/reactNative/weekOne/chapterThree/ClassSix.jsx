@@ -4,8 +4,8 @@ import StepComp from "../../../EnvironmentSetup/StepComp";
 import CodeBox from "../../../global/CodeBox";
 
 const start = `
-npx create-expo-app AwesomeProject
-cd AwesomeProject
+npx create-expo-app ts4u
+cd ts4u
 npx expo start
 
 `;

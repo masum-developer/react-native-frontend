@@ -199,7 +199,7 @@ const Aside = ({ children }) => {
                           label={
                             "Chapter" +
                             chapter.chapter_number +
-                            ":" +
+                            ": " +
                             chapter.title
                           }
                           title={chapter.title}
