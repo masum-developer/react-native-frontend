@@ -42,6 +42,14 @@ import ClassThirteenNew from "../src/components/reactNative/weekTwo/chapterTwo/C
 import ClassFourteen from "../src/components/reactNative/weekTwo/chapterThree/ClassFourteen";
 import ClassFifteen from "../src/components/reactNative/weekTwo/chapterThree/ClassFifteen";
 import ClassSixteen from "../src/components/reactNative/weekThree/chapterOne/ClassSixteen";
+import ClassSeventeen from "../src/components/reactNative/weekThree/chapterOne/classSeventeen";
+import ClassEighteen from "../src/components/reactNative/weekThree/chapterTwo/ClassEighteen";
+import ClassNineteen from "../src/components/reactNative/weekThree/chapterTwo/ClassNineteen";
+import ClassTwenty from "../src/components/reactNative/weekThree/chapterThree/ClassTwenty";
+import ClassTwentyOne from "../src/components/reactNative/weekThree/chapterThree/ClassTwentyOne";
+import ClassTwentyTwo from "../src/components/reactNative/weekFour/chapterOne/ClassTwentyTwo";
+import ClassTwentyThree from "../src/components/reactNative/weekFour/chapterOne/ClassTwentyThree";
+import ClassTwentyFour from "../src/components/reactNative/weekFour/chapterTwo/ClassTwentyFour";
 
 // import Roadmap from '../src/components/roadmap/roadmap';
 // import MernRoadmap from '../src/components/roadmap/roadmap';
@@ -111,6 +119,22 @@ const Home = () => {
           <ClassFifteen />
         ) : active === "week3_chapter1_class16" ? (
           <ClassSixteen />
+        ) : active === "week3_chapter1_class17" ? (
+          <ClassSeventeen />
+        ) : active === "week3_chapter2_class18" ? (
+          <ClassEighteen />
+        ) : active === "week3_chapter2_class19" ? (
+          <ClassNineteen />
+        ) : active === "week3_chapter3_class20" ? (
+          <ClassTwenty />
+        ) : active === "week3_chapter3_class21" ? (
+          <ClassTwentyOne />
+        ) : active === "week4_chapter1_class22" ? (
+          <ClassTwentyTwo />
+        ) : active === "week4_chapter1_class23" ? (
+          <ClassTwentyThree />
+        ) : active === "week4_chapter2_class24" ? (
+          <ClassTwentyFour />
         ) : active === "roadmap" ? (
           <MernRoadmap></MernRoadmap>
         ) : (
